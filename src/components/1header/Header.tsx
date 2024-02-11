@@ -24,12 +24,11 @@ const Header = ({ theme, setTheme }: datatype) => {
   return (
     <>
       <h1 className="text-3xl font-bold underline">
-      Hello world!
+        into the header, homepage
     </h1>
     
     <div
-      className=" flex h-screen w-screen justify-center items-center p-7"
-      style={{ background: theme.body, color: theme.text }}
+      className=" flex h-screen w-screen justify-start items-start p-7"
     >
       <button
         style={{ color: theme.text }}

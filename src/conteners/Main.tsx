@@ -14,7 +14,9 @@ interface datatype {
 const Main = ({ theme, setTheme }: datatype) => {
   return (
     <>
-      <div>
+      <div className=""
+      style={{background:theme.body,color:theme.text}}>
+        
         <BrowserRouter basename="/">
           <Routes>
             <Route
