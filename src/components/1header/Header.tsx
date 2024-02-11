@@ -1,0 +1,47 @@
+import React, { useState } from "react";
+
+import { ThemeDataType } from "../../assets/theme";
+
+interface datatype {
+  theme: ThemeDataType;
+  setTheme: (value: string) => void;
+}
+
+const Header = ({ theme, setTheme }: datatype) => {
+  const [currTheme, setCurrTheme] = useState(theme.name);
+
+  function changeTheme(): void {
+    console.log("clicked");
+    if (currTheme === "light") {
+      setTheme("dark");
+      setCurrTheme("dark");
+    } else {
+      setTheme("light");
+      setCurrTheme("light");
+    }
+  }
+
+  return (
+    <>
+      <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+    
+    <div
+      className=" flex h-screen w-screen justify-center items-center p-7"
+      style={{ background: theme.body, color: theme.text }}
+    >
+      <button
+        style={{ color: theme.text }}
+        className=" h-fit w-fit bg-gray-500 rounded-md px-6 py-1"
+        onClick={changeTheme}
+      >
+        click
+      </button>
+    </div>
+    </>
+    
+  );
+};
+
+export default Header;
