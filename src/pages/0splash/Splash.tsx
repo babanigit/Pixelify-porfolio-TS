@@ -39,7 +39,7 @@ const Splash = ({ theme, setTheme }: datatype) => {
           onChange={(input) => setColor(input.target.value)}
           placeholder="Color of the loader"
         /> */}
-        <div>loading</div>
+        <div>loading...</div>
         <ClipLoader
           color={color}
           loading={loading}
