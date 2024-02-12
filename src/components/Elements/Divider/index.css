@@ -1,0 +1,7 @@
+.divider[divider-orientation='horizontal'] {
+  @apply h-[var(--divider-width)] w-full;
+}
+
+.divider[divider-orientation='vertical'] {
+  @apply w-[var(--divider-width)] h-full inline-block mx-[8px];
+}
