@@ -16,6 +16,9 @@ export default function Header2( props ) {
   let [checked, setChecked] = useState(true);
   const [currTheme, setCurrTheme] = useState(props.theme);
 
+  const Click ="click</>  .";
+  const Aniket = "aniket</> .";
+
 
 
   function toggleTheme (params) {
@@ -40,7 +43,7 @@ export default function Header2( props ) {
   
   return (
     <div 
-    className=" sticky"
+    className=" bg-green-500"
     // style={{background:props.theme.body}}
     >
 
@@ -52,19 +55,19 @@ export default function Header2( props ) {
         className="rounded-[None] items-center md:rounded-[None] md:items-center lg:rounded-[None] lg:items-center"
         gap="10px"
       >
-        <Image
+        {/* <Image
                 style={{color:props.theme.text}}
 
           src="data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMjMuOTA4IDEyLjMzMS0zLjk2My04LjU4N2MtLjQ4OS0xLjA1OS0xLjU1OC0xLjc0NC0yLjcyNS0xLjc0NGgtMTAuNDRjLTEuMTY3IDAtMi4yMzYuNjg1LTIuNzI0IDEuNzQzbC0zLjk2NCA4LjU4OGMtLjA2MS4xMzEtLjA5Mi4yNzQtLjA5Mi40MTl2Ni4yNWMwIDEuNjU0IDEuMzQ2IDMgMyAzaDE4YzEuNjU0IDAgMy0xLjM0NiAzLTN2LTYuMjVjMC0uMTQ1LS4wMzEtLjI4OC0uMDkyLS40MTl6bS0xOC4wMzYtNy43NWMuMTYzLS4zNTMuNTE5LS41ODEuOTA4LS41ODFoMTAuNDRjLjM4OSAwIC43NDUuMjI4LjkwOC41ODFsMy40MjQgNy40MTloLTIuMDU5Yy0uNzc4IDAtMS40NTIuNTAxLTEuNjc2IDEuMjQ3bC0xLjA3MyAzLjU3NWMtLjAzMS4xMDYtLjEyNy4xNzgtLjIzOC4xNzhoLTkuMDEyYy0uMTExIDAtLjIwNy0uMDcyLS4yMzktLjE3OWwtMS4wNzMtMy41NzRjLS4yMjQtLjc0Ni0uODk3LTEuMjQ3LTEuNjc2LTEuMjQ3aC0yLjA1OHoiLz48L3N2Zz4="
           className="lg:rounded-[None] lg:"
           size="20px"
           radius="4px"
-        ></Image>
+        ></Image> */}
         <Typography
           className="rounded-[None]  text-[14px] md:rounded-[None] md:text-[15px] lg:rounded-[None] "
           variantType="h4"
         >
-          All Inboxes
+          <Link className=" text-3xl" href="/"> {Aniket}</Link>
         </Typography>
       </RowContainer>
       <Dropdown
@@ -87,7 +90,9 @@ export default function Header2( props ) {
               className="rounded-[None]  text-[14px] md:rounded-[None] md: md:text-[15px] lg:rounded-[None] lg:"
               variantType="subtitle"
             >
-              Aniket
+              <div className=" text-2xl">
+                {Click}
+              </div>
             </Typography>
           
           </RowContainer>

@@ -21,7 +21,7 @@ const Main = ({ theme, setTheme }: datatype) => {
           <Routes>
             <Route
               path="/"
-              element={<Splash theme={theme} setTheme={setTheme} />}
+              element={<Splash theme={theme} />}
             />
             <Route
               path="/home"

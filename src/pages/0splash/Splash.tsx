@@ -13,14 +13,14 @@ const override: CSSProperties = {
 
 interface datatype {
   theme: ThemeDataType;
-  setTheme: (value: string) => void;
+
 }
 
-const Splash = ({ theme, setTheme }: datatype) => {
+const Splash = ({ theme}: datatype) => {
   const history = useNavigate();
 
   let [loading, setLoading] = useState(false);
-  let [color, setColor] = useState("#ffffff");
+  // let [color, setColor] = useState("#ffffff");
   setTimeout(() => setLoading(true), 2000);
 
 
@@ -31,7 +31,8 @@ const Splash = ({ theme, setTheme }: datatype) => {
   ) : (
     <>
       <div 
-      className=" sweet-loading flex justify-center items-center h-screen w-screen"
+      style={{background:theme.body}}
+      className="  flex justify-center items-center h-screen w-screen"
       >
         {/* <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
         <input
@@ -40,14 +41,14 @@ const Splash = ({ theme, setTheme }: datatype) => {
           placeholder="Color of the loader"
         /> */}
         <div>loading...</div>
-        <ClipLoader
+        {/* <ClipLoader
           color={color}
           loading={loading}
           cssOverride={override}
           size={150}
           aria-label="Loading Spinner"
           data-testid="loader"
-        />
+        /> */}
       </div>
     </>
   );
