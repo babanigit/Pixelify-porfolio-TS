@@ -14,7 +14,7 @@ interface datatype {
 const Main = ({ theme, setTheme }: datatype) => {
   return (
     <>
-      <div className=" h-screen"
+      <div className=""
       style={{background:theme.body,color:theme.text}}>
         
         <BrowserRouter basename="/">

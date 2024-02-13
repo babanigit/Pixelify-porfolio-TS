@@ -11,14 +11,14 @@ export interface ThemeDataType {
   
   const lightTheme: ThemeDataType = {
     name: "light",
-    body: "#FFFFFF",
-    text: "#343434",
+    body: "#D8D8D8",
+    text: "#373737",
   };
   
   const darkTheme: ThemeDataType = {
     name: "dark",
-    body: "#1D1D1D",
-    text: "#FFFFFF",
+    body: "#373737",
+    text: "#D8D8D8",
   
   };
   

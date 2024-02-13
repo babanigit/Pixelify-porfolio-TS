@@ -9,7 +9,7 @@ import { themes } from "./assets/theme";
 import Main from "./conteners/Main";
 
 function App() {
-  const [themeState, setThemeState] = useState("light");
+  const [themeState, setThemeState] = useState("dark");
 
   return (
     <>
