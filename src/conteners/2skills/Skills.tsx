@@ -8,11 +8,11 @@ interface Iprops {
 const Skills = ({ theme }: Iprops) => {
   return (
     <>
-      <div className=" h-screen w-screen bg-red-200 grid gap-4   grid-cols-4 grid-flow-col">
+      <div className=" h-screen w-screen grid gap-4   grid-cols-4 grid-flow-col">
         <div className=" grid justify-center items-center col-span-1 text-5xl p-8">
           Here's what I do...
         </div>
-        <div className=" col-span-3 bg-slate-200 grid gap-4 grid-rows-6 justify-center items-center">
+        <div className=" col-span-3 grid gap-4 grid-rows-6 justify-center items-center">
           <div className=" gird row-span-1"></div>
           <div className=" text-2xl">~ MERN Stack Development</div>
           <div className=" text-2xl">~ Building responsive website using NEXT.js and typeSCRIPT</div>

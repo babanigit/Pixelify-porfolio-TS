@@ -14,10 +14,10 @@ interface datatype {
 const HomePage = ({ theme, setTheme }: datatype) => {
   return (
     <div className="">
-      <div className=" z-30 top-0  sticky ">
+      <div className=" ">
         <Header2 theme={theme} setTheme={setTheme} />
       </div>
-      <div className="z-0 top-0">
+      <div className="">
         <Greeting theme={theme}  />
       </div>
       <div>
