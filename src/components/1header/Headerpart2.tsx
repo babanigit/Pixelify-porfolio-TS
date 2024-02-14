@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
+import { Link, NavLink } from "react-router-dom";
+
 import { ThemeDataType } from "../../assets/theme";
 
 interface Iprops {
@@ -26,15 +26,20 @@ const Headerpart2 = ({ theme, setTheme }: Iprops) => {
   return (
     <>
       <div
-        style={{ background: theme.body }}
-        className="  fixed top-0 right-0 w-[200px] h-[50px] bg-emerald-20 grid grid-flow-col  justify-evenly items-center text-xl"
+        className="  fixed top-0 right-0 w-[200px] h-[50px] bg-opacity-0 grid grid-flow-col  justify-evenly items-center text-xl"
       >
-        <div>
-          <button>div 1</button>
-        </div>
+        {/* <div>
+          <div>div1</div>
+          <div ><NavLink to="/projects">
+            project
+            </NavLink></div>
+
+
+         
+        </div> */}
         <div>
           <button onClick={changeTheme}>
-            {theme.name === "light" ? "dark" : "light"}
+            {theme.name === "light" ? "<darkTheme/>" : "<lightTheme/>"}
           </button>
         </div>
       </div>

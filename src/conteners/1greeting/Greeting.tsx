@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeDataType } from "../../assets/theme";
-// import FeelingProud from './FeelingProud';
+
 
 interface dataType {
   theme: ThemeDataType;
@@ -18,8 +18,7 @@ const Greeting = (theme: dataType) => {
         </div>
 
         <div className=" h-full w-full grid justify-center items-center  col-span-1">
-          {/* <FeelingProud theme={theme} /> */}
-          {/* <div className=" text-7xl">{code}</div> */}
+
         </div>
       </div>
     </>
