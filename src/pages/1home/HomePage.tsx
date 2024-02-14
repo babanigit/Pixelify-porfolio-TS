@@ -2,7 +2,9 @@
 // import Header from "../../components/1header/Header";
 
 import { ThemeDataType } from "../../assets/theme";
-import Header2 from "../../components/1header/Header2";
+import HeaderPart1 from "../../components/1header/HeaderPart1";
+// import Header2 from "../../components/1header/Header2";
+import Headerpart2 from "../../components/1header/Headerpart2";
 import Greeting from "../../conteners/1greeting/Greeting";
 import Skills from "../../conteners/2skills/Skills";
 
@@ -15,7 +17,10 @@ const HomePage = ({ theme, setTheme }: datatype) => {
   return (
     <div className="">
       <div className=" ">
-        <Header2 theme={theme} setTheme={setTheme} />
+        <HeaderPart1 theme={theme} />
+        <Headerpart2  theme={theme} setTheme={setTheme} />
+
+        {/* <Header2 theme={theme} setTheme={setTheme} /> */}
       </div>
       <div className="">
         <Greeting theme={theme}  />
