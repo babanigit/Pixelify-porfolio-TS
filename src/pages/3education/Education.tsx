@@ -27,7 +27,7 @@ const Education = ({ theme, setTheme }: Iprop) => {
         <div>
           <EducationIntro theme={theme} />
           <Degree theme={theme} />
-          {/* <Certificate theme={theme} /> */}
+          <Certificate theme={theme} />
         </div>
       </div>
     </>

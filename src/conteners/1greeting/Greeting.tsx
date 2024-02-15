@@ -18,7 +18,7 @@ const Greeting = (theme: dataType) => {
         </div>
 
         <div className=" h-full w-full grid justify-center items-center  col-span-1">
-
+          hello
         </div>
       </div>
     </>

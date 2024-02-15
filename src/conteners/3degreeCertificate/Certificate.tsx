@@ -7,7 +7,14 @@ interface Iprops {
 
 const Certificate = ({theme}:Iprops) => {
   return (
-    <div className=' h-24 w-screen bg-red-700'>Certificate</div>
+    <div className=' h-screen w-screen bg-red-100 grid grid-flow-col grid-cols-4 place-items-center'>
+      <div className=' grid col-span-3 bg-blue-200 w-[60%] h-[40%] justify-center items-center'>
+        hello1
+      </div>
+      <div>
+        hello2
+      </div>
+   </div>
   )
 }
 
