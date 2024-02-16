@@ -15,7 +15,7 @@ const EducationIntro = ({ theme }: Iprops) => {
         </div>
       </div>
 
-      <div className=" bg-red-20 grid  justify-center items-center">hello</div>
+      <div className=" bg-red-20 grid  justify-center items-center">dev1</div>
     </div>
   );
 };

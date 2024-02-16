@@ -20,28 +20,48 @@ const ContactMe = ({ theme }: Iprops) => {
 
       {/* div 2 */}
 
-      <div className=" bg-gray-400 h-[60%] w-[60%] col-span-2 grid-rows-4  grid items-center p-[3%] ">
-
+      <div
+        style={{ borderColor: theme.text }}
+        className=" h-[60%] w-[60%] col-span-2 grid-rows-4 border-4 border  grid items-center p-[3%] "
+      >
         <div className=" h-full  text-3xl grid justify-center items-center  row-span-1 ">
           Contact Me
         </div>
 
         <div className=" h-full grid row-span-2  ">
-          <form action="" className=" grid gap-2 grid-flow-row place-items-end ">
-            <input type="text" style={{background:theme.body}} placeholder="your email" className="border border-5 border-white w-full " />
-            <input type="text" style={{background:theme.body}} placeholder="message" className=" h-[100px] border border-5 border-white w-full " />
-            <button 
-            style={{borderColor:theme.body}}
-            className=" w-[20%]  grid border border-5 "> Send</button>{" "}
+          <form
+            action=""
+            className=" grid gap-2 grid-flow-row place-items-end "
+          >
+            <input
+              type="text"
+              style={{ background: theme.body, borderColor: theme.text }}
+              placeholder="your email"
+              className="border border-5 border-white w-full "
+            />
+            <input
+              type="text"
+              style={{ background: theme.body, borderColor: theme.text }}
+              placeholder="message"
+              className=" h-[100px] border border-5 border-white w-full "
+            />
+            <button
+              style={{ borderColor: theme.text }}
+              className=" w-[20%]  grid border border-5 "
+            >
+              {" "}
+              Send
+            </button>{" "}
           </form>
         </div>
 
-        <div className=" h-full grid justify-end items-center  ">
+        <div className=" h-full grid justify-start items-center  ">
           {" "}
-          <a 
-                      style={{borderColor:theme.body}}
-
-          className=" border-4 p-[8%] w-[120px]  " href="./Resume.pdf">
+          <a
+            style={{ borderColor: theme.text }}
+            className=" border-3 border p-[8%] w-[120px]  "
+            href="./Resume.pdf"
+          >
             <a
               // href={
               //   "https://drive.google.com/file/d/1vrH2TG_69x0BslVAYGnNDpzCPCczuPXb/view?usp=sharing/view"
@@ -53,7 +73,6 @@ const ContactMe = ({ theme }: Iprops) => {
             </a>
           </a>
         </div>
-
       </div>
     </div>
   );
