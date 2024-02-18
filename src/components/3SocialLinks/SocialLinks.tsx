@@ -1,20 +1,42 @@
-import React from "react";
 import { ThemeDataType } from "../../assets/theme";
+import { socialMediaLinks } from "../../assets/Links";
+
 interface Iprops {
   theme: ThemeDataType;
 }
+
 const SocialLinks = ({ theme }: Iprops) => {
-    const LinkedIn = "<LinkedIn/>"
-    const GH = "<GitHub/>"
-    const Insta ="<Instagram/>"
-    const LeetCode = "<LeetCode/>"
+  const LinkedIn = "<LinkedIn/>";
+  const GH = "<GitHub/>";
+  const Insta = "<Instagram/>";
+  const LeetCode = "<LeetCode/>";
+
   return (
     <>
-      <div className=" grid h-auto w-[480px] justify-evenly bg-blue-400 grid-flow-col gap-3     ">
-        <div className=" bg-yellow-300 w-auto  " ><a href="https://www.linkedin.com/in/aniket-vilas-panchal/" target="_blank">{LinkedIn}</a></div>
-        <div className=" bg-yellow-300 w-auto  " ><a href="" target="_blank">{GH}</a></div>
-        <div className=" bg-yellow-300 w-auto  " ><a href="" target="_blank">{Insta}</a></div>
-        <div className=" bg-yellow-300 w-auto  " ><a href="" target="_blank">{LeetCode}</a></div>
+      <div className=" grid h-auto w-auto place-content-center grid-flow-col gap-8     ">
+        <div className="  w-auto h-auto   ">
+          <a
+            href={socialMediaLinks.linkedin}
+            target="_blank"
+          >
+            {LinkedIn}
+          </a>
+        </div>
+        <div className="  w-auto h-auto   ">
+          <a href={socialMediaLinks.github} target="_blank">
+            {GH}
+          </a>
+        </div>
+        <div className="  w-auto h-auto   ">
+          <a href={socialMediaLinks.instagram} target="_blank">
+            {Insta}
+          </a>
+        </div>
+        <div className="  w-auto h-auto   ">
+          <a href={socialMediaLinks.leetcode} target="_blank">
+            {LeetCode}
+          </a>
+        </div>
       </div>
     </>
   );
