@@ -11,7 +11,7 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
       <div>
         <div
           style={{ borderColor: theme.text }}
-          className=" w-full h-full  grid grid-flow-row border border-3 px-[3%] py-[2%] "
+          className=" w-auto h-auto grid grid-flow-row border border-3 px-[3%] py-[2%] "
         >
           <div className=" grid justify-center items-center text-3xl">
             {certprop.title}{" "}
@@ -22,16 +22,18 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
             {certprop.dev2}
             </div>
           </div>
-          <div className=" w-full flex justify-end  ">
-            <div
+          <div className=" w-full flex justify-end   ">
+            {/* <div
               style={{ borderColor: theme.text }}
               className=" border-3 border w-[10%] h-[50%] items-center justify-center flex"
-            >
-              <a href={certprop.certificate_link}  target="_blank" >
-                {" "}
+            > */}
+              <a href={certprop.certificate_link}
+                            style={{ borderColor: theme.text }}
+
+              className=" border border-spacing-2 px-[2%] "  target="_blank" >
                 pdf Link
               </a>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>

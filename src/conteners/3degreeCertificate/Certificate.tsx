@@ -24,8 +24,15 @@ const Certificate = ({ theme }: Iprops) => {
 
         
       </div>
-      <div className=" text-4xl justify-center items-center">
-        Certifications
+      <div className=" grid place-items-center">
+        <div>
+        <img
+          className=" w-20"
+          src={require(`../../assets/png/mario3.png`)}
+          alt="profile image"
+        />
+        </div>
+        <div className="text-4xl">Certification</div>
       </div>
     </div>
   );
