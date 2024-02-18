@@ -7,6 +7,8 @@ interface link {
   facebook: string;
   instagram: string;
   leetcode:string;
+  resume:string;
+  instagram2:string;
 }
 
 export const socialMediaLinks: link = {
@@ -17,4 +19,6 @@ export const socialMediaLinks: link = {
   facebook: "https://www.facebook.com/profile.php?id=100014709424349",
   instagram:"https://instagram.com/changeyourthinkingg?igshid=MzRlODBiNWFlZA==",
   leetcode:"",
+  resume: "https://drive.google.com/file/d/1vrH2TG_69x0BslVAYGnNDpzCPCczuPXb/view?usp=sharing/view",
+  instagram2: "",
 };

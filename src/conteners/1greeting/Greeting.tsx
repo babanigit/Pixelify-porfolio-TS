@@ -21,7 +21,11 @@ const Greeting = ({theme}: dataType) => {
         </div>
 
         <div className=" h-full w-full grid justify-center items-center  col-span-1">
-          hello
+        <img
+          className=" w-28 grid justify-center items-center "
+          src={require(`../../assets/png/mincraft3.png`)}
+          alt="profile image"
+        /> 
         </div>
       </div>
     </>

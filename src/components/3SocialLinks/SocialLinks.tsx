@@ -10,15 +10,20 @@ const SocialLinks = ({ theme }: Iprops) => {
   const GH = "<GitHub/>";
   const Insta = "<Instagram/>";
   const LeetCode = "<LeetCode/>";
+  const resume = "<Resume/>";
+  const digiart = "<Arts  />";
+
 
   return (
     <>
-      <div className=" grid h-auto w-auto place-content-center grid-flow-col gap-8     ">
+      <div className=" grid h-auto w-auto place-content-center grid-flow-col gap-3     ">
         <div className="  w-auto h-auto   ">
-          <a
-            href={socialMediaLinks.linkedin}
-            target="_blank"
-          >
+          <a href={socialMediaLinks.resume} target="_blank">
+            {resume}
+          </a>
+        </div>
+        <div className="  w-auto h-auto   ">
+          <a href={socialMediaLinks.linkedin} target="_blank">
             {LinkedIn}
           </a>
         </div>
@@ -35,6 +40,11 @@ const SocialLinks = ({ theme }: Iprops) => {
         <div className="  w-auto h-auto   ">
           <a href={socialMediaLinks.leetcode} target="_blank">
             {LeetCode}
+          </a>
+        </div>
+        <div className="  w-auto h-auto   ">
+          <a href={socialMediaLinks.leetcode} target="_blank">
+            {digiart}
           </a>
         </div>
       </div>

@@ -1,20 +1,22 @@
-import React from "react";
 import { ThemeDataType } from "../../assets/theme";
+import { socialMediaLinks } from "../../assets/Links";
 import SocialLinks from "../../components/3SocialLinks/SocialLinks";
+
 interface Iprops {
   theme: ThemeDataType;
 }
 const ContactMe = ({ theme }: Iprops) => {
   const resu = "<Resume/>";
+  const send = "<Send/>";
   return (
     <div className="  h-screen w-screen grid grid-flow-col grid-cols-3 place-items-center items-center">
       {/* div 1  */}
 
       <div className="  h-full w-full grid justify-center items-center">
         <img
-          className="profile-pic w-64"
-          src={require(`../../assets/images/me306kb.jpg`)}
-          alt=""
+          className=" w-64"
+          src={require(`../../assets/jpg/me306kb.jpg`)}
+          alt="profile image"
         />
       </div>
 
@@ -22,10 +24,15 @@ const ContactMe = ({ theme }: Iprops) => {
 
       <div
         style={{ borderColor: theme.text }}
-        className=" h-[60%] w-[60%] col-span-2 grid-rows-4 border-4 border  grid items-center p-[3%] "
+        className=" h-[60%] w-[70%] col-span-2 grid-rows-4 border-4 border  grid items-center p-[3%] "
       >
-        <div className=" h-full  text-3xl grid justify-center items-center  row-span-1 ">
-          Contact Me
+        <div className=" h-full  text-3xl grid grid-flow-col justify-center gap-3  items-center  row-span-1 ">
+          <div>Contact</div>
+          <div> <img
+          className=" w-20"
+          src={require(`../../assets/png/pngegg.png`)}
+          alt="profile image"
+        /> </div>
         </div>
 
         <div className=" h-full grid row-span-2  ">
@@ -37,41 +44,24 @@ const ContactMe = ({ theme }: Iprops) => {
               type="text"
               style={{ background: theme.body, borderColor: theme.text }}
               placeholder="your email"
-              className="border border-5 border-white w-full "
+              className="border px-[2%] border-5 border-white w-full "
             />
             <input
               type="text"
               style={{ background: theme.body, borderColor: theme.text }}
               placeholder="message"
-              className=" h-[100px] border border-5 border-white w-full "
+              className=" h-[100px] px-[2%] border border-5 border-white w-full "
             />
             <button
               style={{ borderColor: theme.text }}
               className=" w-[20%]  grid border border-5 "
             >
-              {" "}
-              Send
+              {send}
             </button>{" "}
           </form>
         </div>
-
-        <div className=" h-full grid justify-start items-center  ">
-          {" "}
-          <a
-            style={{ borderColor: theme.text }}
-            className=" border-3 border p-[8%] w-[120px]  "
-            href="./Resume.pdf"
-          >
-            <a
-              // href={
-              //   "https://drive.google.com/file/d/1vrH2TG_69x0BslVAYGnNDpzCPCczuPXb/view?usp=sharing/view"
-              // }
-              target="_blank"
-              rel="noreferrer"
-            >
-              {resu}
-            </a>
-          </a>
+        <div>
+          <SocialLinks theme={theme} />
         </div>
       </div>
     </div>

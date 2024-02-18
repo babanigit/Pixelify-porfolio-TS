@@ -15,7 +15,15 @@ const EducationIntro = ({ theme }: Iprops) => {
         </div>
       </div>
 
-      <div className=" bg-red-20 grid  justify-center items-center">dev1</div>
+      <div className=" bg-red-20 grid  justify-center items-center">
+
+      <img
+          className=" w-28 grid justify-center items-center "
+          src={require(`../../assets/png/mincraft4.png`)}
+          alt="profile image"
+        /> 
+
+      </div>
     </div>
   );
 };
