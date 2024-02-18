@@ -1,14 +1,26 @@
-interface Certification {
+export interface Certification {
   title: string;
+  dev1:string;
+  dev2:string;
+  dev3:string;
+  dev4:string;
   subtitle: string;
   logo_path: string;
   certificate_link: string;
   alt_name: string;
-  color_code: string;
 }
+
+// for trail
+export interface Certification2 {
+
+}
+
 
 interface CertificateData {
   certifications: Certification[];
+
+  // for trail
+  certifications2: Certification2[];
 }
 
 export const certificate: CertificateData = {
@@ -16,28 +28,47 @@ export const certificate: CertificateData = {
     {
       title: "Google data analysis",
       subtitle: "data analysis",
-      logo_path: "aws.png",
+      dev1: " the fundamental concepts associated with programming in R",
+      dev2: " the R programming language, data visualization and its programming environment.",
+      dev3: " ",
+      dev4: " ",
       certificate_link:
         "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
-      alt_name: "google",
-      color_code: "#ffc475",
+        alt_name: "google",
+        logo_path: "aws.png",
+
     },
+    // {
+    //   title: "Google data analysis2",
+    //   subtitle: "data analysis",
+    //   dev1: " the fundamental concepts associated with programming in R",
+    //   dev2: " the R programming language, data visualization and its programming environment.",
+    //   dev3: " ",
+    //   certificate_link:
+    //     "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
+    //     alt_name: "google",
+    //     logo_path: "aws.png",
+
+    // },
+    // {
+    //   title: "Google data analysis3",
+    //   subtitle: "data analysis",
+    //   dev1: " the fundamental concepts associated with programming in R",
+    //   dev2: " the R programming language, data visualization and its programming environment.",
+    //   dev3: " ",
+    //   certificate_link:
+    //     "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
+    //     alt_name: "google",
+    //     logo_path: "aws.png",
+
+    // },
+  ],
+  certifications2 : [
     {
-      title: "AWS Certified Cloud Practitioner",
-      subtitle: "Amazon Web Services",
-      logo_path: "aws.png",
-      certificate_link:
-        "https://www.credly.com/badges/8b2db191-702d-427c-91aa-0f926be447a6/public_url",
-      alt_name: "AWS",
-      color_code: "#ffc475",
-    },
-    {
-      title: "Google Summer of Code 2019",
-      subtitle: "Google / Sugar Labs",
-      logo_path: "google_logo.png",
-      certificate_link: " ",
-      alt_name: "Google",
-      color_code: "#ffc475",
-    },
+
+    },{
+
+    }
+
   ],
 };
