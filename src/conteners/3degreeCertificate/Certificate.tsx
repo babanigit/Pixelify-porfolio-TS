@@ -9,15 +9,22 @@ interface Iprops {
 const Certificate = ({ theme }: Iprops) => {
   return (
     <div className=" h-screen w-screen  grid grid-flow-col grid-cols-4 place-items-center">
-      <div className=" grid col-span-3  w-[90%] h-[75%]  items-center gap-[2%] p-[2%]  ">
+      <div className="grid col-span-3 place-items-center  w-[90%] h-[75%] gap-[2%] p-[2%]  ">
         {certificate.certifications.map((cert) => {
           return (
             <>
-              <CertificateCard key={cert.title} certprop={cert} theme={theme} />
+              <div className=" h-full w-full">
+                <CertificateCard
+                  key={cert.title}
+                  certprop={cert}
+                  theme={theme}
+                />
+              </div>
             </>
           );
         })}
       </div>
+
       <div className=" grid place-items-center">
         <div>
           <img
