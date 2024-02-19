@@ -13,7 +13,7 @@ const Certificate = ({ theme }: Iprops) => {
         {certificate.certifications.map((cert) => {
           return (
             <>
-              <div className=" h-full w-full">
+              <div className=" h-[40%] w-full">
                 <CertificateCard
                   key={cert.title}
                   certprop={cert}
@@ -33,7 +33,7 @@ const Certificate = ({ theme }: Iprops) => {
             alt="profile image"
           />
         </div>
-        <div className="text-4xl">Certification</div>
+        <div className="text-4xl">Certificates</div>
       </div>
     </div>
   );
