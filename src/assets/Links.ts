@@ -18,7 +18,7 @@ export const socialMediaLinks: link = {
   gmail: "creativeap07@gmail.com",
   facebook: "https://www.facebook.com/profile.php?id=100014709424349",
   instagram:"https://instagram.com/aniketpanchal._",
-  leetcode:"",
+  leetcode:"https://leetcode.com/aniketpanchal07",
   resume: "https://drive.google.com/file/d/15BKwVmJfJVKgfBr_PdLpaXHmHo-Tghc6/view?usp=sharing",
   instagram2: "https://instagram.com/babartstyle ",
 };

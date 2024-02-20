@@ -13,7 +13,6 @@ const SocialLinks = ({ theme }: Iprops) => {
   const resume = "<Resume/>";
   const digiart = "<Arts  />";
 
-
   return (
     <>
       <div className=" grid h-auto w-auto place-content-center grid-flow-col gap-3     ">
