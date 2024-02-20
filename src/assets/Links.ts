@@ -17,8 +17,8 @@ export const socialMediaLinks: link = {
   linkedin: "https://www.linkedin.com/in/aniket-vilas-panchal",
   gmail: "creativeap07@gmail.com",
   facebook: "https://www.facebook.com/profile.php?id=100014709424349",
-  instagram:"https://instagram.com/changeyourthinkingg?igshid=MzRlODBiNWFlZA==",
+  instagram:"https://instagram.com/aniketpanchal._",
   leetcode:"",
-  resume: "https://drive.google.com/file/d/1vrH2TG_69x0BslVAYGnNDpzCPCczuPXb/view?usp=sharing/view",
-  instagram2: "",
+  resume: "https://drive.google.com/file/d/15BKwVmJfJVKgfBr_PdLpaXHmHo-Tghc6/view?usp=sharing",
+  instagram2: "https://instagram.com/babartstyle ",
 };

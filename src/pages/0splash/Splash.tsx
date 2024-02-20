@@ -13,26 +13,22 @@ const override: CSSProperties = {
 
 interface datatype {
   theme: ThemeDataType;
-
 }
 
-const Splash = ({ theme}: datatype) => {
+const Splash = ({ theme }: datatype) => {
   const history = useNavigate();
 
   let [loading, setLoading] = useState(false);
   // let [color, setColor] = useState("#ffffff");
   setTimeout(() => setLoading(true), 2000);
 
-
   return loading ? (
-    <>
-      {history("/home", { replace: true })}
-    </>
+    <>{history("/home", { replace: true })}</>
   ) : (
     <>
-      <div 
-      style={{background:theme.body}}
-      className="  flex justify-center items-center h-screen w-screen"
+      <div
+        style={{ background: theme.body }}
+        className="  flex justify-center items-center h-screen w-screen"
       >
         {/* <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
         <input

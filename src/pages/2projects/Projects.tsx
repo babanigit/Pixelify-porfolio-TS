@@ -18,7 +18,7 @@ const Projects = ({ theme, setTheme }: Iprops) => {
           <Headerpart2 theme={theme} setTheme={setTheme} />
           <HeaderPart3 theme={theme} />
         </div>
-        <div className=" place-content-center place-items-center grid h-screen w-screen ">
+        <div className=" place-content-center place-items-center grid h-screen w-full ">
           hello project , content still have to add.. stay tune
         </div>
       </div>
