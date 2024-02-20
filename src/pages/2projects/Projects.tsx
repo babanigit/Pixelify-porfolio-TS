@@ -19,8 +19,8 @@ const Projects = ({ theme, setTheme }: Iprops) => {
           <Headerpart2 theme={theme} setTheme={setTheme} />
           <HeaderPart3 theme={theme} />
         </div>
-        <div className=" grid h-screen w-full ">
-          <ProjectPage />
+        <div className="">
+          <ProjectPage theme={theme} />
         </div>
       </div>
     </>

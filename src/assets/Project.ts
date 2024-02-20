@@ -1,4 +1,4 @@
-interface Project {
+export interface Project {
     title: string;
     language_used: string;
     dev1: string;
@@ -12,10 +12,10 @@ interface Project {
   
   export const projects: Project[] = [
     {
-      title: "Google data analysis",
-      language_used: "data analysis",
-      dev1: "Learned the fundamental concepts associated with programming in R",
-      dev2: "Explored the R programming language, data visualization, and its programming environment",
+      title: " Football Updates ",
+      language_used: "NextJs, ReactJs, Tailwind and Football-API",
+      dev1: "~ Leveraged Football API integration to develop a sports platform that provided users with up-to-date match schedules, live scores, and player statistics, significantly enhancing user engagement and retention rates.",
+      dev2: "~ Engineered a sleek and intuitive user interface, prioritizing simplicity and ease of navigation. This minimalist design approach ensures a seamless and user-friendly experience, enhancing accessibility for all users while maintaining a modern aesthetic appeal.",
       dev3: "",
       dev4: "",
       project_link: "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
@@ -23,10 +23,10 @@ interface Project {
       logo_path: "aws.png",
     },
     {
-      title: "Google data analysis2",
-      language_used: "data analysis",
-      dev1: "Learned the fundamental concepts associated with programming in R",
-      dev2: "Explored the R programming language, data visualization, and its programming environment",
+      title: "User Authentication",
+      language_used: "ReactJs, TailwindCSS, MongoDB, ExpressJs and NodeJS",
+      dev1: "~ A project utilizing the MERN stack and Tailwind CSS, which incorporated user authentication functionalities for seamless login and logout experiences.",
+      dev2: "~ This project effectively managed and stored user data, ensuring a secure and streamlined user experience.",
       dev3: "",
       dev4: "",
       project_link: "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
