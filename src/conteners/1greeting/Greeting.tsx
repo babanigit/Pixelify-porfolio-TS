@@ -20,7 +20,9 @@ const Greeting = ({theme}: dataType) => {
           <div ><SocialLinks theme={theme}/></div>
         </div>
 
-        <div className=" h-full w-full grid justify-center items-center  col-span-1">
+        <div
+        // style={{opacity:theme.bg1}}
+        className= {" h-full w-full grid justify-center items-center  col-span-1 bg-red-400 bg-opacity-50 " + { }}>
         <img
           className=" w-28 grid justify-center items-center "
           src={require(`../../assets/png/mincraft3.png`)}

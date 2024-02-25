@@ -1,6 +1,6 @@
 
 import { projects } from "../../assets/Project";
-import { ThemeDataType } from "../../assets/theme";
+import { ThemeDataType, themes } from "../../assets/theme";
 interface Iprops {
   theme:ThemeDataType;
 }
@@ -15,7 +15,9 @@ const ProjectPage = (props:Iprops) => {
               <>
                 {/* this is starting point */}
 
-                <div className=" bg-red-400 w-full h-full  grid grid-flow-row grid-rows-7 border-2 border-gray-700 p-2 px-6 ">
+                <div
+                style={{borderColor:props.theme.text}}
+                className="  w-full h-full  grid grid-flow-row grid-rows-7 border-2 border-gray-700 p-2 px-6 ">
                   <div className="justify-center flex w-full h-full text-2xl">
                     {pro.title}
                   </div>
@@ -45,10 +47,11 @@ const ProjectPage = (props:Iprops) => {
           })}
         </div>
 
-        <div className=" grid place-items-center ">
-          <div>hello</div>
+        <div className=" grid place-items-center bg-red-400 bg-opacity-50  ">
+          <div className=" text-xl" >projects</div>
         </div>
       </div>
+      <div className=" h-screen "> </div>
     </>
   );
 };

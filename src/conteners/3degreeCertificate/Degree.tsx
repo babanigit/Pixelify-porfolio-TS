@@ -9,8 +9,8 @@ const Degree = ({ theme }: Iprops) => {
   return (
     <>
       {/* add place-items-center to place all child div in center */}
-      <div className=" h-screen w-full grid grid-flow-col grid-cols-4 place-items-center">
-        <div className=" grid place-items-center ">
+      <div className=" h-screen w-full grid grid-flow-col grid-cols-4 place-items-center ">
+        <div className=" grid place-items-center bg-red-400 bg-opacity-50  h-full w-full place-content-center ">
           <div>
             <img
               className=" w-36 "
@@ -23,7 +23,7 @@ const Degree = ({ theme }: Iprops) => {
 
         <div
           style={{ borderColor: theme.text }}
-          className=" grid bg-yellow-30 col-span-3 place-content-center h-[50%] w-[70%] border-4 rounded-md p-[5%] "
+          className=" grid bg-yellow-30 col-span-3 place-content-center h-[50%] w-[70%] border-2 rounded-md p-[5%] "
         >
           <div className="  bg-red-40 grid justify-between items-center text-3xl grid-flow-col px-[3%] font-bold">
             <div>Tilak Maharashtra Vidyapeeth </div>

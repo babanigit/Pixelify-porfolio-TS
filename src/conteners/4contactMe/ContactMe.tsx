@@ -12,7 +12,7 @@ const ContactMe = ({ theme }: Iprops) => {
     <div className="  h-screen w-screen grid grid-flow-col grid-cols-3 place-items-center items-center">
       {/* div 1  */}
 
-      <div className="  h-full w-full grid justify-center items-center">
+      <div className="  h-full w-full grid justify-center items-center bg-purple-400 bg-opacity-50 ">
         <img
           className=" w-64"
           src={require(`../../assets/jpg/me306kb.jpg`)}
