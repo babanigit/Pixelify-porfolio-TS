@@ -7,8 +7,8 @@ interface Iprops {
 }
 
 const HeaderPart3 = ({ theme }: Iprops) => {
-  const contact = "<Contact and Resume/>";
-  const eduCert = "<Education and Certification/>";
+  const contact = "<Contact/>";
+  const eduCert = "<Certifications/>";
   const project = "<Projects/>";
   const home = "<Home/>";
 
