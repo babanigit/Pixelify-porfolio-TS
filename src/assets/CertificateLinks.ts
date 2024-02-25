@@ -106,13 +106,13 @@ export const certificate: CertificateData = {
     },
     {
       // 4
-      title: " in process",
-      dev1: " ",
-      dev2: "",
-      dev3: " ",
+      title: "Process Data from Dirty to Clean",
+      dev1: "- Applied data cleaning techniques using spreadsheets.",
+      dev2: "- Developed basic SQL queries for use on databases.",
+      dev3: "- Used basic SQL functions to clean and transform data.",
       dev4: " ",
       certificate_link:
-      "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
+      "https://drive.google.com/file/d/14Mc68oBJ0U5z_0mv3vfyJOG2DmROvzE2/view?usp=sharing",
       alt_name: "google",
     },
     {
@@ -123,18 +123,18 @@ export const certificate: CertificateData = {
       dev3: " ",
       dev4: " ",
       certificate_link:
-      "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
+      "",
       alt_name: "google",
     },
     {
       // 6
-      title: "in process",
+      title: "Share Data Through the Art of Visualization",
       dev1: "",
-      dev2: " ",
+      dev2: "- Gained an understanding of how to use Tableau to create dashboards and dashboard filters. ",
       dev3: " ",
       dev4: " ",
       certificate_link:
-      "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
+      "https://drive.google.com/file/d/1ukBQdu2HqtgqdTt75SfA0z5NoOBLu2t_/view?usp=sharing",
       alt_name: "google",
     },
     {
@@ -156,7 +156,7 @@ export const certificate: CertificateData = {
       dev3: " ",
       dev4: " ",
       certificate_link:
-      "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
+      "",
       alt_name: "google",
     },
 

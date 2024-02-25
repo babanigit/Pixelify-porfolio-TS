@@ -32,15 +32,16 @@ const SocialLinks = ({ theme }: Iprops) => {
           </a>
         </div>
         <div className="  w-auto h-auto   ">
-          <a href={socialMediaLinks.instagram} target="_blank">
-            {Insta}
-          </a>
-        </div>
-        <div className="  w-auto h-auto   ">
           <a href={socialMediaLinks.leetcode} target="_blank">
             {LeetCode}
           </a>
         </div>
+        <div className="  w-auto h-auto   ">
+          <a href={socialMediaLinks.instagram} target="_blank">
+            {Insta}
+          </a>
+        </div>
+
         <div className="  w-auto h-auto   ">
           <a href={socialMediaLinks.instagram2} target="_blank">
             {digiart}

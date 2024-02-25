@@ -29,7 +29,7 @@ const Certificate = ({ theme }: Iprops) => {
         <div>
           <img
             className=" w-20"
-            src={require(`../../assets/png/mario3.png`)}
+            src={require(`../../assets/png/mincraft1.png`)}
             alt="profile image"
           />
         </div>

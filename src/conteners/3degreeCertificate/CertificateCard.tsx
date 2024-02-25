@@ -21,6 +21,7 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
       <div className="  grid place-items-center">
         <div>{certprop.dev1} </div>
         <div>{certprop.dev2}</div>
+
       </div>
       <div className=" w-full flex justify-end   ">
         {/* <a
@@ -32,15 +33,17 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
               pdf Link
             </a> */}
         <button
-          style={{ borderColor: theme.text }}
+          style={{ borderColor: theme.text,  backgroundColor:theme.body }}
           className=" border  px-[2%] "
           onClick={() => setTrigg(!trigg)}
         >
           View certification
         </button>
 
-        <PopupCertification trigger={trigg} setTrigg={setTrigg} trigg={trigg}>
-          <div className=" h-full w-full grid  grid-flow-col grid-cols-4 grid-rows-2 gap-2 p-2 ">
+        <PopupCertification trigger={trigg} setTrigg={setTrigg} trigg={trigg} theme={theme} >
+          <div
+          style={{backgroundColor:theme.body}}
+          className=" h-full w-full grid  grid-flow-col grid-cols-4 grid-rows-2 gap-2 p-2  ">
             {certificate.certifications2.map((cert) => {
               return (
                 <>
@@ -48,12 +51,14 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
                     style={{ borderColor: theme.text }}
                     className=" w-auto h-auto grid grid-flow-row border-2 px-[3%] py-[2%] "
                   >
-                    <div className=" grid justify-center items-center text-3xl">
+                    <div className=" grid justify-center items-center text-3xl bg-yellow-600 bg-opacity-70 rounded-xl">
                       {cert.title}{" "}
                     </div>
                     <div className="  grid place-items-center">
                       <div>{cert.dev1} </div>
                       <div>{cert.dev2}</div>
+                      {/* <div>{cert.dev3}</div> */}
+
                     </div>
                     <div className=" w-full flex justify-end   ">
                       <a
