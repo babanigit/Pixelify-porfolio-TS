@@ -26,7 +26,7 @@ const Headerpart2 = ({ theme, setTheme }: Iprops) => {
   return (
     <>
       <div
-        className="  fixed top-0 right-0 w-[200px] h-[50px] bg-opacity-0 grid grid-flow-col  justify-evenly items-center text-xl"
+        className="  fixed top-0 right-0 w-[200px] h-[50px] grid grid-flow-col  place-items-center text-xl"
       >
         {/* <div>
           <div>div1</div>
