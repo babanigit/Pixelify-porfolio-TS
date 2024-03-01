@@ -15,7 +15,7 @@ const SocialLinks = ({ theme }: Iprops) => {
 
   return (
     <>
-      <div className=" grid h-auto w-auto place-content-center place-items-center gap-3  grid-flow-col md:grid-flow-row md:grid-cols-3 mx-6 ">
+      <div className=" grid h-auto w-auto  gap-3  grid-flow-col md:grid-flow-row md:grid-cols-2 place-items-center mx-6 ">
         <div className="  w-auto h-auto   ">
           <a href={socialMediaLinks.resume} target="_blank" rel="noreferrer">
             {resume}

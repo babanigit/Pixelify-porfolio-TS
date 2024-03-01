@@ -9,7 +9,7 @@ const Skills = ({ theme }: Iprops) => {
   return (
     <>
       <div className=" h-screen w-full grid gap-4 grid-cols-4 md:grid-cols-1 grid-flow-col md:grid-flow-row md:grid-rows-3">
-        <div className=" grid col-span-1  place-items-center place-content-center p-8 bg-pink-400 bg-opacity-50   ">
+        <div className=" grid md:col-span-3 place-items-center place-content-center p-8 bg-pink-400 bg-opacity-50 md:m-3   ">
           <div >
             <img
               className=" w-28 grid justify-center items-center "
@@ -17,12 +17,12 @@ const Skills = ({ theme }: Iprops) => {
               alt="profile"
             />
           </div>
-          <div className=" grid  w-auto h-auto text-4xl ">
+          <div className=" grid md:grid-flow-row place  w-auto h-auto text-4xl ">
             Here's what I do...
           </div>
         </div>
 
-        <div className=" col-span-3 grid gap-4 grid-rows-6 justify-center items-center">
+        <div className=" col-span-3 md:row-span-2 grid gap-4 grid-rows-6 justify-center items-center">
           <div className=" gird row-span-1"></div>
           <div className=" text-2xl">~ MERN Stack Development</div>
           <div className=" text-2xl">

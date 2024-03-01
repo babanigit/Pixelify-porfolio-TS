@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeDataType } from "../../assets/theme";
-import ClipLoader from "react-spinners/ClipLoader";
+// import ClipLoader from "react-spinners/ClipLoader";
 import { useState, CSSProperties } from "react";
 
 import { useNavigate } from "react-router-dom";
