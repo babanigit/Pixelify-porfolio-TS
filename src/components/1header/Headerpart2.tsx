@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+// import { Link, NavLink } from "react-router-dom";
 
 import { ThemeDataType } from "../../assets/theme";
 
@@ -10,6 +10,7 @@ interface Iprops {
 
 const Headerpart2 = ({ theme, setTheme }: Iprops) => {
   const [currTheme, setCurrTheme] = useState(theme.name);
+
 
   function changeTheme() {
     if (currTheme === "light") {

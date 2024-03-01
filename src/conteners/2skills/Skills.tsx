@@ -8,13 +8,13 @@ interface Iprops {
 const Skills = ({ theme }: Iprops) => {
   return (
     <>
-      <div className=" h-screen w-full grid gap-4   grid-cols-4 grid-flow-col">
+      <div className=" h-screen w-full grid gap-4 grid-cols-4 md:grid-cols-1 grid-flow-col md:grid-flow-row md:grid-rows-3">
         <div className=" grid col-span-1  place-items-center place-content-center p-8 bg-pink-400 bg-opacity-50   ">
           <div >
             <img
               className=" w-28 grid justify-center items-center "
               src={require(`../../assets/png/mario4.png`)}
-              alt="profile image"
+              alt="profile"
             />
           </div>
           <div className=" grid  w-auto h-auto text-4xl ">

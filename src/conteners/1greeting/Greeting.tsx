@@ -7,26 +7,25 @@ interface dataType {
 }
 
 const Greeting = ({theme}: dataType) => {
-  const code = "</>";
+  // const code = "</>";
   return (
     <>
-      <div className=" h-screen w-full grid grid-cols-3 md:h-screen sm:grid-flow-row ">
-        <div className=" grid col-span-2  place-content-center gap-5 ">
-          <div className=" h-full w-full grid  place-items-center gap-3 grid-flow-col  ">
+      <div className=" h-screen w-full grid grid-cols-3  md:grid-cols-1 md:grid-rows-3">
+        <div className="  h-full w-full grid col-span-2 gap-3 md:gap-8 place-items-center place-content-center md:row-span-2   ">
+          <div className=" h-full w-full grid  place-items-center place-content-center gap-3 md:gap-1 grid-flow-col md:grid-flow-row   ">
             I'm <div className=" text-5xl font-bold">Aniket Panchal.</div>{" "}
             Developer <div className=" text-3xl font-bold">and</div> Digital
             Artist.
           </div>
-          <div ><SocialLinks theme={theme}/></div>
+          <div  className=" w-full h-full md:px-7"><SocialLinks theme={theme}/></div>
         </div>
 
         <div
-        // style={{opacity:theme.bg1}}
-        className= {" h-full w-full grid justify-center items-center  col-span-1 bg-red-400 bg-opacity-50 " + { }}>
+        className= " h-full w-full grid justify-center items-center col-span-1 md:row-span-2  bg-red-400 bg-opacity-50 ">
         <img
           className=" w-28 grid justify-center items-center "
           src={require(`../../assets/png/mincraft3.png`)}
-          alt="profile image"
+          alt="profile"
         /> 
         </div>
       </div>

@@ -18,7 +18,7 @@ interface datatype {
 const Main = ({ theme, setTheme }: datatype) => {
   return (
     <>
-      <div className=""
+      <div
       style={{background:theme.body,color:theme.text}}
       >
         
