@@ -17,20 +17,20 @@ const ProjectPage = (props: Iprops) => {
 
                 <div
                   style={{ borderColor: props.theme.text }}
-                  className="  w-auto h-auto  grid grid-flow-row  border-2 border-gray-700 p-2 px-6 "
+                  className="  w-auto h-auto  grid grid-flow-row  border-2 rounded-md  border-gray-700 p-2 px-6 "
                 >
                   <div className="justify-center flex w-full h-auto text-2xl">
                     {pro.title}
                   </div>
                   <div className=" justify-end flex w-full h-auto  text-xl">
-                    {pro.language_used}
+                    <i>{pro.language_used}</i>
                   </div>
                   <div>
                     {" "}
                     <a
                       href={pro.project_link}
                       style={{ borderColor: props.theme.text }}
-                      className=" border border-spacing-2 px-[2%] "
+                      className=" border border-spacing-2 rounded-md  px-[2%] "
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -50,11 +50,13 @@ const ProjectPage = (props: Iprops) => {
         </div>
 
         <div className=" grid place-items-center place-content-center bg-red-400 bg-opacity-50  ">
-          <div><img
-          className=" w-28 grid justify-center items-center "
-          src={require(`../../assets/png/heart.png`)}
-          alt="profile"
-        /> </div>
+          <div>
+            <img
+              className=" w-28 grid justify-center items-center "
+              src={require(`../../assets/png/heart.png`)}
+              alt="profile"
+            />{" "}
+          </div>
           <div className=" text-2xl">Top three Projects</div>
         </div>
       </div>
@@ -62,11 +64,13 @@ const ProjectPage = (props: Iprops) => {
       {/* project 2 */}
       <div className=" grid grid-flow-col grid-cols-6 h-auto w-auto  ">
         <div className=" grid place-items-center bg-red-400 bg-opacity-50  ">
-          <div className=" "><img
-          className=" w-28 grid justify-center items-center "
-          src={require(`../../assets/png/mario.png`)}
-          alt="profile"
-        /> </div>
+          <div className=" ">
+            <img
+              className=" w-28 grid justify-center items-center "
+              src={require(`../../assets/png/mario.png`)}
+              alt="profile"
+            />{" "}
+          </div>
         </div>
 
         <div className=" grid grid-flow-row p-3 gap-3 col-span-5  grid-rows-3  ">
@@ -77,20 +81,20 @@ const ProjectPage = (props: Iprops) => {
 
                 <div
                   style={{ borderColor: props.theme.text }}
-                  className="  w-auto h-auto  grid grid-flow-row grid-rows-7 border-2 border-gray-700 p-2 px-6 "
+                  className="  w-auto h-auto  grid grid-flow-row grid-rows-7 border-2 rounded-md  border-gray-700 p-2 px-6 "
                 >
                   <div className="justify-center flex w-full h-auto text-2xl">
                     {pro2.title}
                   </div>
                   <div className=" justify-end flex w-full h-auto text-xl">
-                    {pro2.language_used}
+                    <i>{pro2.language_used}</i>{" "}
                   </div>
                   <div>
                     {" "}
                     <a
                       href={pro2.project_link}
                       style={{ borderColor: props.theme.text }}
-                      className=" border border-spacing-2 px-[2%] "
+                      className=" border border-spacing-2 rounded-md  px-[2%] "
                       target="_blank"
                       rel="noreferrer"
                     >

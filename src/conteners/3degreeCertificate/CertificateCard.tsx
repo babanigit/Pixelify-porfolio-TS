@@ -13,7 +13,7 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
   return (
     <div
       style={{ borderColor: theme.text }}
-      className=" w-[80%] h-auto place-items-center grid grid-flow-row border-2 px-[3%] py-[2%] "
+      className=" w-[80%] h-auto place-items-center grid grid-flow-row border-2 rounded-md  px-[3%] py-[2%] "
     >
       <div className=" grid place-items-center text-3xl">
         {certprop.title}{" "}
@@ -34,7 +34,7 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
             </a> */}
         <button
           style={{ borderColor: theme.text,  backgroundColor:theme.body }}
-          className=" border  px-[2%] "
+          className=" border  rounded-md  px-[2%] "
           // onClick={() => setTrigg(!trigg)}
         >
            <a

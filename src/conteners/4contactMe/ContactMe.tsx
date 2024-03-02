@@ -16,7 +16,7 @@ const ContactMe = ({ theme }: Iprops) => {
         <img
           className=" w-64"
           src={require(`../../assets/jpg/me306kb.jpg`)}
-          alt="profile image"
+          alt="profile img"
         />
       </div>
 
@@ -24,14 +24,14 @@ const ContactMe = ({ theme }: Iprops) => {
 
       <div
         style={{ borderColor: theme.text }}
-        className=" h-[60%] w-[70%] col-span-2 grid-rows-4 border-4 border  grid items-center p-[3%] "
+        className=" h-[60%] w-[70%] col-span-2 grid-rows-4 border-4 rounded-md  grid items-center p-[3%] "
       >
         <div className=" h-full  text-3xl grid grid-flow-col justify-center gap-3  items-center  row-span-1 ">
           <div>Contact</div>
           <div> <img
           className=" w-20"
           src={require(`../../assets/png/pngegg.png`)}
-          alt="profile image"
+          alt="profile im"
         /> </div>
         </div>
 
@@ -44,17 +44,17 @@ const ContactMe = ({ theme }: Iprops) => {
               type="text"
               style={{ background: theme.body, borderColor: theme.text }}
               placeholder="your email"
-              className="border px-[2%] border-5 border-white w-full "
+              className="border px-[2%] border-5 rounded-md  border-white w-full "
             />
             <input
               type="text"
               style={{ background: theme.body, borderColor: theme.text }}
               placeholder="message"
-              className=" h-[100px] px-[2%] border border-5 border-white w-full "
+              className=" h-[100px] px-[2%] border border-5 rounded-md  border-white w-full "
             />
             <button
               style={{ borderColor: theme.text }}
-              className=" w-[20%]  grid border border-5 "
+              className=" w-[20%]  grid border border-5 rounded-md "
             >
               {send}
             </button>{" "}
