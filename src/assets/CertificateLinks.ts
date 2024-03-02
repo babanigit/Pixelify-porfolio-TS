@@ -34,35 +34,37 @@ export const certificate: CertificateData = {
     {
       title: "Google data analysis",
       subtitle: "data analysis",
-      dev1: " the fundamental concepts associated with programming in R",
-      dev2: " the R programming language, data visualization and its programming environment.",
-      dev3: " ",
-      dev4: " ",
+      dev1: "Through the completion of several courses, I've learned to ask pertinent questions for data-driven decision-making, conduct data analysis proficiently using R programming, and apply these skills in real-world scenarios through a capstone project.",
+      dev2: "",
+      dev3: "",
+      dev4: "",
       certificate_link:
-        "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
+        "https://drive.google.com/file/d/1rkr_ppn0kDFiR8zTlQoBkuUrCFDlBImw/view?usp=sharing",
         alt_name: "google",
         logo_path: "aws.png",
 
     },
-    // {
-    //   title: "Google data analysis2",
-    //   subtitle: "data analysis",
-    //   dev1: " the fundamental concepts associated with programming in R",
-    //   dev2: " the R programming language, data visualization and its programming environment.",
-    //   dev3: " ",
-    //   dev4: " ",
-    //   certificate_link:
-    //     "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
-    //     alt_name: "google",
-    //     logo_path: "aws.png",
+    {
+      title: "Introduction to Cybersecurity Fundamentals",
+      subtitle: "cybersecurity",
+      dev1: " Acquired comprehensive knowledge of attacker techniques, encompassing phishing, social engineering, and ransomware, enabling a deeper understanding of cybersecurity vulnerabilities and proactive defense measures.",
+      dev2: "",
+      dev3: "",
+      dev4: "",
+      certificate_link:
+        "https://drive.google.com/file/d/1he7TF_MNxpljqxiV7DxVKE0hVcgbCOr-/view?usp=sharing",
+        alt_name: "google",
+        logo_path: "aws.png",
 
-    // },
+    },
     // {
     //   title: "Google data analysis3",
     //   subtitle: "data analysis",
     //   dev1: " the fundamental concepts associated with programming in R",
     //   dev2: " the R programming language, data visualization and its programming environment.",
     //   dev3: " ",
+    //   dev4: " ",
+
     //   certificate_link:
     //     "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
     //     alt_name: "google",

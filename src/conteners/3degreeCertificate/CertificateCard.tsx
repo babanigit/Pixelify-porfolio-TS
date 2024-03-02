@@ -13,9 +13,9 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
   return (
     <div
       style={{ borderColor: theme.text }}
-      className=" w-full h-full grid grid-flow-row border-2 px-[3%] py-[2%] "
+      className=" w-[80%] h-auto place-items-center grid grid-flow-row border-2 px-[3%] py-[2%] "
     >
-      <div className=" grid justify-center items-center text-3xl">
+      <div className=" grid place-items-center text-3xl">
         {certprop.title}{" "}
       </div>
       <div className="  grid place-items-center">
@@ -35,12 +35,21 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
         <button
           style={{ borderColor: theme.text,  backgroundColor:theme.body }}
           className=" border  px-[2%] "
-          onClick={() => setTrigg(!trigg)}
+          // onClick={() => setTrigg(!trigg)}
         >
-          View certification
+           <a
+                        href={certprop.certificate_link}
+                        style={{ borderColor: theme.text }}
+                        // className=" border border-spacing-2 px-[2%] "
+                        target="_blank" rel="noreferrer"
+                      >
+                        pdf Link
+                      </a>
         </button>
 
-        <PopupCertification trigger={trigg} setTrigg={setTrigg} trigg={trigg} theme={theme} >
+
+
+        {/* <PopupCertification trigger={trigg} setTrigg={setTrigg} trigg={trigg} theme={theme} >
           <div
           style={{backgroundColor:theme.body}}
           className=" h-full w-full grid  grid-flow-col grid-cols-4 grid-rows-2 gap-2 p-2  ">
@@ -57,7 +66,6 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
                     <div className="  grid place-items-center">
                       <div>{cert.dev1} </div>
                       <div>{cert.dev2}</div>
-                      {/* <div>{cert.dev3}</div> */}
 
                     </div>
                     <div className=" w-full flex justify-end   ">
@@ -65,7 +73,7 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
                         href={cert.certificate_link}
                         style={{ borderColor: theme.text }}
                         className=" border border-spacing-2 px-[2%] "
-                        target="_blank"
+                        target="_blank" rel="noreferrer"
                       >
                         pdf Link
                       </a>
@@ -75,7 +83,9 @@ const CertificateCard = ({ theme, certprop }: Iprops) => {
               );
             })}
           </div>
-        </PopupCertification>
+        </PopupCertification> */}
+
+
       </div>
     </div>
   );
