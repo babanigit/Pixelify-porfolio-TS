@@ -18,7 +18,7 @@ const Degree = ({ theme }: Iprops) => {
             <img
               className=" w-36 "
               src={require(`../../assets/png/mario2.png`)}
-              alt="profile image"
+              alt="profile_img"
             />
           </div>
           <div className="text-4xl "> Degree </div>
