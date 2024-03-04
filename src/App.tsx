@@ -7,7 +7,7 @@ import { themes } from "./assets/theme";
 import Main from "./conteners/Main";
 
 interface SetThemeContextType {
-  (theme: string): void;
+  (value: string): void;
 }
 
 export const SetThemeContext = createContext<SetThemeContextType>(() => {});
@@ -20,7 +20,7 @@ function App() {
       <div>
         <ThemeProvider theme={themes[themeState]}>
           <SetThemeContext.Provider value={setThemeState}>
-            <Main theme={themes[themeState]} setTheme={setThemeState} />
+            <Main theme={themes[themeState]}  />
           </SetThemeContext.Provider>
         </ThemeProvider>
       </div>

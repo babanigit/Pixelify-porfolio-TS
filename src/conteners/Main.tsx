@@ -12,10 +12,10 @@ import Contact from "../pages/4contact/Contact";
 // interface
 interface datatype {
   theme: ThemeDataType;
-  setTheme: (value: string) => void;
+  // setTheme: (value: string) => void;
 }
 
-const Main = ({ theme, setTheme }: datatype) => {
+const Main = ({ theme }: datatype) => {
   return (
     <>
       <div
