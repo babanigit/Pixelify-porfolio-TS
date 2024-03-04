@@ -1,6 +1,7 @@
-import React,{useState} from "react";
+import React,{useState ,useContext} from "react";
 import { ThemeDataType } from "../../assets/theme";
 import { NavLink } from "react-router-dom";
+import { SetThemeContext } from "../../App";
 
 interface Iprops {
   theme: ThemeDataType;
@@ -8,20 +9,18 @@ interface Iprops {
 }
 
 const Header = ({ theme,setTheme }: Iprops) => {
-
-
     const name = "<Aniket/>"
-
-
   const [currTheme, setCurrTheme] = useState(theme.name);
+
+  const setT = useContext(SetThemeContext);
 
   function changeTheme() {
     if (currTheme === "light") {
-      setTheme("dark");
+      setT("dark");
       // localStorage.setItem("theme", "dark");
       setCurrTheme("dark");
     } else {
-      setTheme("light");
+      setT("light");
       // localStorage.setItem("theme", "light");
       setCurrTheme("light");
     }
