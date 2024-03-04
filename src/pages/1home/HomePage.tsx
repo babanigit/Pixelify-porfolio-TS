@@ -12,14 +12,14 @@ import Skills from "../../conteners/2skills/Skills";
 
 interface datatype {
   theme: ThemeDataType;
-  setTheme: (value: string) => void;
+  // setTheme: (value: string) => void;
 }
 
-const HomePage = ({ theme, setTheme }: datatype) => {
+const HomePage = ({ theme }: datatype) => {
   return (
     <div>
       <div>
-        <Header theme={theme} setTheme={setTheme} />
+        <Header theme={theme} />
         {/* <HeaderPart1 theme={theme} />
         <Headerpart2 theme={theme} setTheme={setTheme} /> */}
         <HeaderPart3 theme={theme} />

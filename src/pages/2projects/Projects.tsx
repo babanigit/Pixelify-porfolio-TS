@@ -1,23 +1,24 @@
 import React from "react";
 import { ThemeDataType } from "../../assets/theme";
-import HeaderPart1 from "../../components/1header/HeaderPart1";
-import Headerpart2 from "../../components/1header/Headerpart2";
+// import HeaderPart1 from "../../components/1header/HeaderPart1";
+// import Headerpart2 from "../../components/1header/Headerpart2";
 import HeaderPart3 from "../../components/1header/HeaderPart3";
 import ProjectPage from "../../conteners/5projectcontents/ProjectPage";
+import Header from "../../components/1header/Header";
 // import ProjectPage2 from "../../conteners/5projectcontents/ProjectPage2";
 
 interface Iprops {
   theme: ThemeDataType;
-  setTheme: (value: string) => void;
+  // setTheme: (value: string) => void;
 }
 
-const Projects = ({ theme, setTheme }: Iprops) => {
+const Projects = ({ theme, }: Iprops) => {
   return (
     <>
       <div>
         <div>
-          <HeaderPart1 theme={theme} />
-          <Headerpart2 theme={theme} setTheme={setTheme} />
+          {/* <HeaderPart1 theme={theme} /> */}
+          <Header theme={theme}/>
           <HeaderPart3 theme={theme} />
         </div>
         <div className="">

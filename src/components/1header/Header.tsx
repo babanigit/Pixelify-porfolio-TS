@@ -1,15 +1,14 @@
-import React,{useState ,useContext} from "react";
+import React, { useState, useContext } from "react";
 import { ThemeDataType } from "../../assets/theme";
 import { NavLink } from "react-router-dom";
 import { SetThemeContext } from "../../App";
 
 interface Iprops {
   theme: ThemeDataType;
-  setTheme:(value:string)=>void
+  // setTheme: (value: string) => void;
 }
 
-const Header = ({ theme,setTheme }: Iprops) => {
-    const name = "<Aniket/>"
+const Header = ({ theme }: Iprops) => {
   const [currTheme, setCurrTheme] = useState(theme.name);
 
   const setT = useContext(SetThemeContext);
@@ -26,6 +25,8 @@ const Header = ({ theme,setTheme }: Iprops) => {
     }
   }
 
+  const name = "<Aniket/>";
+
   return (
     <>
       <div className=" bg-red-400 w-screen h-14 fixed top-0 bg-opacity-0 grid grid-flow-col justify-between items-center px-3 text-xl ">
@@ -33,13 +34,11 @@ const Header = ({ theme,setTheme }: Iprops) => {
           <div>
             <NavLink to="/">{name}</NavLink>
           </div>
-      
         </div>
         <div className=" grid text-right">
-        <button onClick={changeTheme}>
+          <button onClick={changeTheme}>
             {theme.name === "light" ? "<darkTheme/>" : "<lightTheme/>"}
           </button>
-       
         </div>
       </div>
     </>

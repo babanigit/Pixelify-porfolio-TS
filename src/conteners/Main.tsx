@@ -30,19 +30,19 @@ const Main = ({ theme, setTheme }: datatype) => {
             />
             <Route
               path="/home"
-              element={<HomePage theme={theme} setTheme={setTheme} />}
+              element={<HomePage theme={theme}  />}
             />
             <Route
               path="/projects"
-              element={<Projects theme={theme} setTheme={setTheme}/>}
+              element={<Projects theme={theme} />}
             />
             <Route
               path="/eduCert"
-              element={<Education theme={theme} setTheme={setTheme} />}
+              element={<Education theme={theme}  />}
             />
              <Route
               path="/contact"
-              element={<Contact theme={theme} setTheme={setTheme} />}
+              element={<Contact theme={theme}  />}
             />
 
             <Route 

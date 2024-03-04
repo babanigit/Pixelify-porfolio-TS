@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { ThemeDataType } from "../../assets/theme";
 interface Iprops {
   theme: ThemeDataType;
