@@ -1,5 +1,7 @@
-// import React from "react";
+import React,{useEffect} from "react";
 // import Header from "../../components/1header/Header";
+import { useLocation } from 'react-router-dom';
+
 
 import { ThemeDataType } from "../../assets/theme";
 import Header from "../../components/1header/Header";
@@ -16,6 +18,13 @@ interface datatype {
 }
 
 const HomePage = ({ theme }: datatype) => {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div>
       <div>

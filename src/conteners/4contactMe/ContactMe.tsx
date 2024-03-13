@@ -9,7 +9,7 @@ const ContactMe = ({ theme }: Iprops) => {
   const resu = "<Resume/>";
   const send = "<Send/>";
   return (
-    <div className="  h-screen w-screen grid grid-flow-col grid-cols-3 place-items-center items-center">
+    <div className="  h-screen w-screen grid grid-flow-col grid-cols-3 place-items-center  ">
       {/* div 1  */}
 
       <div className="  h-full w-full grid justify-center items-center bg-purple-400 bg-opacity-50 ">
@@ -24,7 +24,7 @@ const ContactMe = ({ theme }: Iprops) => {
 
       <div
         style={{ borderColor: theme.text }}
-        className=" h-[60%] w-[70%] col-span-2 grid-rows-4 border-4 rounded-md  grid items-center p-[3%] "
+        className=" h-[60%] w-auto col-span-2 grid-rows-4 border-4 rounded-md  grid items-center p-[3%] "
       >
         <div className=" h-full  text-3xl grid grid-flow-col justify-center gap-3  items-center  row-span-1 ">
           <div>Contact</div>

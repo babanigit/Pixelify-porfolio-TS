@@ -1,4 +1,6 @@
-import React from "react";
+import React,{useEffect} from "react";
+import { useLocation } from 'react-router-dom';
+
 // import HeaderPart1 from "../../components/1header/HeaderPart1";
 // import Headerpart2 from "../../components/1header/Headerpart2";
 import HeaderPart3 from "../../components/1header/HeaderPart3";
@@ -14,6 +16,12 @@ interface Iprop {
   // setTheme: (value: string) => void;
 }
 const Education = ({ theme,}: Iprop) => {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
       <div
