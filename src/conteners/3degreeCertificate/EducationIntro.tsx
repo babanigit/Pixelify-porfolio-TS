@@ -5,7 +5,7 @@ interface Iprops {
 }
 const EducationIntro = ({ theme }: Iprops) => {
   return (
-    <div className=" h-screen w-full grid grid-flow-col grid-cols-3 ">
+    <div className=" h-screen w-full grid grid-flow-col grid-cols-3 p-3">
       <div className=" bg-blue-20 grid col-span-2 grid-flow-row text-center items-center py-[26%] px-3">
         <div className=" text-6xl">Education</div>
         <div className=" text-3xl">Basic Qualification and Certifications</div>
@@ -15,7 +15,7 @@ const EducationIntro = ({ theme }: Iprops) => {
         </div>
       </div>
 
-      <div className=" bg-red-20 grid  justify-center items-center bg-green-400 bg-opacity-50 ">
+      <div className=" bg-red-20 grid  justify-center items-center bg-green-400 bg-opacity-50 rounded-full">
 
       <img
           className=" w-28 grid justify-center items-center "

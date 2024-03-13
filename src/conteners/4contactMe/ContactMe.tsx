@@ -9,10 +9,10 @@ const ContactMe = ({ theme }: Iprops) => {
   const resu = "<Resume/>";
   const send = "<Send/>";
   return (
-    <div className="  h-screen w-screen grid grid-flow-col grid-cols-3 place-items-center  ">
+    <div className="  h-screen w-screen grid grid-flow-col grid-cols-3 place-items-center p-3  ">
       {/* div 1  */}
 
-      <div className="  h-full w-full grid justify-center items-center bg-purple-400 bg-opacity-50 ">
+      <div className="  h-full w-full grid justify-center items-center bg-purple-400 bg-opacity-50 rounded-full">
         <img
           className=" w-64"
           src={require(`../../assets/jpg/me306kb.jpg`)}

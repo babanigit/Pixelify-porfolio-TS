@@ -8,7 +8,7 @@ interface Iprops {
 
 const Certificate = ({ theme }: Iprops) => {
   return (
-    <div className=" h-screen w-full grid grid-flow-col place-items-center grid-cols-4">
+    <div className=" h-screen w-full grid grid-flow-col place-items-center grid-cols-4 p-3">
       <div className="grid col-span-3 place-items-center w-full h-full  px-2  ">
         <div className=" grid gap-4 ">
           {certificate.certifications.map((cert) => {
@@ -27,7 +27,7 @@ const Certificate = ({ theme }: Iprops) => {
         </div>
       </div>
 
-      <div className=" grid place-items-center bg-yellow-400 bg-opacity-50 h-full w-full place-content-center ">
+      <div className=" grid place-items-center bg-yellow-400 bg-opacity-50 h-full w-full place-content-center rounded-full ">
         <div>
           <img
             className=" w-20"

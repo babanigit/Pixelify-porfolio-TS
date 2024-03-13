@@ -7,8 +7,8 @@ const ProjectPage = (props: Iprops) => {
   const GH = "<GitHub Link/>";
   return (
     <>
-      {/* project 1 */}
-      <div className=" grid grid-flow-col grid-cols-6 h-auto w-auto  ">
+      {/* section 1 */}
+      <div className=" grid grid-flow-col grid-cols-6 h-auto w-auto p-3 ">
         <div className=" grid grid-flow-row p-3 gap-3 col-span-5  grid-rows-3  ">
           {projects.page1.map((pro) => {
             return (
@@ -17,7 +17,7 @@ const ProjectPage = (props: Iprops) => {
 
                 <div
                   style={{ borderColor: props.theme.text }}
-                  className="  w-auto h-auto  grid grid-flow-row  border-2 rounded-md  border-gray-700 p-2 px-6 "
+                  className="  w-auto h-auto  grid grid-flow-row  border-2 rounded-md  border-gray-700 p-2 px-6 rounded-3xl "
                 >
                   <div className="justify-center flex w-full h-auto text-2xl">
                     {pro.title}
@@ -40,6 +40,7 @@ const ProjectPage = (props: Iprops) => {
                   <div className=" h-auto grid row-span-4 text-lg">
                     <div>{pro.dev1}</div>
                     <div>{pro.dev2}</div>
+                    <div>{pro.dev3}</div>
                   </div>
                 </div>
 
@@ -49,7 +50,7 @@ const ProjectPage = (props: Iprops) => {
           })}
         </div>
 
-        <div className=" grid place-items-center place-content-center bg-red-400 bg-opacity-50  ">
+        <div className=" grid place-items-center place-content-center bg-red-400 bg-opacity-50 rounded-full  ">
           <div>
             <img
               className=" w-28 grid justify-center items-center "
@@ -61,9 +62,9 @@ const ProjectPage = (props: Iprops) => {
         </div>
       </div>
 
-      {/* project 2 */}
-      <div className=" grid grid-flow-col grid-cols-6 h-auto w-auto  ">
-        <div className=" grid place-items-center bg-red-400 bg-opacity-50  ">
+      {/* section 2 */}
+      <div className=" grid grid-flow-col grid-cols-6  w-auto h-auto p-3 ">
+        <div className=" grid place-items-center place-content-center h-auto bg-red-400 bg-opacity-50 rounded-full  ">
           <div className=" ">
             <img
               className=" w-28 grid justify-center items-center "
@@ -81,7 +82,7 @@ const ProjectPage = (props: Iprops) => {
 
                 <div
                   style={{ borderColor: props.theme.text }}
-                  className="  w-auto h-auto  grid grid-flow-row grid-rows-7 border-2 rounded-md  border-gray-700 p-2 px-6 "
+                  className="  w-auto h-auto  grid grid-flow-row grid-rows-7 border-2 rounded-md  p-2 px-6 rounded-3xl "
                 >
                   <div className="justify-center flex w-full h-auto text-2xl">
                     {pro2.title}

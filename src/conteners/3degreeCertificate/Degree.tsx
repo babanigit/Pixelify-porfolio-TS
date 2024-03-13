@@ -12,8 +12,8 @@ const Degree = ({ theme }: Iprops) => {
   return (
     <>
       {/* add place-items-center to place all child div in center */}
-      <div className=" h-screen w-full grid grid-flow-col grid-cols-4 place-items-center ">
-        <div className=" grid place-items-center bg-red-400 bg-opacity-50  h-full w-full place-content-center ">
+      <div className=" h-screen w-full grid grid-flow-col grid-cols-4 place-items-center p-3">
+        <div className=" grid place-items-center bg-red-400 bg-opacity-50  h-full w-full place-content-center rounded-full ">
           <div>
             <img
               className=" w-36 "
