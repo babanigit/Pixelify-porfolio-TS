@@ -12,7 +12,7 @@ const HeaderPart1 = ({ theme }: Iprops) => {
   return (
     <>
       <div
-        // style={{background:theme.body}}
+        style={{background:theme.body}}
         className="  fixed top-0 left-0 w-[150px] h-[50px] bg-opacity-0 grid grid-flow-col  justify-center items-center text-xl"
       >
         <div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeDataType } from "../../assets/theme";
+import Mario from "../../assets/png/mario4.png";
 
 interface Iprops {
   theme: ThemeDataType;
@@ -8,12 +9,12 @@ interface Iprops {
 const Skills = ({ theme }: Iprops) => {
   return (
     <>
-      <div className=" h-screen w-full grid gap-4 grid-cols-4 md:grid-cols-1 grid-flow-col md:grid-flow-row md:grid-rows-3 p-3" >
+      <div className=" h-screen w-full grid gap-4 grid-cols-4 md:grid-cols-1 grid-flow-col md:grid-flow-row md:grid-rows-3 p-3">
         <div className=" grid md:col-span-3 place-items-center place-content-center p-8 bg-pink-400 bg-opacity-50 md:m-3 rounded-full   ">
-          <div >
+          <div>
             <img
               className=" w-28 grid justify-center items-center "
-              src={require(`../../assets/png/mario4.png`)}
+              src={Mario}
               alt="profile"
             />
           </div>

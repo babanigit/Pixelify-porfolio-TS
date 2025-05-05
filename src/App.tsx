@@ -1,5 +1,4 @@
-import React, { useState, createContext } from "react";
-// import logo from "./logo.svg";
+import { useState, createContext } from "react";
 
 import { ThemeProvider } from "styled-components";
 import { themes } from "./assets/theme";
@@ -12,7 +11,7 @@ interface SetThemeContextType {
 
 export const SetThemeContext = createContext<SetThemeContextType>(() => {});
 
-function App() {
+const App = () => {
   const [themeState, setThemeState] = useState<string>("dark");
 
   return (
@@ -20,12 +19,12 @@ function App() {
       <div>
         <ThemeProvider theme={themes[themeState]}>
           <SetThemeContext.Provider value={setThemeState}>
-            <Main theme={themes[themeState]}  />
+            <Main theme={themes[themeState]} />
           </SetThemeContext.Provider>
         </ThemeProvider>
       </div>
     </>
   );
-}
+};
 
 export default App;

@@ -1,12 +1,12 @@
-import React from "react";
 import { ThemeDataType } from "../../assets/theme";
 import SocialLinks from "../../components/3SocialLinks/SocialLinks";
+import mincraft3 from "../../assets/png/mincraft3.png";
 
 interface dataType {
   theme: ThemeDataType;
 }
 
-const Greeting = ({theme}: dataType) => {
+const Greeting = ({ theme }: dataType) => {
   // const code = "</>";
   return (
     <>
@@ -17,16 +17,17 @@ const Greeting = ({theme}: dataType) => {
             Developer <div className=" text-3xl font-bold">and</div> Digital
             Artist.
           </div>
-          <div  className=" w-full h-full md:px-7"><SocialLinks theme={theme}/></div>
+          <div className=" w-full h-full md:px-7">
+            <SocialLinks theme={theme} />
+          </div>
         </div>
 
-        <div
-        className= " h-full w-full grid justify-center items-center col-span-1 md:row-span-2   bg-red-400 bg-opacity-50 rounded-full ">
-        <img
-          className=" w-28 grid justify-center items-center "
-          src={require(`../../assets/png/mincraft3.png`)}
-          alt="profile"
-        /> 
+        <div className=" h-full w-full grid justify-center items-center col-span-1 md:row-span-2   bg-red-400 bg-opacity-50 rounded-full ">
+          <img
+            className=" w-28 grid justify-center items-center "
+            src={mincraft3}
+            alt="profile"
+          />
         </div>
       </div>
     </>

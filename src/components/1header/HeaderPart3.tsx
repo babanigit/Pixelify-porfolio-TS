@@ -1,4 +1,3 @@
-import React from "react";
 import { ThemeDataType } from "../../assets/theme";
 import { NavLink } from "react-router-dom";
 
@@ -14,7 +13,7 @@ const HeaderPart3 = ({ theme }: Iprops) => {
 
   return (
     <>
-      <div className=" bg-red-400 w-screen h-14 fixed bottom-0 bg-opacity-0 grid grid-flow-col justify-between items-center px-3 text-xl ">
+      <div className="  w-screen h-14 fixed bottom-0 bg-opacity-0 grid grid-flow-col justify-between items-center px-3 text-xl ">
         <div>
           <div>
             <NavLink to="/projects">{project}</NavLink>
