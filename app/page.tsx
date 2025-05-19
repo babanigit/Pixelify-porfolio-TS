@@ -13,7 +13,6 @@ import { usePathname } from "next/navigation";
 // import HeaderPart1 from "@/components/1header/HeaderPart1";
 // import HeaderPart3 from "@/components/1header/HeaderPart3";
 import Greeting from "@/conteners/1greeting/Greeting";
-import Skills from "@/conteners/2skills/Skills";
 
 export default function HomePage() {
   const pathname = usePathname();
@@ -27,9 +26,7 @@ export default function HomePage() {
       <div>
         <Greeting />
       </div>
-      <div>
-        {/* <Skills /> */}
-      </div>
+      
     </div>
   );
 }

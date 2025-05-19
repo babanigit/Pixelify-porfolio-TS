@@ -1,42 +1,39 @@
-import React from "react";
-import { ThemeDataType } from "../../../assets/theme";
-import Mario from "../../assets/png/mario4.png";
+"use client";
 
-interface Iprops {
-  theme: ThemeDataType;
-}
+import Image from "next/image";
+import mario4 from "../../assets/png/mario4.png"; // Make sure this is imported properly
 
-const Skills = ({ theme }: Iprops) => {
+// import { ThemeDataType } from "@/assets/theme";
+
+// interface Iprops {
+//   theme: ThemeDataType;
+// }
+
+const Skills = () => {
   return (
-    <>
-      <div className=" h-screen w-full grid gap-4 grid-cols-4 md:grid-cols-1 grid-flow-col md:grid-flow-row md:grid-rows-3 p-3">
-        <div className=" grid md:col-span-3 place-items-center place-content-center p-8 bg-pink-400 bg-opacity-50 md:m-3 rounded-full   ">
-          <div>
-            <img
-              className=" w-28 grid justify-center items-center "
-              src={Mario}
-              alt="profile"
-            />
-          </div>
-          <div className=" grid md:grid-flow-row place  w-auto h-auto text-4xl ">
-            Here's what I do...
-          </div>
-        </div>
-
-        <div className=" col-span-3 md:row-span-2 grid gap-4 grid-rows-6 justify-center items-center">
-          <div className=" gird row-span-1"></div>
-          <div className=" text-2xl">~ MERN Stack Development</div>
-          <div className=" text-2xl">
-            ~ Building responsive website using NEXT.js and typeSCRIPT
-          </div>
-          <div className=" text-2xl">
-            ~ Developing mobile applications using REACT native
-          </div>
-          <div className=" text-2xl">~ Integrating APIs</div>
-          <div className=" gird row-span-1"></div>
-        </div>
+    <div className="w-full min-h-screen grid gap-6 grid-rows-auto md:grid-cols-4 md:grid-rows-1 p-4">
+      {/* Image and Intro Section */}
+      <div className="md:col-span-1 flex flex-col justify-center items-center bg-pink-400/50 p-6 rounded-full">
+        <Image
+          src={mario4}
+          alt="profile"
+          width={100}
+          height={100}
+          className="mb-4"
+        />
+        <h2 className="text-center text-3xl font-semibold">
+          Here's what I do...
+        </h2>
       </div>
-    </>
+
+      {/* Skills Section */}
+      <div className="md:col-span-3 grid gap-4 justify-center items-center text-center text-lg md:text-2xl">
+        <p>~ MERN Stack Development</p>
+        <p>~ Building responsive websites using Next.js and TypeScript</p>
+        <p>~ Developing mobile applications using React Native</p>
+        <p>~ Integrating APIs</p>
+      </div>
+    </div>
   );
 };
 

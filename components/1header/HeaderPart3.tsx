@@ -9,7 +9,7 @@ const HeaderPart3 = () => {
   const contact = "<Contact/>";
   const eduCert = "<Certifications/>";
   const project = "<Projects/>";
-  const home = "<Home/>";
+  const home = "<Skills/>";
 
   return (
     <div className="w-screen h-14 fixed bottom-0 bg-opacity-0 grid grid-flow-col justify-between items-center px-3 text-xl">
@@ -18,12 +18,12 @@ const HeaderPart3 = () => {
           <Link href="/projects">{project}</Link>
         </div>
         <div>
-          <Link href="/eduCert">{eduCert}</Link>
+          <Link href="/edu">{eduCert}</Link>
         </div>
       </div>
       <div className="grid text-right">
         <div>
-          <Link href="/home">{home}</Link>
+          <Link href="/skills">{home}</Link>
         </div>
         <div>
           <Link href="/contact">{contact}</Link>

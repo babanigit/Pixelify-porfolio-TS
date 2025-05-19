@@ -1,117 +1,114 @@
-import { projects } from "../../../assets/Project";
-import { ThemeDataType, themes } from "../../../assets/theme";
-interface Iprops {
-  theme: ThemeDataType;
-}
-const ProjectPage = (props: Iprops) => {
+"use client";
+
+import Image from "next/image";
+import { projects } from "@/assets/Project";
+import { ThemeDataType } from "@/assets/theme";
+
+import mario from "../../assets/png/mario.png"; // Make sure this is imported properly
+import heart from "../../assets/png/heart.png"; // Make sure this is imported properly
+
+// interface Iprops {
+//   theme: ThemeDataType;
+// }
+
+const ProjectPage = () => {
   const GH = "<GitHub Link/>";
+
   return (
     <>
-      {/* section 1 */}
-      <div className=" grid grid-flow-col grid-cols-6 h-auto w-auto p-3 ">
-        <div className=" grid grid-flow-row p-3 gap-3 col-span-5  grid-rows-3  ">
-          {projects.page1.map((pro) => {
-            return (
-              <>
-                {/* this is starting point */}
-
-                <div
-                  style={{ borderColor: props.theme.text }}
-                  className="  w-auto h-auto  grid grid-flow-row  border-2 rounded-md  border-gray-700 p-2 px-6 rounded-3xl "
+      {/* Section 1 */}
+      <div className="grid grid-cols-1 md:grid-cols-6 w-full gap-4 p-4">
+        {/* Project Cards */}
+        <div className="md:col-span-5 grid gap-4">
+          {projects.page1.map((pro, index) => (
+            <div
+              key={index}
+              // style={{ borderColor: theme.text }}
+              className="border-2 p-4 rounded-3xl w-full"
+            >
+              <div className="text-center text-2xl font-semibold">
+                {pro.title}
+              </div>
+              <div className="text-right text-xl italic">
+                {pro.language_used}
+              </div>
+              <div className="my-2">
+                <a
+                  href={pro.project_link}
+                  target="_blank"
+                  rel="noreferrer"
+                  // style={{ borderColor: theme.text }}
+                  className="border rounded-md px-3 py-1 inline-block"
                 >
-                  <div className="justify-center flex w-full h-auto text-2xl">
-                    {pro.title}
-                  </div>
-                  <div className=" justify-end flex w-full h-auto  text-xl">
-                    <i>{pro.language_used}</i>
-                  </div>
-                  <div>
-                    {" "}
-                    <a
-                      href={pro.project_link}
-                      style={{ borderColor: props.theme.text }}
-                      className=" border border-spacing-2 rounded-md  px-[2%] "
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {GH}
-                    </a>{" "}
-                  </div>
-                  <div className=" h-auto grid row-span-4 text-lg">
-                    <div>{pro.dev1}</div>
-                    <div>{pro.dev2}</div>
-                    <div>{pro.dev3}</div>
-                  </div>
-                </div>
-
-                {/* this is an end */}
-              </>
-            );
-          })}
+                  {GH}
+                </a>
+              </div>
+              <div className="text-lg grid gap-1">
+                <div>{pro.dev1}</div>
+                <div>{pro.dev2}</div>
+                <div>{pro.dev3}</div>
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className=" grid place-items-center place-content-center bg-red-400 bg-opacity-50 rounded-full  ">
-          <div>
-            <img
-              className=" w-28 grid justify-center items-center "
-              src={require(`../../assets/png/heart.png`)}
-              alt="profile"
-            />{" "}
-          </div>
-          <div className=" text-2xl">Top three Projects</div>
+        {/* Side Image */}
+        <div className="flex flex-col items-center justify-center bg-red-400/50 rounded-full p-4">
+          <Image
+            src={heart}
+            alt="heart"
+            width={100}
+            height={100}
+            className="object-contain"
+          />
+          <div className="text-2xl mt-2">Top Three Projects</div>
         </div>
       </div>
 
-      {/* section 2 */}
-      <div className=" grid grid-flow-col grid-cols-6  w-auto h-auto p-3 ">
-        <div className=" grid place-items-center place-content-center h-auto bg-red-400 bg-opacity-50 rounded-full  ">
-          <div className=" ">
-            <img
-              className=" w-28 grid justify-center items-center "
-              src={require(`../../assets/png/mario.png`)}
-              alt="profile"
-            />{" "}
-          </div>
+      {/* Section 2 */}
+      <div className="grid grid-cols-1 md:grid-cols-6 w-full gap-4 p-4">
+        {/* Side Image */}
+        <div className="flex items-center justify-center bg-red-400/50 bg-opacity-50 rounded-full p-4">
+          <Image
+            src={mario}
+            alt="mario"
+            width={100}
+            height={100}
+            className="object-contain"
+          />
         </div>
 
-        <div className=" grid grid-flow-row p-3 gap-3 col-span-5  grid-rows-3  ">
-          {projects.page2.map((pro2) => {
-            return (
-              <>
-                {/* this is starting point */}
-
-                <div
-                  style={{ borderColor: props.theme.text }}
-                  className="  w-auto h-auto  grid grid-flow-row grid-rows-7 border-2 rounded-md  p-2 px-6 rounded-3xl "
+        {/* Project Cards */}
+        <div className="md:col-span-5 grid gap-4">
+          {projects.page2.map((pro2, index) => (
+            <div
+              key={index}
+              // style={{ borderColor: theme.text }}
+              className="border-2 p-4 rounded-3xl w-full"
+            >
+              <div className="text-center text-2xl font-semibold">
+                {pro2.title}
+              </div>
+              <div className="text-right text-xl italic">
+                {pro2.language_used}
+              </div>
+              <div className="my-2">
+                <a
+                  href={pro2.project_link}
+                  target="_blank"
+                  rel="noreferrer"
+                  // style={{ borderColor: theme.text }}
+                  className="border rounded-md px-3 py-1 inline-block"
                 >
-                  <div className="justify-center flex w-full h-auto text-2xl">
-                    {pro2.title}
-                  </div>
-                  <div className=" justify-end flex w-full h-auto text-xl">
-                    <i>{pro2.language_used}</i>{" "}
-                  </div>
-                  <div>
-                    {" "}
-                    <a
-                      href={pro2.project_link}
-                      style={{ borderColor: props.theme.text }}
-                      className=" border border-spacing-2 rounded-md  px-[2%] "
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {GH}
-                    </a>{" "}
-                  </div>
-                  <div className=" grid row-span-4 text-lg">
-                    <div>{pro2.dev1}</div>
-                    <div>{pro2.dev2}</div>
-                  </div>
-                </div>
-
-                {/* this is an end */}
-              </>
-            );
-          })}
+                  {GH}
+                </a>
+              </div>
+              <div className="text-lg grid gap-1">
+                <div>{pro2.dev1}</div>
+                <div>{pro2.dev2}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
