@@ -16,37 +16,55 @@ const SocialLinks = () => {
   const DigiArt = "<Arts/>";
 
   return (
-    <div className="grid gap-3 grid-cols-2 md:grid-cols-6 grid-rows-3 md:grid-rows-1 place-items-center mx-6">
-      <div className="w-auto h-auto">
-        <a href={socialMediaLinks.resume} target="_blank" rel="noreferrer">
-          {Resume}
-        </a>
-      </div>
-      <div className="w-auto h-auto">
-        <a href={socialMediaLinks.linkedin} target="_blank" rel="noreferrer">
-          {LinkedIn}
-        </a>
-      </div>
-      <div className="w-auto h-auto">
-        <a href={socialMediaLinks.github} target="_blank" rel="noreferrer">
-          {GH}
-        </a>
-      </div>
-      <div className="w-auto h-auto">
-        <a href={socialMediaLinks.leetcode} target="_blank" rel="noreferrer">
-          {LeetCode}
-        </a>
-      </div>
-      <div className="w-auto h-auto">
-        <a href={socialMediaLinks.instagram} target="_blank" rel="noreferrer">
-          {Insta}
-        </a>
-      </div>
-      <div className="w-auto h-auto">
-        <a href={socialMediaLinks.instagram2} target="_blank" rel="noreferrer">
-          {DigiArt}
-        </a>
-      </div>
+    <div className="grid gap-4 grid-cols-2 md:grid-cols-6 place-items-center mx-6 text-center">
+      <a
+        href={socialMediaLinks.resume}
+        target="_blank"
+        rel="noreferrer"
+        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+      >
+        {Resume}
+      </a>
+      <a
+        href={socialMediaLinks.linkedin}
+        target="_blank"
+        rel="noreferrer"
+        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+      >
+        {LinkedIn}
+      </a>
+      <a
+        href={socialMediaLinks.github}
+        target="_blank"
+        rel="noreferrer"
+        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+      >
+        {GH}
+      </a>
+      <a
+        href={socialMediaLinks.leetcode}
+        target="_blank"
+        rel="noreferrer"
+        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+      >
+        {LeetCode}
+      </a>
+      <a
+        href={socialMediaLinks.instagram}
+        target="_blank"
+        rel="noreferrer"
+        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+      >
+        {Insta}
+      </a>
+      <a
+        href={socialMediaLinks.instagram2}
+        target="_blank"
+        rel="noreferrer"
+        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+      >
+        {DigiArt}
+      </a>
     </div>
   );
 };

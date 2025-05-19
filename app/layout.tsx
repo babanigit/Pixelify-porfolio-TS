@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Pixelify_Sans  } from "next/font/google";
 import "./globals.css";
 import HeaderPart1 from "@/components/1header/HeaderPart1";
-import Headerpart2 from "@/components/1header/Headerpart2";
+// import Headerpart2 from "@/components/1header/Headerpart2";
 import HeaderPart3 from "@/components/1header/HeaderPart3";
+
+const pixelify = Pixelify_Sans({
+  weight: ["400"], // or multiple weights like ['400', '700']
+  subsets: ["latin"],
+  variable: "--font-pixelify-sans", // optional CSS variable
+  display: "swap", // recommended
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,21 +34,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com"  />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
-          rel="stylesheet"
-        />
-        {/* <title>Aniket Panchal Portfolio</title>
-        <link rel="icon" href="/mincraft2.png" type="image/svg+xml" /> */}
-      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${pixelify.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <HeaderPart1 />
-        <HeaderPart3 />
+        {/* <HeaderPart1 />
+        <HeaderPart3 /> */}
         <main className="min-h-screen">{children}</main>
       </body>
     </html>
