@@ -21,8 +21,8 @@ const Education = ({ theme }: Iprop) => {
   return (
     <div>
       <EducationIntro  />
-      {/* <Degree theme={theme} />
-      <Certificate theme={theme} /> */}
+      <Degree  />
+      <Certificate  />
     </div>
   );
 };
