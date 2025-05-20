@@ -46,9 +46,7 @@ const MainPage = () => {
       <div className="scroll-smooth">
         <section id="home" className="min-h-screen pt-20 scroll-mt-20">
           {/* <h1 className="text-4xl font-bold"></h1> */}
-          <div>
-            <Greeting />
-          </div>
+          <Greeting />
         </section>
         <section id="about" className="min-h-screen pt-20 scroll-mt-20">
           {/* <h1 className="text-4xl font-bold">Education</h1> */}

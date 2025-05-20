@@ -2,6 +2,7 @@
 
 // import { ThemeDataType } from "../../../assets/theme";
 import { socialMediaLinks } from "@/assets/Links";
+import Link from "next/link";
 
 // interface IProps {
 //   theme: ThemeDataType;
@@ -17,14 +18,14 @@ const SocialLinks = () => {
 
   return (
     <div className="grid gap-4 grid-cols-2 md:grid-cols-6 place-items-center mx-6 text-center">
-      <a
+      <Link
         href={socialMediaLinks.resume}
-        target="_blank"
-        rel="noreferrer"
+        // target="_blank"
+        // rel="noreferrer"
         className="px-4 py-2  rounded hover:bg-gray-200 transition"
       >
         {Resume}
-      </a>
+      </Link>
       <a
         href={socialMediaLinks.linkedin}
         target="_blank"
