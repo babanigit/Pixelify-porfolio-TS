@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 import HeaderPart3 from "../../components/1header/HeaderPart3";
 
 import { ThemeDataType } from "../../../assets/theme";
-import ContactMe from "../../conteners/4contactMe/ContactMe";
+import ContactMe from "../../containers/ContactMe";
 import Header from "../../components/1header/Header";
 interface Iprops {
   theme: ThemeDataType;

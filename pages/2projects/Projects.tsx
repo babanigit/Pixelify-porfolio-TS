@@ -3,7 +3,7 @@ import { ThemeDataType } from "../../../assets/theme";
 // import HeaderPart1 from "../../components/1header/HeaderPart1";
 // import Headerpart2 from "../../components/1header/Headerpart2";
 import HeaderPart3 from "../../components/1header/HeaderPart3";
-import ProjectPage from "../../conteners/5projectcontents/ProjectPage";
+import ProjectPage from "../../containers/ProjectPage";
 import Header from "../../components/1header/Header";
 // import ProjectPage2 from "../../conteners/5projectcontents/ProjectPage2";
 

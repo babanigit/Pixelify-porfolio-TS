@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Pixelify_Sans  } from "next/font/google";
+import { Geist, Geist_Mono, Pixelify_Sans } from "next/font/google";
 import "./globals.css";
-import HeaderPart1 from "@/components/1header/HeaderPart1";
-// import Headerpart2 from "@/components/1header/Headerpart2";
-import HeaderPart3 from "@/components/1header/HeaderPart3";
 
 const pixelify = Pixelify_Sans({
   weight: ["400"], // or multiple weights like ['400', '700']
@@ -37,8 +34,6 @@ export default function RootLayout({
       <body
         className={`${pixelify.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <HeaderPart1 />
-        <HeaderPart3 /> */}
         <main className="min-h-screen">{children}</main>
       </body>
     </html>

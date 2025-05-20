@@ -1,6 +1,6 @@
 import React from "react";
 
-import Skills from "@/conteners/2skills/Skills";
+import Skills from "@/containers/Skills";
 
 const Skillss = () => {
   return (

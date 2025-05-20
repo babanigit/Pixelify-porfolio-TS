@@ -1,19 +1,16 @@
-"use client";
 
-import React from "react";
+
+import { certificate } from '@/assets/CertificateLinks'
+import React from 'react'
+import CertificateCard from './3degreeCertificate/CertificateCard'
 import Image from "next/image";
-// import { ThemeDataType } from "../../../assets/theme";
-import CertificateCard from "./CertificateCard";
-import { certificate } from "../../assets/CertificateLinks";
 
-import certImg from "../../assets/png/mincraft1.png";
+import certImg from "../assets/png/mincraft1.png";
 
-// interface Iprops {
-//   theme: ThemeDataType;
-// }
-
-const Certificate = () => {
+const Skills2 = () => {
   return (
+    <>
+    
     <div className="h-screen w-full grid grid-flow-col place-items-center grid-cols-4 p-3">
       {/* Certificate Cards */}
       <div className="grid col-span-3 place-items-center w-full h-full px-2">
@@ -27,7 +24,7 @@ const Certificate = () => {
       </div>
 
       {/* Right-side Image */}
-      <div className="grid place-items-center bg-yellow-400 bg-opacity-50 h-full w-full place-content-center rounded-full">
+      <div className="grid place-items-center bg-yellow-400/50 h-full w-full place-content-center rounded-full">
         <div>
           <Image
             className="w-20"
@@ -40,7 +37,9 @@ const Certificate = () => {
         <div className="text-4xl">Certificates</div>
       </div>
     </div>
-  );
-};
+    
+    </>
+  )
+}
 
-export default Certificate;
+export default Skills2

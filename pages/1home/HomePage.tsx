@@ -9,8 +9,8 @@ import Header from "../../components/1header/Header";
 // import Headerpart2 from "../../components/1header/Headerpart2";
 import HeaderPart3 from "../../components/1header/HeaderPart3";
 
-import Greeting from "../../conteners/1greeting/Greeting";
-import Skills from "../../conteners/2skills/Skills";
+import Greeting from "../../containers/Greeting";
+import Skills from "../../containers/Skills";
 
 interface datatype {
   theme: ThemeDataType;

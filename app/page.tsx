@@ -1,12 +1,14 @@
 "use client";
 import Navbar_Compo from "@/components/Navbar_Compo";
-import Greeting from "@/conteners/1greeting/Greeting";
-import Certificate from "@/conteners/3degreeCertificate/Certificate";
-import Degree from "@/conteners/3degreeCertificate/Degree";
-import EducationIntro from "@/conteners/3degreeCertificate/EducationIntro";
-import ContactMe from "@/conteners/4contactMe/ContactMe";
-import ProjectPage from "@/conteners/5projectcontents/ProjectPage";
+import Greeting from "@/containers/Greeting";
+import Certificate from "@/containers/3degreeCertificate/Certificate";
+import Degree from "@/containers/3degreeCertificate/Degree";
+import EducationIntro from "@/containers/3degreeCertificate/EducationIntro";
+import ContactMe from "@/containers/ContactMe";
+import ProjectPage from "@/containers/ProjectPage";
 import React, { useEffect, useState } from "react";
+import Experience from "@/containers/Experience";
+import Skills from "@/containers/Skills";
 
 const MainPage = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -33,6 +35,15 @@ const MainPage = () => {
     };
   }, [lastScrollY]);
 
+  /*
+home
+experience
+skills
+education
+projects
+connect
+*/
+
   return (
     <>
       <nav
@@ -48,19 +59,29 @@ const MainPage = () => {
           {/* <h1 className="text-4xl font-bold"></h1> */}
           <Greeting />
         </section>
-        <section id="about" className=" scroll-mt-20">
+        <section id="experience" className=" pt-10 scroll-mt-20">
+          {/* <h1 className="text-4xl font-bold"> experience</h1> */}
+          <Experience />
+        </section>
+
+        <section id="skills" className=" pt-10 scroll-mt-20">
+          {/* <h1 className="text-4xl font-bold"> experience</h1> */}
+          <Skills />
+        </section>
+
+        <section id="education" className=" scroll-mt-20">
           {/* <h1 className="text-4xl font-bold">Education</h1> */}
           <EducationIntro />
           <Degree />
           {/* <Certificate /> */}
         </section>
-        <section id="skills" className="min-h-screen pt-20 scroll-mt-20">
-          <h1 className="text-4xl w-full flex justify-center font-bold">
+        <section id="projects" className="min-h-screen pt-20 scroll-mt-20">
+          <h1 className="text-4xl w-full flex justify-center ">
             Projects
           </h1>
           <ProjectPage />
         </section>
-        <section id="contact" className="min-h-screen pt-20 scroll-mt-20">
+        <section id="connect" className="min-h-screen pt-20 scroll-mt-20">
           {/* <h1 className="text-4xl font-bold w-full flex justify-center">
             Contact{" "}
           </h1> */}

@@ -1,4 +1,4 @@
-import ContactMe from "../../conteners/4contactMe/ContactMe";
+import ContactMe from "../../containers/ContactMe";
 import React from "react";
 
 const Contact = () => {

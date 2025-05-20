@@ -4,8 +4,8 @@ import Image from "next/image";
 import { projects } from "@/assets/Project";
 import { ThemeDataType } from "@/assets/theme";
 
-import mario from "../../assets/png/mario.png"; // Make sure this is imported properly
-import heart from "../../assets/png/heart.png"; // Make sure this is imported properly
+import mario from "../assets/png/mario.png"; // Make sure this is imported properly
+import heart from "../assets/png/heart.png"; // Make sure this is imported properly
 
 // interface Iprops {
 //   theme: ThemeDataType;
@@ -21,14 +21,14 @@ const ProjectPage = () => {
         
         {/* Side Image */}
         <div className="flex flex-col items-center justify-center bg-red-400/50 rounded-full p-4">
-          <Image
+          {/* <Image
             src={heart}
             alt="heart"
             width={100}
             height={100}
             className="object-contain"
-          />
-          <div className="text-2xl mt-2">Top Three Projects</div>
+          /> */}
+          {/* <div className="text-2xl mt-2">Top Three Projects</div> */}
         </div>
 
         {/* Project Cards */}
@@ -37,7 +37,7 @@ const ProjectPage = () => {
             <div
               key={index}
               // style={{ borderColor: theme.text }}
-              className="border-2 p-4 rounded-3xl w-full"
+              className="border-2 p-4 rounded-md w-full"
             >
               <div className="text-center text-2xl font-semibold">
                 {pro.title}

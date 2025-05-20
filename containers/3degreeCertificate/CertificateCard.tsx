@@ -15,7 +15,7 @@ const CertificateCard = ({ certprop }: Iprops) => {
   return (
     <div
       // style={{ borderColor: theme.text }}
-      className="w-auto h-auto place-items-center grid grid-flow-row border-2 rounded-md p-3 "
+      className="w-auto h-auto place-items-center grid grid-flow-row rounded-md p-3 "
     >
       <div className="grid place-items-center text-3xl">{certprop.title}</div>
 

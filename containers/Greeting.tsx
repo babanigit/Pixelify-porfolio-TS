@@ -1,20 +1,19 @@
 // "use client";
 
 import Image from "next/image";
-import SocialLinks from "../../components/3SocialLinks/SocialLinks";
-import mincraft3 from "../../assets/png/mincraft3.png";
+import SocialLinks from "../components/SocialLinks";
+import mincraft3 from "../assets/png/mincraft3.png";
 
 const Greeting = () => {
   return (
     <div className="min-h-[60vh] w-full grid md:grid-cols-3 grid-cols-1 p-4 gap-6 items-center">
-      
       {/* Text Section */}
       <div className="md:col-span-2 flex flex-col justify-center items-center md:items-center text-center md:text-left space-y-6">
         {/* Heading */}
         <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4">
           <span className="text-2xl md:text-3xl">I'm</span>
-          <span className="text-4xl md:text-5xl font-bold text-blue-600">
-            heheh
+          <span className="text-4xl md:text-5xl font-bold text-blue-600/70">
+            Aniket Panchal
           </span>
         </div>
 
