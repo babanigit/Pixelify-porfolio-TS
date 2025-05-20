@@ -1,48 +1,42 @@
-"use client";
+// "use client";
 
 import Image from "next/image";
-// import { ThemeDataType } from "../../../assets/theme"; // Adjust path if needed
 import SocialLinks from "../../components/3SocialLinks/SocialLinks";
-import mincraft3 from "../../assets/png/mincraft3.png"; // Make sure this is imported properly
-
-// interface DataType {
-//   theme: ThemeDataType;
-// }
+import mincraft3 from "../../assets/png/mincraft3.png";
 
 const Greeting = () => {
   return (
-    <div className="h-screen w-full grid md:grid-cols-3 grid-cols-1 grid-rows-3 p-3">
-      <div className="md:h-screen h-full w-full grid md:col-span-2 gap-6 md:gap-3 place-items-center place-content-center row-span-2 text-center md:text-left">
+    <div className="min-h-[60vh] w-full grid md:grid-cols-3 grid-cols-1 p-4 gap-6 items-center">
+      
+      {/* Text Section */}
+      <div className="md:col-span-2 flex flex-col justify-center items-center md:items-center text-center md:text-left space-y-6">
         {/* Heading */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4">
+        <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4">
           <span className="text-2xl md:text-3xl">I'm</span>
           <span className="text-4xl md:text-5xl font-bold text-blue-600">
-            Aniket Panchal.
+            heheh
           </span>
         </div>
 
         {/* Subheading */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4">
-          <span className="text-2xl md:text-3xl">
-            <u>Full Stack Developer</u>
-          </span>
-          <span className="text-xl md:text-3xl font-bold">and</span>
-          <span className="text-2xl md:text-3xl">
-            <u>Digital Artist.</u>
-          </span>
+        <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4 text-xl md:text-3xl">
+          <span className="underline">Full Stack Developer</span>
+          <span className="font-bold">and</span>
+          <span className="underline"> Artist.</span>
         </div>
 
         {/* Social Links */}
-        <SocialLinks/>
+        <SocialLinks />
       </div>
 
-      <div className="md:h-screen h-full w-full grid justify-center items-center col-span-1 md:row-span-2 bg-red-400/50 rounded-full">
+      {/* Image Section */}
+      <div className="flex justify-center items-center bg-red-400/30 rounded-full p-8">
         <Image
-          className="w-28 grid justify-center items-center"
+          className=" object-cover"
           src={mincraft3}
           alt="profile"
-          width={112}
-          height={112}
+          width={120}
+          height={120}
         />
       </div>
     </div>

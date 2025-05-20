@@ -23,6 +23,16 @@ const Navbar_Compo = () => {
           Contact
         </a>
       </li>
+      <li>
+        <a href="/resume" className="hover:text-blue-600">
+          Resume
+        </a>
+      </li>
+      <li>
+        <a href="/portfolio" className="hover:text-blue-600">
+          Portfolio
+        </a>
+      </li>
     </ul>
   );
 };

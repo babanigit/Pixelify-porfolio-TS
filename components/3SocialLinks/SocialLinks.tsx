@@ -17,55 +17,66 @@ const SocialLinks = () => {
   const DigiArt = "<Arts/>";
 
   return (
-    <div className="grid gap-4 grid-cols-2 md:grid-cols-6 place-items-center mx-6 text-center">
+    <div className="grid gap-4 grid-cols-2 md:grid-cols-6 place-items-center mx-6 text-center font-bold">
       <Link
         href={socialMediaLinks.resume}
-        // target="_blank"
-        // rel="noreferrer"
-        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+        className="relative px-4 py-2 rounded group"
       >
-        {Resume}
+        <span className="font-bold text-black group-hover:text-blue-600/80 transition-colors duration-300">
+          {Resume}
+          <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
+        </span>
       </Link>
-      <a
+
+      <Link
         href={socialMediaLinks.linkedin}
-        target="_blank"
-        rel="noreferrer"
-        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+        className="relative px-4 py-2 rounded group"
       >
-        {LinkedIn}
-      </a>
-      <a
+        <span className="font-bold text-black group-hover:text-blue-600/80 transition-colors duration-300">
+          {LinkedIn}
+          <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
+        </span>
+      </Link>
+
+      <Link
         href={socialMediaLinks.github}
-        target="_blank"
-        rel="noreferrer"
-        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+        className="relative px-4 py-2 rounded group"
       >
-        {GH}
-      </a>
-      <a
+        <span className="font-bold text-black group-hover:text-blue-600/80 transition-colors duration-300">
+          {GH}
+          <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
+        </span>
+      </Link>
+
+      <Link
         href={socialMediaLinks.leetcode}
-        target="_blank"
-        rel="noreferrer"
-        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+        className="relative px-4 py-2 rounded group"
       >
-        {LeetCode}
-      </a>
-      <a
+        <span className="font-bold text-black group-hover:text-blue-600/80 transition-colors duration-300">
+          {LeetCode}
+          <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
+        </span>
+      </Link>
+
+      <Link
         href={socialMediaLinks.instagram}
-        target="_blank"
-        rel="noreferrer"
-        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+        className="relative px-4 py-2 rounded group"
       >
-        {Insta}
-      </a>
-      <a
+        <span className="font-bold text-black group-hover:text-blue-600/80 transition-colors duration-300">
+          {Insta}
+          <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
+        </span>
+      </Link>
+
+      <Link
         href={socialMediaLinks.instagram2}
-        target="_blank"
-        rel="noreferrer"
-        className="px-4 py-2  rounded hover:bg-gray-200 transition"
+        className="relative px-4 py-2 rounded group"
       >
-        {DigiArt}
-      </a>
+        <span className="font-bold text-black group-hover:text-blue-600/80 transition-colors duration-300">
+          {DigiArt}
+          <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
+        </span>
+      </Link>
     </div>
   );
 };

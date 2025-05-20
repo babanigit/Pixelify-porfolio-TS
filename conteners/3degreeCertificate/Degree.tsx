@@ -8,6 +8,8 @@ import { education } from "../../assets/EducationLinks";
 
 import marioImage from "../../assets/png/mario2.png";
 
+import CertificateCard from "./CertificateCard";
+import { certificate } from "../../assets/CertificateLinks";
 
 // interface Iprops {
 //   theme: ThemeDataType;
@@ -17,17 +19,10 @@ const Degree = () => {
   const web = "<University Website/>";
 
   return (
-    <div className="h-screen w-full grid grid-flow-col grid-cols-4 place-items-center p-3">
-      {/* Left Profile Section */}
-      <div className="grid place-items-center bg-red-400 bg-opacity-50 h-full w-full place-content-center rounded-full">
-        <div>
-          <Image className="w-36" src={marioImage} alt="profile_img" width={144} height={144} />
-        </div>
-        <div className="text-4xl">Degree</div>
-      </div>
-
+    <div className="h-auto w-full grid grid-flow-col grid-cols-4 place-items-center p-3">
       {/* Education Info Section */}
       <div className="grid col-span-3 place-items-center w-full gap-3">
+        <div className="text-4xl">Education</div>
         {education.map((edu, index) => (
           <div
             key={index}
@@ -52,6 +47,28 @@ const Degree = () => {
             </div>
           </div>
         ))}
+
+        <div className="text-4xl">Certifications</div>
+
+        {certificate.certifications.map((cert) => (
+          <div key={cert.title} className="grid h-auto w-[70%] ">
+            <CertificateCard certprop={cert} />
+          </div>
+        ))}
+      </div>
+
+      {/* right Profile Section */}
+      <div className="grid place-items-center bg-red-400/50 h-full w-full place-content-center rounded-full">
+        <div>
+          <Image
+            className="w-36"
+            src={marioImage}
+            alt="profile_img"
+            width={144}
+            height={144}
+          />
+        </div>
+        <div className="text-4xl">Degree</div>
       </div>
     </div>
   );

@@ -18,6 +18,19 @@ const ProjectPage = () => {
     <>
       {/* Section 1 */}
       <div className="grid grid-cols-1 md:grid-cols-6 w-full gap-4 p-4">
+        
+        {/* Side Image */}
+        <div className="flex flex-col items-center justify-center bg-red-400/50 rounded-full p-4">
+          <Image
+            src={heart}
+            alt="heart"
+            width={100}
+            height={100}
+            className="object-contain"
+          />
+          <div className="text-2xl mt-2">Top Three Projects</div>
+        </div>
+
         {/* Project Cards */}
         <div className="md:col-span-5 grid gap-4">
           {projects.page1.map((pro, index) => (
@@ -50,18 +63,6 @@ const ProjectPage = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Side Image */}
-        <div className="flex flex-col items-center justify-center bg-red-400/50 rounded-full p-4">
-          <Image
-            src={heart}
-            alt="heart"
-            width={100}
-            height={100}
-            className="object-contain"
-          />
-          <div className="text-2xl mt-2">Top Three Projects</div>
         </div>
       </div>
 

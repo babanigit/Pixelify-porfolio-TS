@@ -44,15 +44,15 @@ const MainPage = () => {
       </nav>
 
       <div className="scroll-smooth">
-        <section id="home" className="min-h-screen pt-20 scroll-mt-20">
+        <section id="home" className=" pt-10 scroll-mt-20">
           {/* <h1 className="text-4xl font-bold"></h1> */}
           <Greeting />
         </section>
-        <section id="about" className="min-h-screen pt-20 scroll-mt-20">
+        <section id="about" className=" scroll-mt-20">
           {/* <h1 className="text-4xl font-bold">Education</h1> */}
           <EducationIntro />
           <Degree />
-          <Certificate />
+          {/* <Certificate /> */}
         </section>
         <section id="skills" className="min-h-screen pt-20 scroll-mt-20">
           <h1 className="text-4xl w-full flex justify-center font-bold">
