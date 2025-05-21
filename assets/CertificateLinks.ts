@@ -56,21 +56,7 @@ export const certificate: CertificateData = {
         alt_name: "google",
         logo_path: "aws.png",
 
-    },
-    // {
-    //   title: "Google data analysis3",
-    //   subtitle: "data analysis",
-    //   dev1: " the fundamental concepts associated with programming in R",
-    //   dev2: " the R programming language, data visualization and its programming environment.",
-    //   dev3: " ",
-    //   dev4: " ",
-
-    //   certificate_link:
-    //     "https://drive.google.com/file/d/1t2RocJF6KCyjz9Q0qDERneTZuUdB8SuP/view?usp=sharing",
-    //     alt_name: "google",
-    //     logo_path: "aws.png",
-
-    // },
+    }
   ],
   certifications2 : [
     {

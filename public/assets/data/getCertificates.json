@@ -1,0 +1,39 @@
+[
+    {
+        "title": "Google Data Analysis",
+        "subtitle": "Data Analysis",
+        "description": [
+            "Learned to ask pertinent questions for data-driven decision-making.",
+            "Conducted data analysis proficiently using R programming.",
+            "Applied analytical skills in real-world scenarios through a capstone project."
+        ],
+        "certificate_link": "https://drive.google.com/file/d/1rkr_ppn0kDFiR8zTlQoBkuUrCFDlBImw/view?usp=sharing",
+        "alt_name": "Google",
+        "logo_path": "google.png",
+        "issued_by": "Google",
+        "issue_date": "2024-03-15",
+        "skills": [
+            "Data Analysis",
+            "R Programming",
+            "Problem Solving"
+        ]
+    },
+    {
+        "title": "Introduction to Cybersecurity Fundamentals",
+        "subtitle": "Cybersecurity",
+        "description": [
+            "Acquired knowledge of phishing, social engineering, and ransomware.",
+            "Understood cybersecurity vulnerabilities and defense measures."
+        ],
+        "certificate_link": "https://drive.google.com/file/d/1he7TF_MNxpljqxiV7DxVKE0hVcgbCOr-/view?usp=sharing",
+        "alt_name": "Google",
+        "logo_path": "google.png",
+        "issued_by": "Google",
+        "issue_date": "2023-11-20",
+        "skills": [
+            "Cybersecurity",
+            "Threat Analysis",
+            "Security Awareness"
+        ]
+    }
+]

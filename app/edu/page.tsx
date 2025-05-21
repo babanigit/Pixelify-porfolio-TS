@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import EducationIntro from "../../containers/3degreeCertificate/EducationIntro";
 import Certificate from "../../containers/3degreeCertificate/Certificate";
-import Degree from "../../containers/3degreeCertificate/Degree";
+import Degree from "../../containers/EducationAndCertificates";
 
 interface Iprop {
   theme: any; // Replace with correct type if available

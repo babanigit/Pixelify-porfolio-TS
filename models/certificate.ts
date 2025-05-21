@@ -1,14 +1,11 @@
-export interface CertificateDataType {
-    title: string; // Full certificate name
-    category: string; // Domain or area of certification
-    description: string[]; // Key learning points (multi-line support)
-    certificateUrl: string; // Public link to view the certificate
-    credentialUrl?: string; // Optional verification URL
-    organization: string; // Issuer name (e.g., Google, Coursera)
-    logo: string; // Path to logo image file
-    dateIssued: string; // e.g., "March 2024"
-    skills: string[]; // Relevant skills gained
-    duration?: string; // e.g., "8 weeks", optional
-    verificationId?: string; // Unique ID, optional
-  }
-  
+export interface CertificationItem {
+  title: string;
+  subtitle: string;
+  description: string[];
+  certificate_link: string;
+  alt_name: string;
+  logo_path: string;
+  issued_by: string;
+  issue_date: string;
+  skills: string[];
+}

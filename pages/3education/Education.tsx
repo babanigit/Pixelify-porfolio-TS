@@ -8,7 +8,7 @@ import HeaderPart3 from "../../components/1header/HeaderPart3";
 import { ThemeDataType } from "../../../assets/theme";
 import EducationIntro from "../../containers/3degreeCertificate/EducationIntro";
 import Certificate from "../../containers/3degreeCertificate/Certificate";
-import Degree from "../../containers/3degreeCertificate/Degree";
+import Degree from "../../containers/EducationAndCertificates";
 import Header from "../../components/1header/Header";
 
 interface Iprop {
