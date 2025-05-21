@@ -1,0 +1,116 @@
+[
+    {
+        "title": "Personal Finance Management - API",
+        "tech_stack": "TypeScript, Express.js, Node.js, MongoDB",
+        "description": [
+            "Developed a secure API using Express and Node.js to manage users and their transactions.",
+            "Implemented JWT authentication and payload verification to protect user data."
+        ],
+        "project_link": "https://github.com/babanigit/API-for-a-Personal-Finance-Management-",
+        "alt_name": "Google",
+        "logo_path": "aws.png",
+        "status": "Completed",
+        "tags": [
+            "API",
+            "JWT",
+            "MongoDB",
+            "Node.js"
+        ],
+        "highlight": "Secure API for financial transaction management",
+        "date_created": "2024-02-10"
+    },
+    {
+        "title": "User Authentication using MERN",
+        "tech_stack": "TypeScript, React.js, Tailwind CSS, MongoDB, Express.js, Node.js",
+        "description": [
+            "Developed a MERN application with strong focus on user authentication and security.",
+            "Implemented JWT-based login and registration system.",
+            "Designed with a minimalistic and intuitive UI."
+        ],
+        "project_link": "https://github.com/babanigit/Ts-nodejs",
+        "alt_name": "Google",
+        "logo_path": "aws.png",
+        "status": "Completed",
+        "tags": [
+            "Authentication",
+            "MERN",
+            "Security"
+        ],
+        "highlight": "End-to-end MERN auth system with TypeScript",
+        "date_created": "2024-01-15"
+    },
+    {
+        "title": "Personal Contacts and Users Management - API",
+        "tech_stack": "Node.js, Express.js, MongoDB",
+        "description": [
+            "Created an API to manage contacts and users with full CRUD functionality.",
+            "Integrated JWT authentication and tested endpoints using Postman."
+        ],
+        "project_link": "https://github.com/babanigit/Contacts-and-Users-Manipulation",
+        "alt_name": "Google",
+        "logo_path": "aws.png",
+        "status": "Completed",
+        "tags": [
+            "CRUD",
+            "Contacts",
+            "Postman"
+        ],
+        "highlight": "Secure contact management API",
+        "date_created": "2023-12-01"
+    },
+    {
+        "title": "Third Year Project (In Progress)",
+        "tech_stack": "React.js, TypeScript, Tailwind CSS, Node.js, Express.js",
+        "description": [
+            "A full-stack academic project under development to showcase advanced technical capabilities."
+        ],
+        "project_link": "https://github.com/babanigit/thirdYear-react-firebase-tailwind",
+        "alt_name": "Google",
+        "logo_path": "aws.png",
+        "status": "In Progress",
+        "tags": [
+            "Full Stack",
+            "College Project"
+        ],
+        "highlight": "Major academic full-stack project",
+        "date_created": "2024-03-01"
+    },
+    {
+        "title": "Weather Updates App",
+        "tech_stack": "React.js, Tailwind CSS, WeatherAPI",
+        "description": [
+            "Integrated Weather API to fetch and display real-time weather data.",
+            "Built a clean and responsive UI to enhance user experience."
+        ],
+        "project_link": "https://github.com/babanigit/Weather-App-API",
+        "alt_name": "Google",
+        "logo_path": "aws.png",
+        "status": "Completed",
+        "tags": [
+            "API",
+            "Weather",
+            "UI"
+        ],
+        "highlight": "Live weather dashboard",
+        "date_created": "2024-01-25"
+    },
+    {
+        "title": "Football Updates (In Progress)",
+        "tech_stack": "Next.js, React.js, Tailwind CSS, Football API",
+        "description": [
+            "Integrated Football API to show match schedules, live scores, and player stats.",
+            "Designed an elegant, modern UI for easy navigation and user engagement."
+        ],
+        "project_link": "https://github.com/babanigit/football-updates",
+        "alt_name": "Google",
+        "logo_path": "aws.png",
+        "status": "In Progress",
+        "tags": [
+            "Sports",
+            "Live Scores",
+            "API"
+        ],
+        "highlight": "Live football tracking app",
+        "date_created": "2024-02-28"
+    }
+]
