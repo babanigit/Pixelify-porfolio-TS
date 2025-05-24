@@ -1,5 +1,133 @@
 [
     {
+        "title": "Finshark",
+        "tech_stack": "Dotnet, Asp.net, React.js, TailwindCSS, TypeScript, PostgreSql, Docker",
+        "description": [
+            "  Developed a Real-time stock tracking system and implemented Secure user authentication with a 99% success rate.",
+            "  Built an interactive commenting feature to boost user engagement.",
+            "  Optimized API performance by 30% with DTOs, Interfaces, and Query Parameters.",
+            "  Integrated FMP API to fetch company data, adding real-time stock information to user portfolios."
+        ],
+        "project_link": "https://github.com/babanigit/Finshark",
+        "live_link": "https://finshark-production.up.railway.app/",
+        "alt_name": "Google",
+        "logo_path": "aws.png",
+        "status": "Completed",
+        "tags": [
+            "Dotnet",
+            "Asp.net",
+            "React.js",
+            "TailwindCSS",
+            "TypeScript",
+            "PostgreSql",
+            "Docker",
+            "JWT"
+        ],
+        "highlight": "Fin-Shark, Finance Researcher App",
+        "date_created": "May 11, 2025"
+    },
+    {
+        "title": "Tic-Tac-Toe-Game",
+        "tech_stack": "TypeScript, Express.js, Node.js, MongoDB, React.js, TailwindCSS",
+        "description": [
+            "            Set up Stream Chat as an alternative to Socket.io for real-time messaging, improved communication efficiency by 40% in multiplayer gameplay.",
+            "Established user authentication with Bcrypt and JWT, enhancing security while supporting 100+ concurrent players in a fully responsive, interactive UI."
+        ],
+        "project_link": "https://github.com/babanigit/Tic-Tac-Toe-Game",
+        "alt_name": "Google",
+        "logo_path": "aws.png",
+        "status": "Completed",
+        "tags": [
+            "API",
+            "JWT",
+            "MongoDB",
+            "Node.js",
+            "TypeScript",
+            "Express.js",
+            "React.js",
+            "Docker",
+            "TailwindCSS",
+            "SteamChat"
+        ],
+        "highlight": "With seamless integration of Stream Chat for real-time communication, players can enjoy an immersive gaming experience while competing against each other from anywhere.",
+        "date_created": "2024-02-10"
+    },
+    {
+        "title": "RunGroop_RunnersApp",
+        "tech_stack": "Dotnet MVC, Asp.net, PostgreSql, Docker",
+        "description": [
+            "Implemented JWT-based session authentication, enhancing login security by 2x.",
+            "Designed and deployed a responsive UI using Bootstrap, increasing mobile usability by 60%.",
+            "Dockerized and deployed the application on AWS EC2, improving scalability and uptime by 99.9%.",
+            "Optimized database queries and models with Entity Framework and PostgreSQL, reducing data retrieval time by 35%."
+        ],
+        "project_link": "https://github.com/babanigit/RunGroop_RunnersApp",
+        "alt_name": "Google",
+        "logo_path": "aws.png",
+        "status": "Completed",
+        "tags": [
+            "Dotnet MVC",
+            "Asp.net",
+            "MVC",
+            "BootStrap",
+            "PostgreSql",
+            "Docker",
+            "JWT"
+        ],
+        "highlight": "Rungroops is an online platform for runners. This platform will help you to find clubs, schedule events, and meet other runners in your area",
+        "date_created": "Feb 13, 2025"
+    },
+    {
+        "title": "TODO APP",
+        "tech_stack": "TypeScript, Express.js, Node.js, MongoDB, MERN, TailwindCSS",
+        "description": [
+            "Configured secure JWT-based cookie authentication, enhancing data protection and reducing unauthorized access incidents by 95%..",
+            "Built responsive UI with Dark/Light mode, Task sorting, and Priority Indicators, boosting user engagement by 40%.",
+            "Utilized Redux and TypeScript for scalable state management and type safety, reducing bugs by 30%"
+        ],
+        "project_link": "https://github.com/babanigit/To-Do-App",
+        "alt_name": "Google",
+        "logo_path": "aws.png",
+        "status": "Completed",
+        "tags": [
+            "API",
+            "JWT",
+            "MongoDB",
+            "Node.js",
+            "TypeScript",
+            "Express.js",
+            "Docker",
+            "React.js",
+            "TailwindCSS",
+            "Render",
+            "AWS"
+        ],
+        "highlight": "To-Do App, Task Management Platform",
+        "date_created": "Feb 10, 2025"
+    },
+    {
+        "title": "Dot Game, Node.js-OnlineGame",
+        "tech_stack": "TypeScript, Express.js, Node.js, JavaScript",
+        "description": [
+            "This project focuses on the development of an online multiplayer game using Node.js, a powerful JavaScript runtime, and Socket.IO, a library that enables real-time, bidirectional event-based communication. The game leverages these technologies to provide a seamless and engaging gaming experience over the internet."
+        ],
+        "project_link": "https://github.com/babanigit/Node.js-OnlineGame",
+        "alt_name": "Google",
+        "logo_path": "aws.png",
+        "status": "Completed",
+        "tags": [
+            "API",
+            "JWT",
+            "Node.js",
+            "TypeScript",
+            "Express.js",
+            "JavaScript",
+            "Socket.io"
+        ],
+        "highlight": "Node.js-OnlineGame using Socket.io",
+        "date_created": "2024-02-10"
+    },
+    {
         "title": "Personal Finance Management - API",
         "tech_stack": "TypeScript, Express.js, Node.js, MongoDB",
         "description": [
@@ -14,7 +142,9 @@
             "API",
             "JWT",
             "MongoDB",
-            "Node.js"
+            "Node.js",
+            "TypeScript",
+            "Express.js"
         ],
         "highlight": "Secure API for financial transaction management",
         "date_created": "2024-02-10"
@@ -32,9 +162,12 @@
         "logo_path": "aws.png",
         "status": "Completed",
         "tags": [
-            "Authentication",
             "MERN",
-            "Security"
+            "MongoDB",
+            "Node.js",
+            "TypeScript",
+            "Express.js",
+            "JWT"
         ],
         "highlight": "End-to-end MERN auth system with TypeScript",
         "date_created": "2024-01-15"
@@ -53,31 +186,37 @@
         "tags": [
             "CRUD",
             "Contacts",
-            "Postman"
+            "Node.js, Express.js, MongoDB"
         ],
         "highlight": "Secure contact management API",
         "date_created": "2023-12-01"
     },
     {
-        "title": "Third Year Project (In Progress)",
-        "tech_stack": "React.js, TypeScript, Tailwind CSS, Node.js, Express.js",
+        "title": "Music Classes Portfolio and Admission",
+        "tech_stack": "React.js, TypeScript, TailwindCSS, Node.js, Express.js",
         "description": [
-            "A full-stack academic project under development to showcase advanced technical capabilities."
+            "This project is a comprehensive solution for managing a final year collage project using modern web technologies. It utilizes the MERN stack (MongoDB, Express.js, React.js, Node.js) for backend and frontend development, Redux for state management, Firebase for google authentication and real-time database features, and Tailwind CSS for styling. :)"
         ],
         "project_link": "https://github.com/babanigit/thirdYear-react-firebase-tailwind",
         "alt_name": "Google",
         "logo_path": "aws.png",
-        "status": "In Progress",
+        "status": "Completed",
         "tags": [
-            "Full Stack",
-            "College Project"
+            "MERN",
+            "MongoDB",
+            "Node.js",
+            "TypeScript",
+            "Express.js",
+            "JWT",
+            "Firebase",
+            "GoogleAuth"
         ],
         "highlight": "Major academic full-stack project",
         "date_created": "2024-03-01"
     },
     {
         "title": "Weather Updates App",
-        "tech_stack": "React.js, Tailwind CSS, WeatherAPI",
+        "tech_stack": "React.js, TailwindCSS, WeatherAPI",
         "description": [
             "Integrated Weather API to fetch and display real-time weather data.",
             "Built a clean and responsive UI to enhance user experience."
@@ -89,28 +228,10 @@
         "tags": [
             "API",
             "Weather",
-            "UI"
+            "UI",
+            "React.js"
         ],
         "highlight": "Live weather dashboard",
         "date_created": "2024-01-25"
-    },
-    {
-        "title": "Football Updates (In Progress)",
-        "tech_stack": "Next.js, React.js, Tailwind CSS, Football API",
-        "description": [
-            "Integrated Football API to show match schedules, live scores, and player stats.",
-            "Designed an elegant, modern UI for easy navigation and user engagement."
-        ],
-        "project_link": "https://github.com/babanigit/football-updates",
-        "alt_name": "Google",
-        "logo_path": "aws.png",
-        "status": "In Progress",
-        "tags": [
-            "Sports",
-            "Live Scores",
-            "API"
-        ],
-        "highlight": "Live football tracking app",
-        "date_created": "2024-02-28"
     }
 ]

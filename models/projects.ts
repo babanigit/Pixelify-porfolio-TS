@@ -4,6 +4,7 @@ interface ProjectItem {
     description: string[];
     project_link: string;
     demo_link?: string;
+    live_link?: string;
     alt_name: string;
     logo_path: string;
     status: "Completed" | "In Progress";

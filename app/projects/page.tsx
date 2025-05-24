@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const Projects = () => {
   // const pathname = usePathname();
@@ -49,8 +49,20 @@ const Projects = () => {
     return tagMatch && techMatch;
   });
 
+  const router = useRouter();
+
   return (
     <div className="px-6 md:px-32 py-12 space-y-8">
+      {/* Back Button - top-left */}
+      <div className="w-full max-w-4xl flex justify-start mb-4">
+        <button
+          onClick={() => router.back()}
+          className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition"
+        >
+          ← Back
+        </button>
+      </div>
+
       {/* Filters */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         {/* Search by Tag */}
@@ -135,14 +147,27 @@ const Projects = () => {
                 {project.highlight}
               </div>
 
-              <a
-                href={project.project_link}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block px-4 py-2 border border-indigo-500 text-indigo-600 rounded-md hover:bg-indigo-50 transition"
-              >
-                View on GitHub
-              </a>
+              <div className="flex gap-3">
+                <a
+                  href={project.project_link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block px-4 py-2 border border-indigo-500 text-indigo-600 rounded-md hover:bg-indigo-50 transition"
+                >
+                  View on GitHub
+                </a>
+
+                {project.live_link && (
+                  <a
+                    href={project.live_link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-block px-4 py-2 border border-indigo-500 text-indigo-600 rounded-md hover:bg-indigo-50 transition"
+                  >
+                    Live Link
+                  </a>
+                )}
+              </div>
             </div>
           ))
         )}

@@ -58,12 +58,12 @@ connect
           showNavbar ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <button
+        {/* <button
           onClick={handleClick}
           className="px-3 py-1 bg-indigo-600 text-white rounded"
         >
           mongodb
-        </button>
+        </button> */}
 
         <Navbar_Compo />
       </nav>
@@ -90,7 +90,6 @@ connect
           {/* <Certificate /> */}
         </section>
         <section id="projects" className="min-h-screen pt-20 scroll-mt-20">
-          <h1 className="text-4xl w-full flex justify-center ">Projects</h1>
           <ProjectPage />
         </section>
         <section id="connect" className="min-h-screen pt-20 scroll-mt-20">
