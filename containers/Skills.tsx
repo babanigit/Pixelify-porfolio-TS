@@ -1,54 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { FaTools } from "react-icons/fa";
 
-const skills = {
-  Languages: [
-    "C/C++/C#",
-    "Java Collections",
-    "TypeScript/JavaScript",
-    "Python",
-    "SQL",
-    "HTML/CSS",
-  ],
-  Frameworks: [
-    "ASP.NET",
-    "Angular",
-    "Next.js",
-    "Django",
-    "Express.js",
-    "Node.js",
-    "React Native",
-  ],
-  Libraries: [
-    "React.js",
-    "Redux",
-    "Axios",
-    "Socket.io",
-    "Tailwind CSS",
-    "Chart.js/Highcharts",
-  ],
-  Databases: ["MongoDB", "MySQL", "PostgreSQL", "SSMS"],
-  Tools: [
-    "AWS EC2",
-    "Postman",
-    "Git",
-    "Docker",
-    "Firebase",
-    "Linux/BASH",
-    "Chrome DevTools",
-  ],
-  Concepts: [
-    "MVC",
-    "SSR",
-    "Computer Networking (OSI/TCP/IP)",
-    "JWT Authentication",
-    "WebSockets",
-  ],
-};
+interface SkillsData {
+  [category: string]: string[];
+}
 
 const Skills = () => {
+  const router = useRouter();
+  const [skills, setSkills] = useState<SkillsData>({});
+
+  const handleSkillClick = (skill: string) => {
+    router.push(`/projects?tech=${encodeURIComponent(skill)}`);
+  };
+
+  useEffect(() => {
+    const fetchSkills = async () => {
+      try {
+        const res = await fetch("/assets/data/getSkills.json");
+        const data: SkillsData = await res.json();
+        setSkills(data);
+      } catch (err) {
+        console.error("Failed to load skills data:", err);
+      }
+    };
+
+    fetchSkills();
+  }, []);
+
   return (
     <div className="h-auto w-full grid grid-cols-4 place-items-center p-3">
       {/* Skills Info Section */}
@@ -63,13 +44,14 @@ const Skills = () => {
             >
               <div className="text-2xl font-semibold mb-2">{category}</div>
               <div className="flex flex-wrap gap-3">
-                {(items as string[]).map((item, index) => (
-                  <span
+                {items.map((item, index) => (
+                  <button
                     key={index}
-                    className="bg-blue-200/70 text-black px-3 py-1 rounded-full text-sm font-medium"
+                    onClick={() => handleSkillClick(item)}
+                    className="bg-blue-200/70 text-black px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-300 transition"
                   >
                     {item}
-                  </span>
+                  </button>
                 ))}
               </div>
             </div>

@@ -1,0 +1,49 @@
+{
+    "Languages": [
+        "C/C++/C#",
+        "Java Collections",
+        "TypeScript/JavaScript",
+        "Python",
+        "SQL",
+        "HTML/CSS"
+    ],
+    "Frameworks": [
+        "ASP.NET",
+        "Angular",
+        "Next.js",
+        "Django",
+        "Express.js",
+        "Node.js",
+        "React Native"
+    ],
+    "Libraries": [
+        "React.js",
+        "Redux",
+        "Axios",
+        "Socket.io",
+        "Tailwind CSS",
+        "Chart.js/Highcharts"
+    ],
+    "Databases": [
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "SSMS"
+    ],
+    "Tools": [
+        "AWS EC2",
+        "Postman",
+        "Git",
+        "Docker",
+        "Firebase",
+        "Linux/BASH",
+        "Chrome DevTools"
+    ],
+    "Concepts": [
+        "MVC",
+        "SSR",
+        "Computer Networking (OSI/TCP/IP)",
+        "JWT Authentication",
+        "WebSockets"
+    ]
+}

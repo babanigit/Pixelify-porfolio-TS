@@ -54,7 +54,7 @@ const EducationAndCertificate = () => {
                 <div>{edu.year}</div>
               </div>
               <div className="text-2xl text-center">{edu.subtitle}</div>
-              <div className="text-base space-y-1">
+              <div className="text-lg space-y-1">
                 {edu.details.map((point, i) => (
                   <div key={i}>- {point}</div>
                 ))}
@@ -104,7 +104,7 @@ const EducationAndCertificate = () => {
                   Issue Date: {cert.issue_date}
                 </div>
 
-                <div className="text-base space-y-1">
+                <div className="text-lg space-y-1">
                   {cert.description.map((point, i) => (
                     <div key={i}>• {point}</div>
                   ))}

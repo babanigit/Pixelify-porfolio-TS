@@ -1,0 +1,17 @@
+[
+  {
+    "role": "Angular Developer, Internship",
+    "duration": "July 2024 - September 2024",
+    "company": "Markets Mojo, Stock Research Organization, Mumbai",
+    "location": "Mumbai, India",
+    "github": "https://github.com/babanigit/markets_mojo_v16",
+    "companyLink": "https://www.marketsmojo.com/",
+    "techStack": ["Angular", "TypeScript", "Highcharts", "Chrome DevTools"],
+    "highlights": [
+      "Migrated old Angular pages to Angular 16 + TypeScript, boosting performance.",
+      "Integrated Highcharts for Data Visualization, improving insights by 30%.",
+      "Leveraged Chrome DevTools to enhance debugging and profiling efficiency."
+    ],
+    "image": "mario.png"
+  }
+]
