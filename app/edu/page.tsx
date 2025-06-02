@@ -7,11 +7,8 @@ import EducationIntro from "../../containers/3degreeCertificate/EducationIntro";
 import Certificate from "../../containers/3degreeCertificate/Certificate";
 import Degree from "../../containers/EducationAndCertificates";
 
-interface Iprop {
-  theme: any; // Replace with correct type if available
-}
 
-const Education = ({ theme }: Iprop) => {
+const Education = () => {
   const pathname = usePathname();
 
   useEffect(() => {

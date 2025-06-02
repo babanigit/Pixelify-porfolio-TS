@@ -1,7 +1,7 @@
 "use client";
 import Navbar_Compo from "@/components/Navbar_Compo";
 import Greeting from "@/containers/Greeting";
-import Certificate from "@/containers/3degreeCertificate/Certificate";
+// import Certificate from "@/containers/3degreeCertificate/Certificate";
 import Degree from "@/containers/EducationAndCertificates";
 import EducationIntro from "@/containers/3degreeCertificate/EducationIntro";
 import ContactMe from "@/containers/ContactMe";
@@ -9,7 +9,7 @@ import ProjectPage from "@/containers/ProjectPage";
 import React, { useEffect, useState } from "react";
 import Experience from "@/containers/Experience";
 import Skills from "@/containers/Skills";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 const MainPage = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -45,11 +45,11 @@ projects
 connect
 */
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  const handleClick = () => {
-    router.push(`/projects?tech=${encodeURIComponent("mongodb")}`);
-  };
+  // const handleClick = () => {
+  //   router.push(`/projects?tech=${encodeURIComponent("mongodb")}`);
+  // };
 
   return (
     <>
