@@ -1,0 +1,72 @@
+{
+    "Educations": [
+        {
+            "title": "Tilak Maharashtra Vidyapeeth",
+            "year": "2021 - 2024",
+            "subtitle": "Bachelor in Computer Application",
+            "details": [
+                "Studied core subjects like Data Structures, DBMS, Networking, Security, OOPs, Web Development, etc.",
+                "Implemented several projects based on learned concepts."
+            ],
+            "Uni_link": "https://www.google.com",
+            "Certificate_link": "https://www.google.com",
+            "alt_name": "Google",
+            "logo_path": "aws.png",
+            "importance": "high",
+            "grade": "CGPA - 7.01"
+        },
+        {
+            "title": "Chetna College",
+            "year": "2018 - 2020",
+            "subtitle": "Higher Secondary School Certificate",
+            "details": [
+                "Commerce with Mathematics"
+            ],
+            "Uni_link": "https://www.google.com",
+            "Certificate_link": "https://www.google.com",
+            "alt_name": "Google",
+            "logo_path": "aws.png",
+            "importance": "medium",
+            "grade": "60%"
+        }
+    ],
+    "Certificates": [
+        {
+            "title": "Google Data Analysis",
+            "subtitle": "Data Analysis",
+            "description": [
+                "Learned to ask pertinent questions for data-driven decision-making.",
+                "Conducted data analysis proficiently using R programming.",
+                "Applied analytical skills in real-world scenarios through a capstone project."
+            ],
+            "certificate_link": "https://drive.google.com/file/d/1rkr_ppn0kDFiR8zTlQoBkuUrCFDlBImw/view?usp=sharing",
+            "alt_name": "Google",
+            "logo_path": "google.png",
+            "issued_by": "Google",
+            "issue_date": "2024-03-15",
+            "skills": [
+                "Data Analysis",
+                "R Programming",
+                "Problem Solving"
+            ]
+        },
+        {
+            "title": "Introduction to Cybersecurity Fundamentals",
+            "subtitle": "Cybersecurity",
+            "description": [
+                "Acquired knowledge of phishing, social engineering, and ransomware.",
+                "Understood cybersecurity vulnerabilities and defense measures."
+            ],
+            "certificate_link": "https://drive.google.com/file/d/1he7TF_MNxpljqxiV7DxVKE0hVcgbCOr-/view?usp=sharing",
+            "alt_name": "Google",
+            "logo_path": "google.png",
+            "issued_by": "Google",
+            "issue_date": "2023-11-20",
+            "skills": [
+                "Cybersecurity",
+                "Threat Analysis",
+                "Security Awareness"
+            ]
+        }
+    ]
+}

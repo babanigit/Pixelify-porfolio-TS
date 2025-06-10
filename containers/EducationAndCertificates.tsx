@@ -5,32 +5,26 @@ import Image from "next/image";
 import Link from "next/link";
 
 import marioImage from "@/assets/png/mario2.png";
-import CertificateCard from "./3degreeCertificate/CertificateCard";
-import { EducationItem } from "@/models/education";
-import { CertificationItem } from "@/models/certificate";
+
+import {
+  ICertificate,
+  IEducation,
+  IEducationAndCertificate,
+} from "@/models/educationAndCertificate";
 
 const EducationAndCertificate = () => {
   const universityWebsiteLabel = "<University Website/>";
   const certificateLabel = "<Certificate/>";
 
-  const [education, setEducation] = useState<EducationItem[]>([]);
-  const [certificate, setCertificate] = useState<CertificationItem[]>([]);
+  const [education, setEducation] = useState<IEducation[]>([]);
+  const [certificate, setCertificate] = useState<ICertificate[]>([]);
 
   useEffect(() => {
     const fetchEducation = async () => {
-      const res = await fetch("/assets/data/getEducations.json");
-      const data = await res.json();
-
-      console.log("education data is:- ", data);
-
-      setEducation(data);
-
-      const res2 = await fetch("/assets/data/getCertificates.json");
-      const data2 = await res2.json();
-
-      console.log("certificate data is:- ", data2);
-
-      setCertificate(data2);
+      const ress = await fetch("https://gist.githubusercontent.com/babanigit/6e1f45b979154bc109323ef4afafa909/raw/977bd6f4415b0e038d55357796994aa2910d58d6/getEduAndCerti.json");
+      const dataa: IEducationAndCertificate = await ress.json();
+      setEducation(dataa.Educations);
+      setCertificate(dataa.Certificates);
     };
 
     fetchEducation();

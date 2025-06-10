@@ -22,7 +22,7 @@ const Experience = () => {
   useEffect(() => {
     const fetchExperience = async () => {
       try {
-        const res = await fetch("/assets/data/getExperience.json");
+        const res = await fetch("https://gist.githubusercontent.com/babanigit/fc0fe4401bcab3d804d60df26ba67ceb/raw/25996d4b50058886c42fcffad8bd8c70227c15d7/getExperence.json");
         const data: ExperienceItem[] = await res.json();
         setExperiences(data);
       } catch (err) {
