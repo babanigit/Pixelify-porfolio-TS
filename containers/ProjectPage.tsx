@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { projects } from "@/assets/Project";
 
-import mario from "../assets/png/mario.png"; // Make sure this is imported properly
-import heart from "../assets/png/heart.png"; // Make sure this is imported properly
+import mario from "@/assets/png/mario.png"; // Make sure this is imported properly
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -46,13 +45,13 @@ const ProjectPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-6 w-full gap-4 p-4">
         {/* Side Image */}
         <div className="flex flex-col items-center justify-center bg-red-400/50 rounded-full p-4">
-          {/* <Image
-            src={heart}
-            alt="heart"
+          <Image
+            src={mario}
+            alt="mario"
             width={100}
             height={100}
             className="object-contain"
-          /> */}
+          />
           {/* <div className="text-2xl mt-2">Top Three Projects</div> */}
         </div>
 

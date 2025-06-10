@@ -46,7 +46,7 @@ const Experience = () => {
               width={144}
               height={144}
             />
-            <div className="text-4xl mt-2">Experience</div>
+            {/* <div className="text-4xl mt-2">Experience</div> */}
           </div>
 
           {/* Experience Info Section */}

@@ -62,7 +62,7 @@ const Skills = () => {
       {/* Right Icon/Visual Section */}
       <div className="grid place-items-center bg-yellow-400/50 h-full w-full rounded-full p-4">
         <FaTools size={64} />
-        <div className="text-4xl mt-2">Skills</div>
+        {/* <div className="text-4xl mt-2">Skills</div> */}
       </div>
     </div>
   );

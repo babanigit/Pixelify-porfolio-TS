@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import marioImage from "../assets/png/mario2.png";
+import marioImage from "@/assets/png/mario2.png";
 import CertificateCard from "./3degreeCertificate/CertificateCard";
 import { EducationItem } from "@/models/education";
 import { CertificationItem } from "@/models/certificate";
@@ -137,14 +137,14 @@ const EducationAndCertificate = () => {
 
       {/* Right: Profile Section */}
       <div className="grid place-items-center bg-red-400/50 h-full w-full rounded-full">
-        {/* <Image
+        <Image
           className="w-36 rounded-full"
           src={marioImage}
           alt="profile_img"
           width={144}
           height={144}
-        /> */}
-        <div className="text-4xl mt-2 font-bold">Education & Certificate</div>
+        />
+        {/* <div className="text-4xl mt-2 font-bold">Education & Certificate</div> */}
       </div>
     </div>
   );
