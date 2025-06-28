@@ -1,7 +1,7 @@
 // "use client";
 
 import Image from "next/image";
-import mincraft4 from "../../assets/png/mincraft4.png";
+import mincraft4 from "@/assets/png/mincraft4.png";
 
 const EducationIntro = () => {
   return (

@@ -1,17 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import SocialLinks from "../components/SocialLinks";
 
-import meImg from "../assets/png/pngegg.png";
-import iconImg from "../assets/png/pngegg.png";
+import meImg from "@/assets/png/pngegg.png";
+import iconImg from "@/assets/png/pngegg.png";
+import SocialLinks from "@/components/SocialLinks";
 
 const ContactMe = () => {
   const resumeLabel = "<Resume/>";
   const sendLabel = "<Send/>";
 
   return (
-    <div className="min-h-screen w-full grid grid-cols-3 place-items-center p-6 bg-gray-50">
+    <div className="min-h-screen w-full grid grid-cols-3 place-items-center p-3 bg-gray-50 gap-3">
       {/* Profile Image Section */}
       <div className="h-full w-full flex justify-center items-center bg-purple-400/50 rounded-full p-6">
         <Image

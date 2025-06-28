@@ -2,11 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
-// import { ThemeDataType } from "../../../assets/theme";
+import { certificate } from "@/assets/CertificateLinks";
 import CertificateCard from "./CertificateCard";
-import { certificate } from "../../assets/CertificateLinks";
+// import { ThemeDataType } from "../../../assets/theme";
 
-import certImg from "../../assets/png/mincraft1.png";
+import certImg from "@/assets/png/mincraft1.png";
+
 
 // interface Iprops {
 //   theme: ThemeDataType;

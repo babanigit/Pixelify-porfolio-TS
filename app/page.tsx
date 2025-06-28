@@ -3,7 +3,7 @@ import Navbar_Compo from "@/components/Navbar_Compo";
 import Greeting from "@/containers/Greeting";
 // import Certificate from "@/containers/3degreeCertificate/Certificate";
 import Degree from "@/containers/EducationAndCertificates";
-import EducationIntro from "@/containers/3degreeCertificate/EducationIntro";
+import EducationIntro from "@/containers/EducationIntro";
 import ContactMe from "@/containers/ContactMe";
 import ProjectPage from "@/containers/ProjectPage";
 import React, { useEffect, useState } from "react";
@@ -45,26 +45,12 @@ projects
 connect
 */
 
-  // const router = useRouter();
-
-  // const handleClick = () => {
-  //   router.push(`/projects?tech=${encodeURIComponent("mongodb")}`);
-  // };
-
   return (
     <>
       <nav
-        className={`fixed top-0 w-full bg-white shadow-md z-50 transition-transform duration-300 ${
-          showNavbar ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 w-full bg-white shadow-md z-50 transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
-        {/* <button
-          onClick={handleClick}
-          className="px-3 py-1 bg-indigo-600 text-white rounded"
-        >
-          mongodb
-        </button> */}
-
         <Navbar_Compo />
       </nav>
 

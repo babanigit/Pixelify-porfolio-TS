@@ -24,7 +24,7 @@ const Navbar_Compo = () => {
       </li>
       <li>
         <a href="#skills" className="hover:text-blue-600">
-          Skills
+          skills
         </a>
       </li>
       <li>

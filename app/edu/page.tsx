@@ -3,9 +3,9 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-import EducationIntro from "../../containers/3degreeCertificate/EducationIntro";
-import Certificate from "../../containers/3degreeCertificate/Certificate";
-import Degree from "../../containers/EducationAndCertificates";
+import EducationIntro from "@/containers/EducationIntro";
+import Certificate from "@/containers/Certificate";
+import Degree from "@/containers/EducationAndCertificates";
 
 
 const Education = () => {

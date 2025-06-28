@@ -1,0 +1,37 @@
+{
+    "name": "Aniket Panchal",
+    "title1": "Full Stack Developer",
+    "title2": "Artist",
+    "links": [
+        {
+            "label": "Resume",
+            "url": "/resume.pdf",
+            "type": "internal"
+        },
+        {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/your-profile",
+            "type": "external"
+        },
+        {
+            "label": "GitHub",
+            "url": "https://github.com/your-username",
+            "type": "external"
+        },
+        {
+            "label": "LeetCode",
+            "url": "https://leetcode.com/your-username",
+            "type": "external"
+        },
+        {
+            "label": "Instagram",
+            "url": "https://instagram.com/your-art-account",
+            "type": "external"
+        },
+        {
+            "label": "Arts",
+            "url": "/arts",
+            "type": "internal"
+        }
+    ]
+}

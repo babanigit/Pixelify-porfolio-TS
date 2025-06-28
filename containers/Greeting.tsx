@@ -1,10 +1,38 @@
 // "use client";
 
 import Image from "next/image";
-import SocialLinks from "../components/SocialLinks";
-import mincraft3 from "../assets/png/mincraft3.png";
+import SocialLinks from "@/components/SocialLinks";
+import mincraft3 from "@/assets/png/mincraft3.png";
+import { useEffect, useState } from "react";
+
+interface GreetingData {
+  name: string;
+  title1: string;
+  title2: string;
+}
+
 
 const Greeting = () => {
+
+  const [data, setData] = useState<GreetingData | null>(null);
+
+  useEffect(() => {
+    const fetchGreeting = async () => {
+      try {
+        const res = await fetch("https://gist.githubusercontent.com/babanigit/336e2f2c92b72f57efce3db7723c24ac/raw/647708242a5424a58ed8b037b58d92eee34393de/getGreeting.json");
+        const jsonData = await res.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error("Error fetching greeting data:", error);
+      }
+    };
+
+    fetchGreeting();
+  }, []);
+
+  if (!data) return <div>Loading...</div>;
+
+
   return (
     <div className="min-h-[60vh] w-full grid md:grid-cols-3 grid-cols-1 p-4 gap-6 items-center">
       {/* Text Section */}
@@ -19,9 +47,9 @@ const Greeting = () => {
 
         {/* Subheading */}
         <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4 text-xl md:text-3xl">
-          <span className="underline">Full Stack Developer</span>
+          <span className="underline">{data.title1}</span>
           <span className="font-bold">and</span>
-          <span className="underline"> Artist.</span>
+          <span className="underline">{data.title2}</span>
         </div>
 
         {/* Social Links */}

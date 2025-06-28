@@ -1,8 +1,8 @@
 "use client";
 
+import { Certification } from "@/assets/CertificateLinks";
 import React, { useState } from "react";
 // import { ThemeDataType } from "../../../assets/theme";
-import { Certification } from "../../assets/CertificateLinks";
 
 interface Iprops {
   // theme: ThemeDataType;
