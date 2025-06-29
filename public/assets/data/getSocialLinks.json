@@ -1,8 +1,22 @@
 {
-  "resume": "/resume.pdf",
-  "linkedin": "https://linkedin.com/in/your-username",
-  "github": "https://github.com/your-username",
-  "leetcode": "https://leetcode.com/your-username",
-  "instagram": "https://instagram.com/your-main-account",
-  "instagram2": "https://instagram.com/your-art-account"
+  "resume": {
+    "label": "<Resume/>",
+    "url": "/resume.pdf"
+  },
+  "linkedin": {
+    "label": "<LinkedIn/>",
+    "url": "https://linkedin.com/in/aniket-vilas-panchal"
+  },
+  "github": {
+    "label": "<GitHub/>",
+    "url": "https://github.com/babanigit"
+  },
+  "leetcode": {
+    "label": "<LeetCode/>",
+    "url": "https://leetcode.com/u/aniketpanchal07"
+  },
+  "instagram": {
+    "label": "<Insta/>",
+    "url": "https://www.instagram.com/babartstyle"
+  }
 }

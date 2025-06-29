@@ -1,12 +1,51 @@
 [
   {
+    "github": "https://github.com/babanigit/markets_mojo_v16",
+    "role": "Software Developer",
+    "duration": "June 2025 - Present",
+    "company": "HealthIndia Insurance TPA Services Pvt. Ltd.",
+    "location": "Mumbai, India",
+    "companyLink": "https://www.healthindiatpa.com/",
+    "techStack": [
+      "Angular",
+      "ASP.NET Core",
+      "SQL",
+      ".NET Framework",
+      "TypeScript",
+      "Postman API",
+      "Tortoise SVN",
+      "Git",
+      "SQL Server Management Studio",
+      "Visual Studio",
+      "HTML5",
+      "C#"
+    ],
+    "highlights": [
+      "Develop and maintain front-end architecture using Angular and TypeScript.",
+      "Design and implement scalable, responsive, and cross-platform web applications.",
+      "Build and manage robust back-end systems using ASP.NET Core and C#.",
+      "Create and optimize complex database schemas with SQL Server.",
+      "Design RESTful APIs and ensure seamless integration across services.",
+      "Use Postman for API testing and debugging.",
+      "Manage code versioning using Git and Tortoise SVN.",
+      "Lead projects from concept through to deployment with focus on performance and UX.",
+      "Stay updated with latest trends and best practices in full-stack development."
+    ],
+    "image": "healthindia.png"
+  },
+  {
     "role": "Angular Developer, Internship",
     "duration": "July 2024 - September 2024",
     "company": "Markets Mojo, Stock Research Organization, Mumbai",
     "location": "Mumbai, India",
     "github": "https://github.com/babanigit/markets_mojo_v16",
     "companyLink": "https://www.marketsmojo.com/",
-    "techStack": ["Angular", "TypeScript", "Highcharts", "Chrome DevTools"],
+    "techStack": [
+      "Angular",
+      "TypeScript",
+      "Highcharts",
+      "Chrome DevTools"
+    ],
     "highlights": [
       "Migrated old Angular pages to Angular 16 + TypeScript, boosting performance.",
       "Integrated Highcharts for Data Visualization, improving insights by 30%.",

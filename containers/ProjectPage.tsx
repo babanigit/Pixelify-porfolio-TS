@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { projects } from "@/assets/Project";
+// import { projects } from "@/assets/Project";
 
 import mario from "@/assets/png/mario.png"; // Make sure this is imported properly
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
+import GetAllProjectButton from "@/components/GetAllProjectButton";
 
 const ProjectPage = () => {
   const GH = "<GitHub Link/>";
@@ -14,7 +15,9 @@ const ProjectPage = () => {
 
   useEffect(() => {
     const fetchEducation = async () => {
-      const res = await fetch("https://gist.githubusercontent.com/babanigit/fdf26ec31d044caccefc83d4349b5a67/raw/3f047a10b72b20a32adf30301a5df77f35de4098/getProjects.json");
+      const res = await fetch(
+        "https://gist.githubusercontent.com/babanigit/fdf26ec31d044caccefc83d4349b5a67/raw/3f047a10b72b20a32adf30301a5df77f35de4098/getProjects.json"
+      );
       const data = await res.json();
 
       setProject(data);
@@ -23,19 +26,14 @@ const ProjectPage = () => {
     fetchEducation();
   }, []);
 
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <>
       <div className=" w-full flex justify-center items-center gap-3 ">
         <h1 className="text-4xl"> Projects</h1>{" "}
         <div>
-          <button
-            className=" border-2 p-2 rounded-2xl bg-green-400/40 cursor-grab "
-            onClick={() => router.push(`/projects`)}
-          >
-            Get all Projects
-          </button>
+          <GetAllProjectButton />
         </div>{" "}
       </div>
 
@@ -124,12 +122,7 @@ const ProjectPage = () => {
             </div>
           ))}
           <div className=" flex justify-center ">
-            <button
-              className=" border-2 p-2 rounded-2xl bg-green-400/40 cursor-grab "
-              onClick={() => router.push(`/projects`)}
-            >
-              Get all Projects
-            </button>
+            <GetAllProjectButton />
           </div>
         </div>
       </div>

@@ -11,26 +11,19 @@ const ContactMe = () => {
   const sendLabel = "<Send/>";
 
   return (
-
     <div className="min-h-screen w-full grid grid-cols-3 place-items-center p-3 bg-gray-50 gap-3">
-
-      {/* Profile Image Section */}
-      <div className="h-full w-full flex justify-center items-center bg-purple-400/50 rounded-full p-6">
-        <Image
-          className="w-64 rounded-full"
-          src={meImg}
-          alt="profile img"
-          width={256}
-          height={256}
-        />
-      </div>
-
       {/* Contact Form Section */}
       <div className="col-span-2 w-full h-auto border-4 border-purple-300 rounded-xl p-6 gap-3 grid bg-white shadow-md">
         {/* Title */}
         <div className="flex items-center justify-center gap-4 text-3xl font-semibold">
           <span>Contact</span>
-          <Image className="w-16" src={iconImg} alt="icon" width={64} height={64} />
+          <Image
+            className="w-16"
+            src={iconImg}
+            alt="icon"
+            width={64}
+            height={64}
+          />
         </div>
 
         {/* Form */}
@@ -66,6 +59,17 @@ const ContactMe = () => {
         <div className="flex justify-center">
           <SocialLinks />
         </div>
+      </div>
+
+      {/* Profile Image Section */}
+      <div className="h-full w-full flex justify-center items-center bg-purple-400/50 rounded-full p-6">
+        <Image
+          className="w-64 rounded-full"
+          src={meImg}
+          alt="profile img"
+          width={256}
+          height={256}
+        />
       </div>
     </div>
   );

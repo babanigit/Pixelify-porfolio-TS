@@ -1,0 +1,14 @@
+{
+    "workExperience": {
+        "title": "Work Experience",
+        "description": "I am currently working as a Software Developer at HealthIndia Insurance TPA Services Pvt. Ltd., where I build full-stack web applications using Angular, ASP.NET Core, and SQL Server. I also completed an internship as an Angular Developer at Markets Mojo, contributing to data visualization and performance upgrades. I use tools like Git, Tortoise SVN, and Postman to ensure clean, testable code."
+    },
+    "technicalSkills": {
+        "title": "Technical Skills",
+        "description": "Proficient in TypeScript, JavaScript, C#, and Python. Experienced with Angular, ASP.NET, Next.js, and Node.js for full-stack development. Skilled in working with SQL Server, MongoDB, and PostgreSQL. Familiar with tools like Git, Docker, Postman, and AWS EC2. Strong foundation in MVC, JWT Auth, and WebSockets."
+    },
+    "educationAndCertifications": {
+        "title": "Education and Certifications",
+        "description": "I actively participate in Hackathons, LeetCode, and other tech-related activities. Below are some of my major certifications."
+    }
+}

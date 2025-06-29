@@ -22,7 +22,7 @@ const Experience = () => {
   useEffect(() => {
     const fetchExperience = async () => {
       try {
-        const res = await fetch("https://gist.githubusercontent.com/babanigit/fc0fe4401bcab3d804d60df26ba67ceb/raw/25996d4b50058886c42fcffad8bd8c70227c15d7/getExperence.json");
+        const res = await fetch("assets/data/getExperience.json");
         const data: ExperienceItem[] = await res.json();
         setExperiences(data);
       } catch (err) {
@@ -35,24 +35,14 @@ const Experience = () => {
 
   return (
     <div className="h-auto w-full grid grid-cols-4 place-items-center p-3">
-      {experiences.map((exp, index) => (
-        <React.Fragment key={index}>
-          {/* Profile Image Section */}
-          <div className="grid place-items-center bg-purple-400/50 h-full w-full rounded-full p-4">
-            <Image
-              className="w-36"
-              src={`/assets/png/${exp.image}`}
-              alt="experience image"
-              width={144}
-              height={144}
-            />
-            {/* <div className="text-4xl mt-2">Experience</div> */}
-          </div>
+      {/* Experience Info Section */}
+      <div className="grid col-span-3 place-items-center w-full gap-6">
+        <div className="text-4xl">Experience</div>
 
-          {/* Experience Info Section */}
-          <div className="grid col-span-3 place-items-center w-full gap-6">
-            <div className="text-4xl">Experience</div>
+        {/* map will come here */}
 
+        {experiences.map((exp, index) => (
+          <React.Fragment key={index}>
             <div className="grid h-auto w-[70%] border-2 rounded-md p-6 space-y-4 bg-white/10 backdrop-blur-md">
               <div className="grid grid-cols-2 text-3xl font-bold">
                 <div>{exp.role}</div>
@@ -70,7 +60,9 @@ const Experience = () => {
                 </Link>
               </div>
 
-              <div className="text-center italic text-md text-gray-200">{exp.location}</div>
+              <div className="text-center italic text-md text-gray-200">
+                {exp.location}
+              </div>
 
               <div className="flex flex-wrap gap-2 justify-center text-sm text-white/80">
                 {exp.techStack.map((tech, idx) => (
@@ -99,9 +91,21 @@ const Experience = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        </React.Fragment>
-      ))}
+          </React.Fragment>
+        ))}
+      </div>
+
+      {/* image section  */}
+      <div className="grid place-items-center bg-purple-400/50 h-full w-full rounded-full p-4">
+        <Image
+          className="w-36"
+          src={`/assets/png/mario.png`}
+          alt="experience image"
+          width={144}
+          height={144}
+        />
+        {/* <div className="text-4xl mt-2">Experience</div> */}
+      </div>
     </div>
   );
 };
