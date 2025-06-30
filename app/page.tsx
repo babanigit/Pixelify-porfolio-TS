@@ -10,16 +10,15 @@ import Experience from "@/containers/Experience";
 import Skills from "@/containers/Skills";
 import ExperienceIntro from "@/containers/ExperienceIntro";
 import SkillsIntro from "@/containers/SkillsIntro";
-// import { ProfileContent } from "@/models/getProfile";
-// import { useRouter } from "next/navigation";
+import { ProfileContent } from "@/models/getProfile";
 
 const MainPage = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // const [profileContent, setProfileContent] = useState<ProfileContent | null>(
-  //   null
-  // );
+  const [profileContent, setProfileContent] = useState<
+    ProfileContent | undefined
+  >(undefined);
 
   // Handle scroll
   useEffect(() => {
@@ -45,13 +44,16 @@ const MainPage = () => {
 
   const fetchProfileContent = async () => {
     try {
-      const res = await fetch("/assets/data/getProfileContent.json", {
-        cache: "no-store",
-      });
+      const res = await fetch(
+        "https://gist.githubusercontent.com/babanigit/e79b0f07ad79a3542e07e924e73a5f06/raw/getContentIntro.json",
+        {
+          cache: "no-store",
+        }
+      );
       if (!res.ok) throw new Error("Failed to fetch profile content");
       const data = await res.json();
       console.log("the data is:- ", data);
-      // setProfileContent(data);
+      setProfileContent(data);
     } catch (error) {
       console.error("Error fetching profile content:", error);
     }
@@ -83,19 +85,22 @@ connect
         </section>
         <section id="experience" className=" pt-10 scroll-mt-20">
           {/* <h1 className="text-4xl font-bold"> experience</h1> */}
-          <ExperienceIntro />
+
+          <ExperienceIntro section={profileContent?.workExperience} />
           <Experience />
         </section>
 
         <section id="skills" className=" pt-10 scroll-mt-20">
           {/* <h1 className="text-4xl font-bold"> experience</h1> */}
-          <SkillsIntro />
+          <SkillsIntro section={profileContent?.technicalSkills} />
           <Skills />
         </section>
 
         <section id="education" className=" scroll-mt-20">
           {/* <h1 className="text-4xl font-bold">Education</h1> */}
-          <EducationIntro />
+          <EducationIntro
+            section={profileContent?.educationAndCertifications}
+          />
           <Degree />
           {/* <Certificate /> */}
         </section>
