@@ -40,7 +40,7 @@ const ProjectPage = () => {
       {/* Section 1 */}
       <div className="grid grid-cols-1 md:grid-cols-6 w-full gap-4 p-4">
         {/* Side Image */}
-        <div className="flex flex-col items-center justify-center bg-red-400/50 rounded-full p-4">
+        <div className="flex flex-col items-center justify-center bg-green-400/50 rounded-full p-4">
           <Image
             src={mario}
             alt="mario"

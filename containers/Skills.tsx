@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaTools } from "react-icons/fa";
+import Image from "next/image";
+import zz from "@/assets/png/ZZ.png";
 
 interface SkillsData {
   [category: string]: string[];
@@ -19,7 +21,9 @@ const Skills = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const res = await fetch("https://gist.githubusercontent.com/babanigit/61c0739ab835b4d850e08141161752bf/raw/9c50ed44ca78920fead926ad716e0e3da9d54f86/getSkills.json");
+        const res = await fetch(
+          "https://gist.githubusercontent.com/babanigit/61c0739ab835b4d850e08141161752bf/raw/9c50ed44ca78920fead926ad716e0e3da9d54f86/getSkills.json"
+        );
         const data: SkillsData = await res.json();
         setSkills(data);
       } catch (err) {
@@ -61,7 +65,16 @@ const Skills = () => {
 
       {/* Right Icon/Visual Section */}
       <div className="grid place-items-center bg-yellow-400/50 h-full w-full rounded-full p-4">
-        <FaTools size={64} />
+        {/* <FaTools size={64} /> */}
+
+        <Image
+          className="object-cover"
+          src={zz}
+          width={140}
+          height={140}
+          alt="profile image"
+        />
+
         {/* <div className="text-4xl mt-2">Skills</div> */}
       </div>
     </div>

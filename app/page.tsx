@@ -1,7 +1,6 @@
 "use client";
 import Navbar_Compo from "@/components/Navbar_Compo";
 import Greeting from "@/containers/Greeting";
-// import Certificate from "@/containers/3degreeCertificate/Certificate";
 import Degree from "@/containers/EducationAndCertificates";
 import EducationIntro from "@/containers/EducationIntro";
 import ContactMe from "@/containers/ContactMe";
@@ -11,16 +10,16 @@ import Experience from "@/containers/Experience";
 import Skills from "@/containers/Skills";
 import ExperienceIntro from "@/containers/ExperienceIntro";
 import SkillsIntro from "@/containers/SkillsIntro";
-import { ProfileContent } from "@/models/getProfile";
+// import { ProfileContent } from "@/models/getProfile";
 // import { useRouter } from "next/navigation";
 
 const MainPage = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const [profileContent, setProfileContent] = useState<ProfileContent | null>(
-    null
-  );
+  // const [profileContent, setProfileContent] = useState<ProfileContent | null>(
+  //   null
+  // );
 
   // Handle scroll
   useEffect(() => {
@@ -52,7 +51,7 @@ const MainPage = () => {
       if (!res.ok) throw new Error("Failed to fetch profile content");
       const data = await res.json();
       console.log("the data is:- ", data);
-      setProfileContent(data);
+      // setProfileContent(data);
     } catch (error) {
       console.error("Error fetching profile content:", error);
     }

@@ -1,18 +1,18 @@
 // "use client";
 
 import Image from "next/image";
-import mincraft4 from "@/assets/png/mincraft4.png";
+import cat from "@/assets/png/cat.png";
 
 const EducationIntro = () => {
   return (
     <div className="min-h-[70vh] w-full grid md:grid-cols-3 grid-cols-1 gap-6 p-6 items-center">
       {/* Image Section */}
-      <div className="flex justify-center items-center bg-green-400/50 rounded-full p-8">
+      <div className="flex justify-center items-center bg-orange-400/50 rounded-full p-8">
         <Image
           className="object-cover"
-          src={mincraft4}
-          width={120}
-          height={120}
+          src={cat}
+          width={150}
+          height={150}
           alt="profile image"
         />
       </div>

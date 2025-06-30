@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import meImg from "@/assets/png/pngegg.png";
-import iconImg from "@/assets/png/pngegg.png";
+import iconImg from "@/assets/png/star.png";
 import SocialLinks from "@/components/SocialLinks";
 
 const ContactMe = () => {
@@ -64,11 +64,11 @@ const ContactMe = () => {
       {/* Profile Image Section */}
       <div className="h-full w-full flex justify-center items-center bg-purple-400/50 rounded-full p-6">
         <Image
-          className="w-64 rounded-full"
+          className="rounded-full"
           src={meImg}
           alt="profile img"
-          width={256}
-          height={256}
+          width={156}
+          height={156}
         />
       </div>
     </div>
