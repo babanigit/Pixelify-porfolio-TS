@@ -3,21 +3,11 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-interface ExperienceItem {
-  role: string;
-  duration: string;
-  company: string;
-  location: string;
-  github: string;
-  companyLink: string;
-  techStack: string[];
-  highlights: string[];
-  image: string;
-}
+import { ExperienceItem } from "@/models/experence";
 
 const Experience = () => {
   const [experiences, setExperiences] = useState<ExperienceItem[]>([]);
+  const vg: string = "<github/>"
 
   useEffect(() => {
     const fetchExperience = async () => {
@@ -44,23 +34,24 @@ const Experience = () => {
         {experiences.map((exp, index) => (
           <React.Fragment key={index}>
             <div className="grid h-auto w-[70%] border-2 rounded-md p-6 space-y-4 bg-white/10 backdrop-blur-md">
-              <div className="grid grid-cols-2 text-3xl font-bold">
-                <div>{exp.role}</div>
+              <div className="grid grid-cols-2 ">
+                <div className="text-3xl font-bold" >{exp.role}</div>
                 <div className="text-right">{exp.duration}</div>
               </div>
 
-              <div className="text-2xl text-center">
+              <div className="flex justify-center text-xl text-center group">
                 <Link
                   href={exp.companyLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-400 hover:underline"
+                  className="group-hover:text-blue-600/80 transition-colors duration-300"
                 >
-                  {exp.company}
+                  {"<" + exp.company + "/>"}
+                  <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
                 </Link>
               </div>
 
-              <div className="text-center italic text-md text-gray-200">
+              <div className="text-center text-md text-gray-500">
                 {exp.location}
               </div>
 
@@ -75,21 +66,29 @@ const Experience = () => {
                 ))}
               </div>
 
-              <ul className="text-left text-lg space-y-2 list-disc list-inside">
+              <ul className="text-left space-y-2 list-disc list-inside">
                 {exp.highlights.map((point, idx) => (
                   <li key={idx}>{point}</li>
                 ))}
               </ul>
 
-              <div className="text-right text-blue-600 underline">
-                <Link
-                  href={exp.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View GitHub
-                </Link>
-              </div>
+              {exp!.github && (
+                <div className="flex justify-end" >
+                  <div className="text-right flex justify-center group ">
+                    <Link
+                      href={exp.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group-hover:text-blue-600/80 transition-colors duration-300"
+
+                    >
+                      {vg}
+                      <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
+                    </Link>
+                  </div>
+                </div>
+              )}
+
             </div>
           </React.Fragment>
         ))}

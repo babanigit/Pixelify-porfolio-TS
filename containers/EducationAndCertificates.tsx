@@ -43,12 +43,12 @@ const EducationAndCertificate = () => {
               key={index}
               className="grid w-[70%] border-2 rounded-md p-4 gap-2"
             >
-              <div className="flex justify-between text-3xl font-bold">
-                <div>{edu.title}</div>
+              <div className="flex justify-between ">
+                <div className="text-2xl font-bold" >{edu.title}</div>
                 <div>{edu.year}</div>
               </div>
-              <div className="text-2xl text-center">{edu.subtitle}</div>
-              <div className="text-lg space-y-1">
+              <div className="text-xl text-center">{edu.subtitle}</div>
+              <div className="text space-y-1">
                 {edu.details.map((point, i) => (
                   <div key={i}>- {point}</div>
                 ))}
@@ -58,7 +58,7 @@ const EducationAndCertificate = () => {
                   href={edu.Uni_link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline hover:text-blue-800"
+                  className="text-blue-500 hover:text-blue-900"
                 >
                   {universityWebsiteLabel}
                 </Link>
@@ -66,7 +66,7 @@ const EducationAndCertificate = () => {
                   href={edu.Certificate_link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline hover:text-blue-800"
+                  className="text-blue-500 hover:text-blue-900"
                 >
                   {certificateLabel}
                 </Link>
