@@ -7,7 +7,7 @@ import { ExperienceItem } from "@/models/experence";
 
 const Experience = () => {
   const [experiences, setExperiences] = useState<ExperienceItem[]>([]);
-  const vg: string = "<github/>"
+  const vg: string = "<github/>";
 
   useEffect(() => {
     const fetchExperience = async () => {
@@ -35,7 +35,7 @@ const Experience = () => {
           <React.Fragment key={index}>
             <div className="grid h-auto w-[70%] border-2 rounded-md p-6 space-y-4 bg-white/10 backdrop-blur-md">
               <div className="grid grid-cols-2 ">
-                <div className="text-3xl font-bold" >{exp.role}</div>
+                <div className="text-3xl font-bold">{exp.role}</div>
                 <div className="text-right">{exp.duration}</div>
               </div>
 
@@ -73,14 +73,13 @@ const Experience = () => {
               </ul>
 
               {exp!.github && (
-                <div className="flex justify-end" >
+                <div className="flex justify-end">
                   <div className="text-right flex justify-center group ">
                     <Link
                       href={exp.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group-hover:text-blue-600/80 transition-colors duration-300"
-
                     >
                       {vg}
                       <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
@@ -88,7 +87,6 @@ const Experience = () => {
                   </div>
                 </div>
               )}
-
             </div>
           </React.Fragment>
         ))}

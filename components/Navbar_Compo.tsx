@@ -9,9 +9,28 @@ projects
 connect
 */
 
+const navs = [
+  {
+    name: "home",
+    url: "#home",
+  },
+  {
+    name: "experience",
+    url: "#experience",
+  },
+];
+
 const Navbar_Compo = () => {
   return (
     <ul className="flex space-x-6 p-4">
+      {/* {navs.map((data, index) => (
+        <li key={index}>
+          <a href={data.url} className="hover:text-blue-600">
+            {data.name}
+          </a>
+        </li>
+      ))} */}
+
       <li>
         <a href="#home" className="hover:text-blue-600">
           home

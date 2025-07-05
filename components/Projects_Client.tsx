@@ -102,7 +102,6 @@ const Projects_Client = () => {
 
       {/* project card */}
       <ProjectCard project={filteredProjects} limit={filteredProjects.length} />
-
     </div>
   );
 };

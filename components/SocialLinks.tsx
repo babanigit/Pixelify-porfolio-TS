@@ -2,15 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-
-interface SocialLinkItem {
-  label: string;
-  url: string;
-}
-
-interface SocialLinksData {
-  [key: string]: SocialLinkItem;
-}
+import { SocialLinksData } from "@/models/socialLinksData";
 
 const SocialLinks = () => {
   const [links, setLinks] = useState<SocialLinksData | null>(null);

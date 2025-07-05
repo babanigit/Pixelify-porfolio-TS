@@ -11,7 +11,7 @@ const GetAllProjectButton = () => {
       className=" border-2 p-2 rounded-2xl bg-green-400/40 cursor-grab hover:bg-green-600 "
       onClick={() => router.push(`/projects`)}
     >
-     Click to get all Projects
+      Click to get all Projects
     </button>
   );
 };

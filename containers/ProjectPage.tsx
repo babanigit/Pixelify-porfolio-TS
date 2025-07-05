@@ -54,10 +54,9 @@ const ProjectPage = () => {
 
         {/* project card */}
         <ProjectCard project={project} limit={3} />
-
-        <div className=" flex justify-center w-screen">
-          <GetAllProjectButton />
-        </div>
+      </div>
+      <div className="flex justify-end  w-full pr-4">
+        <GetAllProjectButton />
       </div>
     </>
   );

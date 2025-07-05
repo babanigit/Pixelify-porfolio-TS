@@ -21,7 +21,9 @@ const EducationAndCertificate = () => {
 
   useEffect(() => {
     const fetchEducation = async () => {
-      const ress = await fetch("https://gist.githubusercontent.com/babanigit/6e1f45b979154bc109323ef4afafa909/raw/977bd6f4415b0e038d55357796994aa2910d58d6/getEduAndCerti.json");
+      const ress = await fetch(
+        "https://gist.githubusercontent.com/babanigit/6e1f45b979154bc109323ef4afafa909/raw/977bd6f4415b0e038d55357796994aa2910d58d6/getEduAndCerti.json"
+      );
       const dataa: IEducationAndCertificate = await ress.json();
       setEducation(dataa.Educations);
       setCertificate(dataa.Certificates);
@@ -44,7 +46,7 @@ const EducationAndCertificate = () => {
               className="grid w-[70%] border-2 rounded-md p-4 gap-2"
             >
               <div className="flex justify-between ">
-                <div className="text-2xl font-bold" >{edu.title}</div>
+                <div className="text-2xl font-bold">{edu.title}</div>
                 <div>{edu.year}</div>
               </div>
               <div className="text-xl text-center">{edu.subtitle}</div>
@@ -53,23 +55,31 @@ const EducationAndCertificate = () => {
                   <div key={i}>- {point}</div>
                 ))}
               </div>
-              <div className="flex justify-end gap-4">
-                <Link
-                  href={edu.Uni_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-blue-900"
-                >
-                  {universityWebsiteLabel}
-                </Link>
-                <Link
-                  href={edu.Certificate_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-blue-900"
-                >
-                  {certificateLabel}
-                </Link>
+              <div className="flex justify-end gap-4 ">
+                <div className="group">
+                  <Link
+                    href={edu.Uni_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group-hover:text-blue-600/80 transition-colors duration-300"
+                  >
+                    {universityWebsiteLabel}
+                    <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
+                  </Link>
+                </div>
+
+                <div className="group">
+                  <Link
+                    href={edu.Certificate_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group-hover:text-blue-600/80 transition-colors duration-300"
+                  >
+                    {certificateLabel}
+                    <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
+                  </Link>
+                </div>
+
                 {edu.grade && <div>{edu.grade}</div>}
               </div>
             </div>
@@ -111,14 +121,15 @@ const EducationAndCertificate = () => {
                   </span>
                 </div>
 
-                <div className="flex justify-end">
+                <div className="flex justify-end group">
                   <a
                     href={cert.certificate_link}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-4 py-1 border rounded-md text-blue-600 hover:underline"
+                    className=" group-hover:text-blue-600/80 transition-colors duration-300"
                   >
-                    View Certificate
+                    {certificateLabel}
+                    <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
                   </a>
                 </div>
               </div>
