@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
-
 :root {
-  --font-pixelify-sans: 'Pixelify Sans', sans-serif;
+  --font-pixelify-sans: "Pixelify Sans", sans-serif;
 }
 
 #root {
@@ -15,6 +14,6 @@ html {
 
 /* globals.css */
 body {
+  overflow-x: hidden;
   font-family: var(--font-pixelify-sans);
 }
-

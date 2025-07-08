@@ -11,9 +11,9 @@ const ContactMe = () => {
   const sendLabel = "<Send/>";
 
   return (
-    <div className="min-h-screen w-full grid grid-cols-3 place-items-center p-3 bg-gray-50 gap-3">
+    <div className="min-h-screen w-full grid grid-cols-1 md:grid-cols-3 place-items-center p-3 bg-gray-50 gap-6">
       {/* Contact Form Section */}
-      <div className="col-span-2 w-full h-auto border-4 border-purple-300 rounded-xl p-6 gap-3 grid bg-white shadow-md">
+      <div className="col-span-2 w-full h-auto border-4 border-purple-300 rounded-xl p-6 grid gap-6 bg-white shadow-md max-w-2xl mx-auto">
         {/* Title */}
         <div className="flex items-center justify-center gap-4 text-3xl font-semibold">
           <span>Contact</span>
@@ -29,7 +29,7 @@ const ContactMe = () => {
         {/* Form */}
         <form
           action=""
-          className="grid gap-4 w-full max-w-xl mx-auto"
+          className="grid gap-4 w-auto max-w-xl mx-auto"
           onSubmit={(e) => {
             e.preventDefault();
             // TODO: Handle form submission
@@ -39,12 +39,12 @@ const ContactMe = () => {
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-auto px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
             required
           />
           <textarea
             placeholder="Your Message"
-            className="w-full px-4 py-2 h-28 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-auto px-4 py-2 h-28 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-purple-400"
             required
           />
           <button
@@ -56,13 +56,13 @@ const ContactMe = () => {
         </form>
 
         {/* Social Links */}
-        <div className="flex justify-center">
+        <div className="flex justify-center w-auto">
           <SocialLinks />
         </div>
       </div>
 
       {/* Profile Image Section */}
-      <div className="h-full w-full flex justify-center items-center bg-purple-400/50 rounded-full p-6">
+      <div className="h-full w-full flex justify-center items-center bg-purple-400/50 rounded-full p-6 max-w-xs mx-auto">
         <Image
           className="rounded-full"
           src={meImg}

@@ -21,41 +21,42 @@ const EducationAndCertificate = () => {
 
   useEffect(() => {
     const fetchEducation = async () => {
-      const ress = await fetch(
+      const res = await fetch(
         "https://gist.githubusercontent.com/babanigit/6e1f45b979154bc109323ef4afafa909/raw/977bd6f4415b0e038d55357796994aa2910d58d6/getEduAndCerti.json"
       );
-      const dataa: IEducationAndCertificate = await ress.json();
-      setEducation(dataa.Educations);
-      setCertificate(dataa.Certificates);
+      const data: IEducationAndCertificate = await res.json();
+      setEducation(data.Educations);
+      setCertificate(data.Certificates);
     };
 
     fetchEducation();
   }, []);
 
   return (
-    <div className="h-auto w-full grid grid-flow-col grid-cols-4 place-items-center p-3">
-      {/* Left: Education + Certificate Section */}
-      <div className="grid col-span-3 place-items-center w-full gap-6">
+    <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-6 p-4 bg-gray-50">
+      {/* Left Section: Education + Certificates */}
+      <div className="md:col-span-3 flex flex-col items-center gap-6 order-2 md:order-1">
         {/* Education Section */}
-        <div className="text-4xl  mb-2">Education</div>
+        <div className="text-3xl font-bold text-center">Education</div>
 
         {education.length > 0 ? (
           education.map((edu, index) => (
             <div
               key={index}
-              className="grid w-[70%] border-2 rounded-md p-4 gap-2"
+              className="w-full max-w-xl border-2 rounded-md p-4 gap-2 grid bg-white"
             >
-              <div className="flex justify-between ">
-                <div className="text-2xl font-bold">{edu.title}</div>
-                <div>{edu.year}</div>
+              <div className="flex justify-between items-center">
+                <div className="text-xl font-bold">{edu.title}</div>
+                <div className="text-sm text-gray-600">{edu.year}</div>
               </div>
-              <div className="text-xl text-center">{edu.subtitle}</div>
-              <div className="text space-y-1">
+              <div className="text-center text-lg">{edu.subtitle}</div>
+              <div className="space-y-1 text-gray-700 text-sm">
                 {edu.details.map((point, i) => (
                   <div key={i}>- {point}</div>
                 ))}
               </div>
-              <div className="flex justify-end gap-4 ">
+
+              <div className="flex flex-wrap justify-end items-center gap-4 text-sm mt-2">
                 <div className="group">
                   <Link
                     href={edu.Uni_link}
@@ -67,7 +68,6 @@ const EducationAndCertificate = () => {
                     <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
                   </Link>
                 </div>
-
                 <div className="group">
                   <Link
                     href={edu.Certificate_link}
@@ -79,8 +79,7 @@ const EducationAndCertificate = () => {
                     <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
                   </Link>
                 </div>
-
-                {edu.grade && <div>{edu.grade}</div>}
+                {edu.grade && <div className="text-gray-600">{edu.grade}</div>}
               </div>
             </div>
           ))
@@ -89,32 +88,30 @@ const EducationAndCertificate = () => {
         )}
 
         {/* Certificate Section */}
-        <div className="text-4xl mt-4">Certifications</div>
-        {certificate && certificate.length > 0 ? (
+        <div className="text-3xl font-bold text-center mt-4">Certifications</div>
+        {certificate.length > 0 ? (
           certificate.map((cert, index) => (
-            <div key={index} className="w-[70%] border-2 p-4 rounded-md mb-4">
+            <div
+              key={index}
+              className="w-full max-w-xl border-2 rounded-md p-4 bg-white"
+            >
               <div className="grid gap-2">
-                <div className="text-3xl font-semibold text-center">
-                  {cert.title}
-                </div>
-                <div className="text-2xl text-center text-gray-600">
-                  {cert.subtitle}
-                </div>
-
-                <div className="text-lg font-medium">
-                  Issued By: {cert.issued_by}
+                <div className="text-2xl font-semibold text-center">{cert.title}</div>
+                <div className="text-lg text-center text-gray-600">{cert.subtitle}</div>
+                <div className="text-sm text-gray-700">
+                  <strong>Issued By:</strong> {cert.issued_by}
                 </div>
                 <div className="text-sm text-gray-500">
-                  Issue Date: {cert.issue_date}
+                  <strong>Issue Date:</strong> {cert.issue_date}
                 </div>
 
-                <div className="text-lg space-y-1">
+                <div className="text-sm text-gray-700 space-y-1">
                   {cert.description.map((point, i) => (
                     <div key={i}>• {point}</div>
                   ))}
                 </div>
 
-                <div className="text-base mt-2">
+                <div className="text-sm mt-2">
                   <strong>Skills:</strong>{" "}
                   <span className="italic text-blue-600">
                     {cert.skills.join(", ")}
@@ -126,7 +123,7 @@ const EducationAndCertificate = () => {
                     href={cert.certificate_link}
                     target="_blank"
                     rel="noreferrer"
-                    className=" group-hover:text-blue-600/80 transition-colors duration-300"
+                    className="group-hover:text-blue-600/80 transition-colors duration-300"
                   >
                     {certificateLabel}
                     <span className="block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
@@ -140,16 +137,17 @@ const EducationAndCertificate = () => {
         )}
       </div>
 
-      {/* Right: Profile Section */}
-      <div className="grid place-items-center bg-red-400/50 h-full w-full rounded-full">
-        <Image
-          className="w-36 rounded-full"
-          src={marioImage}
-          alt="profile_img"
-          width={144}
-          height={144}
-        />
-        {/* <div className="text-4xl mt-2 font-bold">Education & Certificate</div> */}
+      {/* Right Section: Image */}
+      <div className="order-1 md:order-2 flex justify-center items-center">
+        <div className="bg-purple-200 rounded-full p-6 shadow-md">
+          <Image
+            className="rounded-full w-36 h-36 object-cover"
+            src={marioImage}
+            alt="profile_img"
+            width={144}
+            height={144}
+          />
+        </div>
       </div>
     </div>
   );

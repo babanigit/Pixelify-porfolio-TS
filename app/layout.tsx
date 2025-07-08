@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${pixelify.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${pixelify.variable} ${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
         <main className="min-h-screen">{children}</main>
       </body>
