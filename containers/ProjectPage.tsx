@@ -31,11 +31,9 @@ const ProjectPage = () => {
 
   return (
     <>
-      <div className=" w-full flex justify-center items-center gap-3 ">
-        <h1 className="text-4xl"> Projects</h1>{" "}
-        <div>
-          <GetAllProjectButton />
-        </div>{" "}
+      <div className="w-full flex flex-row sm:flex-row justify-center items-center gap-4 p-3">
+        <h1 className="text-4xl text-center">Projects</h1>
+        {/* <GetAllProjectButton /> */}
       </div>
 
       {/* Section 1 */}
@@ -48,6 +46,7 @@ const ProjectPage = () => {
             width={100}
             height={100}
             className="object-contain"
+            loading="lazy"
           />
           {/* <div className="text-2xl mt-2">Top Three Projects</div> */}
         </div>
@@ -55,7 +54,7 @@ const ProjectPage = () => {
         {/* project card */}
         <ProjectCard project={project} limit={3} />
       </div>
-      <div className="flex justify-end  w-full pr-4">
+      <div className="flex justify-end  w-full pr-6">
         <GetAllProjectButton />
       </div>
     </>

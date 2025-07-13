@@ -11,7 +11,7 @@ interface IExperienceIntroProps {
 
 const ExperienceIntro = ({ section }: IExperienceIntroProps) => {
   return (
-    <div className="min-h-[70vh] w-full grid md:grid-cols-3 grid-cols-1 gap-6 p-6 items-center">
+    <div className="bg-gray-50 min-h-[70vh] w-full grid md:grid-cols-3 grid-cols-1 gap-6 p-6 items-center">
       {/* Image Section */}
       <div className="flex justify-center items-center bg-green-400/50 rounded-full p-8">
         <Image

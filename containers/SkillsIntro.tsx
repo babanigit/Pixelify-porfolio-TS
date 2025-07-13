@@ -13,7 +13,7 @@ const SkillsIntro = ({ section }: ISkillsIntroProps) => {
   return (
     <div className="min-h-[70vh] w-full grid md:grid-cols-3 grid-cols-1 gap-6 p-6 items-center">
       {/* Image Section */}
-      <div className="flex justify-center items-center bg-red-400/50 rounded-full p-8">
+      <div className="flex justify-center items-center bg-yellow-500/50 rounded-full p-8">
         <Image
           className="object-cover"
           src={redd}

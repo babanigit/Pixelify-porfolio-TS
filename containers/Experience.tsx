@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { ExperienceItem } from "@/models/experence";
 import Link from "next/link";
+import { ExternalLink, Github } from "lucide-react";
 
 const Experience = () => {
   const [experiences, setExperiences] = useState<ExperienceItem[]>([]);
@@ -22,19 +23,21 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="w-full px-4 sm:px-8 py-6">
+    <div className="bg-gray-50 w-full px-4 sm:px-8 py-6">
       {/* <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Experience</h2> */}
 
       <div className="grid grid-cols-1 gap-6">
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="border-2 rounded-lg p-5 bg-white shadow-sm hover:shadow-md transition duration-300"
+            className="border-2  border-green-500/50 rounded-md p-4 gap-2 grid bg-white hover:shadow-lg hover:border-blue-500/50   shadow-sm  transition duration-300"
           >
             {/* Header */}
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
               <h3 className="text-xl sm:text-2xl font-semibold">{exp.role}</h3>
-              <span className="text-sm text-gray-600 italic">{exp.duration}</span>
+              <span className="text-sm text-gray-600 italic">
+                {exp.duration}
+              </span>
             </div>
 
             {/* Company + Location */}
@@ -68,16 +71,25 @@ const Experience = () => {
 
             {/* GitHub Link */}
             {exp.github && (
-              <div className="mt-2 group">
-                <Link
-                  href={exp.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 group-hover:text-blue-800 transition-colors duration-300"
-                >
-                  {vg}
-                  <span className="block h-0.5 bg-blue-600 max-w-0 group-hover:max-w-full transition-all duration-300"></span>
-                </Link>
+              <div className="group w-fit">
+                <div className="flex flex-col items-start w-fit">
+                  <a
+                    href={exp.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-center sm:justify-start gap-2 px-4 py-2 sm:px-0 sm:py-0 bg-gray-100 sm:bg-transparent rounded-lg sm:rounded-none hover:bg-gray-200 sm:hover:bg-transparent text-gray-700 hover:text-blue-600 transition-all duration-300 text-sm sm:text-base font-medium"
+                  >
+                    <Github size={16} className="sm:hidden" />
+                    <span className="hidden sm:inline">
+                      &lt;View on GitHub/&gt;
+                    </span>
+                    <span className="sm:hidden">View on GitHub</span>
+                    <ExternalLink size={14} className="opacity-70 sm:hidden" />
+                  </a>
+
+                  {/* Underline animation only on desktop */}
+                  <span className="hidden sm:block h-0.5 bg-blue-600/80 max-w-0 group-hover:max-w-full transition-all duration-300 w-full"></span>
+                </div>
               </div>
             )}
           </div>

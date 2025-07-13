@@ -16,7 +16,7 @@ const ProjectCard = ({ project, limit }: IProjectProp) => {
           {project.slice(0, limit).map((project, index) => (
             <div
               key={index}
-              className="border-2 border-gray-200 p-4 sm:p-5 md:p-6 rounded-lg hover:shadow-lg hover:border-blue-300 transition-all duration-300 bg-white h-fit"
+              className="border-2 border-green-500/50 p-4 sm:p-5 md:p-6 rounded-lg hover:shadow-lg hover:border-blue-500/50 transition-all duration-300 bg-white h-fit"
             >
               {/* Project Title */}
               <div className="text-center text-xl sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4 text-gray-800 line-clamp-2">

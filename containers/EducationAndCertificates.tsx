@@ -43,7 +43,7 @@ const EducationAndCertificate = () => {
           education.map((edu, index) => (
             <div
               key={index}
-              className="w-full max-w-xl border-2 rounded-md p-4 gap-2 grid bg-white"
+              className="w-full max-w-xl border-2 border-purple-500/50 rounded-md p-4 gap-2 grid bg-white hover:shadow-lg hover:border-blue-500/50 transition-all duration-300"
             >
               <div className="flex justify-between items-center">
                 <div className="text-xl font-bold">{edu.title}</div>
@@ -88,16 +88,22 @@ const EducationAndCertificate = () => {
         )}
 
         {/* Certificate Section */}
-        <div className="text-3xl font-bold text-center mt-4">Certifications</div>
+        <div className="text-3xl font-bold text-center mt-4">
+          Certifications
+        </div>
         {certificate.length > 0 ? (
           certificate.map((cert, index) => (
             <div
               key={index}
-              className="w-full max-w-xl border-2 rounded-md p-4 bg-white"
+              className="w-full max-w-xl border-2 border-purple-500/50 rounded-md p-4 bg-white hover:shadow-lg hover:border-blue-500/50 transition-all duration-300"
             >
               <div className="grid gap-2">
-                <div className="text-2xl font-semibold text-center">{cert.title}</div>
-                <div className="text-lg text-center text-gray-600">{cert.subtitle}</div>
+                <div className="text-2xl font-semibold text-center">
+                  {cert.title}
+                </div>
+                <div className="text-lg text-center text-gray-600">
+                  {cert.subtitle}
+                </div>
                 <div className="text-sm text-gray-700">
                   <strong>Issued By:</strong> {cert.issued_by}
                 </div>
@@ -137,17 +143,22 @@ const EducationAndCertificate = () => {
         )}
       </div>
 
-      {/* Right Section: Image */}
-      <div className="order-1 md:order-2 flex justify-center items-center">
-        <div className="bg-purple-200 rounded-full p-6 shadow-md">
-          <Image
-            className="rounded-full w-36 h-36 object-cover"
-            src={marioImage}
-            alt="profile_img"
-            width={144}
-            height={144}
-          />
-        </div>
+      {/* Right Icon/Visual Section */}
+      <div className=" hidden md:grid place-items-center bg-purple-500/50 h-32 w-32 sm:h-40 sm:w-40 md:h-full md:w-full rounded-full p-3 sm:p-4 order-1 md:order-2 shadow-lg">
+        <Image
+          className="object-cover rounded-full"
+          src={marioImage}
+          width={100}
+          height={100}
+          alt="profile image"
+          sizes="(max-width: 640px) 80px, (max-width: 768px) 120px, 140px"
+          style={{
+            width: "auto",
+            height: "auto",
+            maxWidth: "100%",
+            maxHeight: "100%",
+          }}
+        />
       </div>
     </div>
   );

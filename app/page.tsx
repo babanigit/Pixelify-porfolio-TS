@@ -1,7 +1,7 @@
 "use client";
 import Navbar_Compo from "@/components/Navbar_Compo";
 import Greeting from "@/containers/Greeting";
-import Degree from "@/containers/EducationAndCertificates";
+import EduAndCerti from "@/containers/EducationAndCertificates";
 import EducationIntro from "@/containers/EducationIntro";
 import ContactMe from "@/containers/ContactMe";
 import ProjectPage from "@/containers/ProjectPage";
@@ -101,7 +101,7 @@ connect
           <EducationIntro
             section={profileContent?.educationAndCertifications}
           />
-          <Degree />
+          <EduAndCerti />
           {/* <Certificate /> */}
         </section>
         <section id="projects" className="min-h-screen pt-20 scroll-mt-20">
