@@ -1,14 +1,41 @@
 "use client";
 
 import Image from "next/image";
-
 import meImg from "@/assets/png/pngegg.png";
 import iconImg from "@/assets/png/star.png";
 import SocialLinks from "@/components/SocialLinks";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 const ContactMe = () => {
   const resumeLabel = "<Resume/>";
   const sendLabel = "<Send/>";
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "service_zq23cub_bab", // Your Service ID
+        "template_j2prnxo",     // Your Template ID
+        form.current,
+        "lXAwRsELGYP-raRkV"          // Your Public Key (not secret key)
+      )
+      .then(
+        (result: { text: any; }) => {
+          alert("Email sent successfully!");
+          console.log(result.text);
+          form.current?.reset();
+        },
+        (error: { text: any; }) => {
+          alert("Something went wrong. Try again!");
+          console.error(error.text);
+        }
+      );
+  };
 
   return (
     <div className="min-h-screen w-full grid grid-cols-1 md:grid-cols-3 place-items-center p-3 bg-gray-50 gap-6">
@@ -17,35 +44,34 @@ const ContactMe = () => {
         {/* Title */}
         <div className="flex items-center justify-center gap-4 text-3xl font-semibold">
           <span>Contact</span>
-          <Image
-            className="w-16"
-            src={iconImg}
-            alt="icon"
-            width={64}
-            height={64}
-            loading="lazy"
-          />
+          <Image className="w-16" src={iconImg} alt="icon" width={64} height={64} loading="lazy" />
         </div>
 
         {/* Form */}
         <form
-          action=""
+          ref={form}
+          onSubmit={sendEmail}
           className="grid gap-4 w-full max-w-xl mx-auto"
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("Message sent (not actually handled)");
-          }}
         >
           <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+            type="text"
+            name="name"
+            placeholder="Your Name"
             required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
           />
           <textarea
+            name="message"
             placeholder="Your Message"
-            className="w-full px-4 py-2 h-28 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-purple-400"
             required
+            className="w-full px-4 py-2 h-28 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-purple-400"
           />
           <button
             type="submit"
@@ -63,13 +89,7 @@ const ContactMe = () => {
 
       {/* Profile Image Section */}
       <div className="h-full w-full hidden md:flex justify-center items-center bg-purple-400/50 rounded-full p-6 max-w-xs mx-auto">
-        <Image
-          className="rounded-full"
-          src={meImg}
-          alt="profile img"
-          width={156}
-          height={156}
-        />
+        <Image className="rounded-full" src={meImg} alt="profile img" width={156} height={156} />
       </div>
     </div>
   );

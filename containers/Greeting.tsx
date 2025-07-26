@@ -51,7 +51,7 @@ const Greeting = () => {
           </div>
 
           {/* Social Links */}
-          <div className="mt-2">
+          <div className="mt-2 bg-blue-300/50 border rounded-4xl ">
             <SocialLinks />
           </div>
         </div>
