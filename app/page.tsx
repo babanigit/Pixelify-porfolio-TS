@@ -1,16 +1,56 @@
 "use client";
-import Navbar_Compo from "@/components/Navbar_Compo";
-import Greeting from "@/containers/Greeting";
-import EduAndCerti from "@/containers/EducationAndCertificates";
-import EducationIntro from "@/containers/EducationIntro";
-import ContactMe from "@/containers/ContactMe";
-import ProjectPage from "@/containers/ProjectPage";
 import React, { useEffect, useState } from "react";
-import Experience from "@/containers/Experience";
-import Skills from "@/containers/Skills";
-import ExperienceIntro from "@/containers/ExperienceIntro";
-import SkillsIntro from "@/containers/SkillsIntro";
+import dynamic from "next/dynamic";
+
 import { ProfileContent } from "@/models/getProfile";
+import Navbar_Compo from "@/components/Navbar_Compo";
+
+// import Greeting from "@/containers/Greeting";
+// import EduAndCerti from "@/containers/EducationAndCertificates";
+// import EducationIntro from "@/containers/EducationIntro";
+// import ContactMe from "@/containers/ContactMe";
+// import ProjectPage from "@/containers/ProjectPage";
+// import Experience from "@/containers/Experience";
+// import Skills from "@/containers/Skills";
+// import ExperienceIntro from "@/containers/ExperienceIntro";
+// import SkillsIntro from "@/containers/SkillsIntro";
+
+const Greeting = dynamic(() => import("@/containers/Greeting"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+const EduAndCerti = dynamic(
+  () => import("@/containers/EducationAndCertificates"),
+  { ssr: false, loading: () => <p>Loading...</p> }
+);
+const EducationIntro = dynamic(() => import("@/containers/EducationIntro"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+const ContactMe = dynamic(() => import("@/containers/ContactMe"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+const ProjectPage = dynamic(() => import("@/containers/ProjectPage"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+const Experience = dynamic(() => import("@/containers/Experience"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+const Skills = dynamic(() => import("@/containers/Skills"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+const ExperienceIntro = dynamic(() => import("@/containers/ExperienceIntro"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+const SkillsIntro = dynamic(() => import("@/containers/SkillsIntro"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 const MainPage = () => {
   const [showNavbar, setShowNavbar] = useState(true);

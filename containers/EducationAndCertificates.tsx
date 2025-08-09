@@ -22,7 +22,7 @@ const EducationAndCertificate = () => {
   useEffect(() => {
     const fetchEducation = async () => {
       const res = await fetch(
-        "https://gist.githubusercontent.com/babanigit/6e1f45b979154bc109323ef4afafa909/raw/977bd6f4415b0e038d55357796994aa2910d58d6/getEduAndCerti.json"
+        "https://gist.githubusercontent.com/babanigit/6e1f45b979154bc109323ef4afafa909/raw/getEduAndCerti.json"
       );
       const data: IEducationAndCertificate = await res.json();
       setEducation(data.Educations);
