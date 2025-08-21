@@ -29,7 +29,7 @@ const SocialLinks = () => {
     <div className="w-full flex justify-center px-2 sm:px-4">
       <div className="grid gap-3 sm:gap-4 grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] text-center font-bold p-3 sm:p-4 rounded max-w-4xl w-full">
         {Object.entries(links)
-          .filter(([, value]) => value.url && value.url.trim() !== "")
+          .filter(([, value]) => value.url && value.url.trim() !== "" && value.isActive != 0)
           .map(([key, { label, url }]) => (
             <Link
               key={key}

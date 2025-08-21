@@ -1,22 +1,27 @@
 {
   "resume": {
     "label": "<Resume/>",
-    "url": "/resume.pdf"
+    "url": "/resume.pdf",
+        "isActive": 1
   },
   "linkedin": {
     "label": "<LinkedIn/>",
-    "url": "https://linkedin.com/in/aniket-vilas-panchal"
+    "url": "https://linkedin.com/in/aniket-vilas-panchal",
+        "isActive": 1
   },
   "github": {
     "label": "<GitHub/>",
-    "url": "https://github.com/babanigit"
+    "url": "https://github.com/babanigit",
+        "isActive": 1
   },
   "leetcode": {
     "label": "<LeetCode/>",
-    "url": "https://leetcode.com/u/aniketpanchal07"
+    "url": "https://leetcode.com/u/aniketpanchal07",
+        "isActive": 0
   },
   "instagram": {
     "label": "<Insta/>",
-    "url": "https://www.instagram.com/babartstyle"
+    "url": "https://www.instagram.com/babartstyle",
+        "isActive": 0
   }
 }
