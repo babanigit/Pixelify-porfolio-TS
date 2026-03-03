@@ -5,23 +5,22 @@ import dynamic from "next/dynamic";
 import { ProfileContent } from "@/models/getProfile";
 import Navbar_Compo from "@/components/Navbar_Compo";
 
-// import Greeting from "@/containers/Greeting";
-// import EduAndCerti from "@/containers/EducationAndCertificates";
-// import EducationIntro from "@/containers/EducationIntro";
-// import ContactMe from "@/containers/ContactMe";
-// import ProjectPage from "@/containers/ProjectPage";
-// import Experience from "@/containers/Experience";
-// import Skills from "@/containers/Skills";
-// import ExperienceIntro from "@/containers/ExperienceIntro";
-// import SkillsIntro from "@/containers/SkillsIntro";
+import AskAI from "@/containers/AskAI";
+
 
 const Greeting = dynamic(() => import("@/containers/Greeting"), {
   ssr: false,
   loading: () => <p>Loading...</p>,
 });
+
+// const AskAI = dynamic(() => import("@/containers/AskAI"), {
+//   ssr: false,
+//   loading: () => <p>Loading...</p>,
+// });
+
 const EduAndCerti = dynamic(
   () => import("@/containers/EducationAndCertificates"),
-  { ssr: false, loading: () => <p>Loading...</p> }
+  { ssr: false, loading: () => <p>Loading...</p> },
 );
 const EducationIntro = dynamic(() => import("@/containers/EducationIntro"), {
   ssr: false,
@@ -88,7 +87,7 @@ const MainPage = () => {
         "https://gist.githubusercontent.com/babanigit/e79b0f07ad79a3542e07e924e73a5f06/raw/getContentIntro.json",
         {
           cache: "no-store",
-        }
+        },
       );
       if (!res.ok) throw new Error("Failed to fetch profile content");
       const data = await res.json();
@@ -123,6 +122,12 @@ connect
           {/* <h1 className="text-4xl font-bold"></h1> */}
           <Greeting />
         </section>
+
+        <section id="askai" className=" pt-10 scroll-mt-20">
+          {/* <h1 className="text-4xl font-bold"></h1> */}
+          <AskAI />
+        </section>
+        
         <section id="experience" className=" pt-10 scroll-mt-20">
           {/* <h1 className="text-4xl font-bold"> experience</h1> */}
 

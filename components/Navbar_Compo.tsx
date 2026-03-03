@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const navs = [
+  { name: "askAI", url: "#askai" },
   { name: "home", url: "#home" },
   { name: "experience", url: "#experience" },
   { name: "skills", url: "#skills" },
@@ -21,6 +22,7 @@ const Navbar_Compo = () => {
 
         {/* Hamburger Button */}
         <button
+          aria-label="Hamburger button"
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden focus:outline-none"
         >

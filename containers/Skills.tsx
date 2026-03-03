@@ -22,7 +22,7 @@ const Skills = () => {
     const fetchSkills = async () => {
       try {
         const res = await fetch(
-          "https://gist.githubusercontent.com/babanigit/61c0739ab835b4d850e08141161752bf/raw/9c50ed44ca78920fead926ad716e0e3da9d54f86/getSkills.json"
+          "https://gist.githubusercontent.com/babanigit/61c0739ab835b4d850e08141161752bf/raw/getSkills.json"
         );
         const data: SkillsData = await res.json();
         setSkills(data);

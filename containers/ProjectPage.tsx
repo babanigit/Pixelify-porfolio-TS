@@ -17,7 +17,7 @@ const ProjectPage = () => {
   useEffect(() => {
     const fetchEducation = async () => {
       const res = await fetch(
-        "https://gist.githubusercontent.com/babanigit/fdf26ec31d044caccefc83d4349b5a67/raw/3f047a10b72b20a32adf30301a5df77f35de4098/getProjects.json"
+        "https://gist.githubusercontent.com/babanigit/fdf26ec31d044caccefc83d4349b5a67/raw/getProjects.json"
       );
       const data = await res.json();
 
