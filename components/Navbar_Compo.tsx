@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+// import { Spinner } from "@heroui/react";
+import Image from "next/image";
 
 const navs = [
-  { name: "askAI", url: "#askai" },
+  // { name: "askAI", url: "#askai" },
   { name: "home", url: "#home" },
   { name: "experience", url: "#experience" },
   { name: "skills", url: "#skills" },
@@ -12,7 +14,11 @@ const navs = [
   { name: "portfolio", url: "/portfolio" },
 ];
 
-const Navbar_Compo = () => {
+interface NavbarProps {
+  isAI: boolean;
+}
+
+const Navbar_Compo = ({ isAI }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -52,6 +58,37 @@ const Navbar_Compo = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-6">
+          <li className="flex gap-2 border-2 border-gray-300 rounded-md ">
+            {isAI ? (
+              <a
+                href="#askai"
+                className="hover:text-blue-600 hover:bg-blue-100 capitalize flex items-center gap-2 px-1.5"
+              >
+                <span>Ask AI</span>
+
+                <Image
+                  src="/dancing_duck.gif"
+                  alt="AI thinking"
+                  width={20}
+                  height={20}
+                />
+              </a>
+            ) : (
+              <a
+                href="#askai"
+                className="capitalize disabled:opacity-50 pointer-events-none flex items-center gap-2 px-1.5"
+              >
+                <span>Ask AI</span>
+
+                <Image
+                  src="/loading_gif.gif"
+                  alt="AI thinking"
+                  width={20}
+                  height={20}
+                />
+              </a>
+            )}
+          </li>
           {navs.map((data, index) => (
             <li key={index}>
               <a href={data.url} className="hover:text-blue-600 capitalize">
@@ -65,6 +102,37 @@ const Navbar_Compo = () => {
       {/* Mobile Navigation */}
       {isOpen && (
         <ul className="md:hidden px-4 pb-4 space-y-2">
+          <li className="flex gap-2 border-2 border-gray-300 rounded-md ">
+            {isAI ? (
+              <a
+                href="#askai"
+                className="hover:text-blue-600 hover:bg-blue-100 capitalize flex items-center gap-2 px-1.5"
+              >
+                <span>Ask AI</span>
+
+                <Image
+                  src="/dancing_duck.gif"
+                  alt="AI thinking"
+                  width={20}
+                  height={20}
+                />
+              </a>
+            ) : (
+              <a
+                href="#askai"
+                className="capitalize disabled:opacity-50 pointer-events-none flex items-center gap-2 px-1.5"
+              >
+                <span>Ask AI</span>
+
+                <Image
+                  src="/loading_gif.gif"
+                  alt="AI thinking"
+                  width={20}
+                  height={20}
+                />
+              </a>
+            )}
+          </li>
           {navs.map((data, index) => (
             <li key={index}>
               <a

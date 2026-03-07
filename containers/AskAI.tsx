@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IAiResponse, IRequest, IResponse } from "@/models/ai";
+import Image from "next/image";
 
 export default function AskAI() {
   const [input, setInput] = useState<string>("");
@@ -15,7 +16,6 @@ export default function AskAI() {
     message: "",
   });
 
-  // const [isSuccess, setIsSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const askAI = async () => {
@@ -36,9 +36,6 @@ export default function AskAI() {
 
     const data: IAiResponse = await res.json();
 
-    // console.log("API response:", data);
-    // setIsSuccess(data.success);
-
     setResponse({
       success: data.success,
       message: data.message,
@@ -48,50 +45,100 @@ export default function AskAI() {
     setInput("");
   };
 
-  return (
-    <main className=" text-black bg-gray-100 p-6">
-      <div className="max-w-6xl mx-auto bg-white rounded-xl shadow p-6 space-y-4">
-        <h1 className="text-2xl font-bold">Know About Aniket</h1>
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    // Submit on Ctrl+Enter or Cmd+Enter
+    if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
+      e.preventDefault();
+      if (!loading && input.trim()) askAI();
+    }
+  };
 
-        <div className="flex flex-col md:flex-row gap-4">
+  return (
+    <main className="min-h-screen text-black bg-gray-100 p-3 sm:p-6">
+      <div className="max-w-6xl mx-auto bg-white rounded-xl shadow p-4 sm:p-6 space-y-4">
+        <h1 className="text-xl sm:text-2xl font-bold flex gap-2 items-center">
+          <span>Know About Aniket</span>
+
+          <Image
+            src="/vibing_duck.gif"
+            alt="AI thinking"
+            width={30}
+            height={30}
+          />
+        </h1>
+
+        <div className="flex flex-col gap-3">
           <textarea
-            className="w-full border rounded p-3"
-            placeholder="ask about him anything, like his projects, experience, skills, or education..."
+            className="w-full border rounded p-3 text-sm sm:text-base resize-none min-h-[100px] sm:min-h-[80px] focus:outline-none focus:ring-2 focus:ring-black"
+            placeholder="Ask about his projects, experience, skills, or education..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+            rows={4}
           />
 
-          <button
-            onClick={askAI}
-            disabled={loading}
-            className="bg-black text-white px-2 py-2 rounded hover:opacity-80"
-          >
-            {loading ? "Thinking..." : "Ask AI"}
-          </button>
+          <div className="flex items-center justify-between gap-3">
+            <span className="text-xs text-gray-400 hidden sm:block">
+              Press Ctrl+Enter to submit
+            </span>
+            <button
+              onClick={askAI}
+              disabled={loading || !input.trim()}
+              className="w-full sm:w-auto bg-black text-white px-6 py-2.5 rounded hover:opacity-80 disabled:opacity-40 disabled:cursor-not-allowed text-sm sm:text-base font-medium transition-opacity"
+            >
+              {loading ? (
+                <span className="flex items-center justify-center gap-2">
+                  <svg
+                    className="animate-spin h-4 w-4 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v8H4z"
+                    />
+                  </svg>
+                  Thinking...
+                </span>
+              ) : (
+                "Ask AI"
+              )}
+            </button>
+          </div>
         </div>
 
         {/* success */}
         {response.success && response.message && (
           <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-700">
             {/* Header */}
-            <div className="bg-gray-800 px-4 py-3 border-b border-gray-700 flex items-center justify-between">
+            <div className="bg-gray-800 px-3 sm:px-4 py-2.5 sm:py-3 border-b border-gray-700 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                <span className="text-gray-300 text-sm font-medium">
+                <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0"></div>
+                <span className="text-gray-300 text-xs sm:text-sm font-medium">
                   AI Response
                 </span>
               </div>
               <button
                 onClick={() => navigator.clipboard.writeText(response.message)}
-                className="text-gray-400 hover:text-gray-200 text-xs px-2 py-1 rounded hover:bg-gray-700 transition-colors"
+                className="text-gray-400 hover:text-gray-200 text-xs px-2 py-1 rounded hover:bg-gray-700 transition-colors whitespace-nowrap"
               >
                 Copy
               </button>
             </div>
 
             {/* Content */}
-            <div className="p-6 max-h-[600px] overflow-y-auto custom-scrollbar">
-              <div className="prose prose-invert prose-pre:bg-black prose-pre:shadow-inner max-w-none">
+            <div className="p-4 sm:p-6 max-h-[60vh] sm:max-h-[600px] overflow-y-auto">
+              <div className="prose prose-invert prose-pre:bg-black prose-pre:shadow-inner max-w-none prose-sm sm:prose-base">
                 <ReactMarkdown
                   components={{
                     code({ node, className, children, ...props }) {
@@ -101,13 +148,13 @@ export default function AskAI() {
                           style={vscDarkPlus}
                           language={match[1]}
                           PreTag="div"
-                          className="rounded-md text-sm"
+                          className="rounded-md !text-xs sm:!text-sm overflow-x-auto"
                         >
                           {String(children).replace(/\n$/, "")}
                         </SyntaxHighlighter>
                       ) : (
                         <code
-                          className="bg-gray-800 px-1.5 py-0.5 rounded text-pink-400 text-sm"
+                          className="bg-gray-800 px-1.5 py-0.5 rounded text-pink-400 text-xs sm:text-sm break-words"
                           {...props}
                         >
                           {children}
@@ -115,37 +162,39 @@ export default function AskAI() {
                       );
                     },
                     h1: ({ children }) => (
-                      <h1 className="text-2xl font-bold text-white mb-4">
+                      <h1 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
                         {children}
                       </h1>
                     ),
                     h2: ({ children }) => (
-                      <h2 className="text-xl font-semibold text-gray-100 mb-3 mt-6">
+                      <h2 className="text-lg sm:text-xl font-semibold text-gray-100 mb-2 sm:mb-3 mt-5 sm:mt-6">
                         {children}
                       </h2>
                     ),
                     h3: ({ children }) => (
-                      <h3 className="text-lg font-semibold text-gray-200 mb-2 mt-4">
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-200 mb-2 mt-3 sm:mt-4">
                         {children}
                       </h3>
                     ),
                     p: ({ children }) => (
-                      <p className="text-gray-300 leading-relaxed mb-4">
+                      <p className="text-gray-300 leading-relaxed mb-3 sm:mb-4 text-sm sm:text-base">
                         {children}
                       </p>
                     ),
                     ul: ({ children }) => (
-                      <ul className="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                      <ul className="list-disc list-inside text-gray-300 space-y-1.5 sm:space-y-2 mb-3 sm:mb-4 text-sm sm:text-base">
                         {children}
                       </ul>
                     ),
                     ol: ({ children }) => (
-                      <ol className="list-decimal list-inside text-gray-300 space-y-2 mb-4">
+                      <ol className="list-decimal list-inside text-gray-300 space-y-1.5 sm:space-y-2 mb-3 sm:mb-4 text-sm sm:text-base">
                         {children}
                       </ol>
                     ),
                     li: ({ children }) => (
-                      <li className="text-gray-300">{children}</li>
+                      <li className="text-gray-300 text-sm sm:text-base">
+                        {children}
+                      </li>
                     ),
                     strong: ({ children }) => (
                       <strong className="text-white font-semibold">
@@ -153,7 +202,7 @@ export default function AskAI() {
                       </strong>
                     ),
                     blockquote: ({ children }) => (
-                      <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-400 my-4">
+                      <blockquote className="border-l-4 border-blue-500 pl-3 sm:pl-4 italic text-gray-400 my-3 sm:my-4 text-sm sm:text-base">
                         {children}
                       </blockquote>
                     ),
@@ -168,7 +217,7 @@ export default function AskAI() {
 
         {/* error */}
         {!response.success && response.message && (
-          <div className=" bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+          <div className="bg-red-100 border border-red-400 text-red-700 px-3 sm:px-4 py-2.5 sm:py-3 rounded text-sm sm:text-base">
             {response.message}
           </div>
         )}

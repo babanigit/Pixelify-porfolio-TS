@@ -3,10 +3,9 @@ import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
 import { ProfileContent } from "@/models/getProfile";
+
 import Navbar_Compo from "@/components/Navbar_Compo";
-
 import AskAI from "@/containers/AskAI";
-
 
 const Greeting = dynamic(() => import("@/containers/Greeting"), {
   ssr: false,
@@ -54,6 +53,7 @@ const SkillsIntro = dynamic(() => import("@/containers/SkillsIntro"), {
 const MainPage = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isAI, setIsAI] = useState(false);
 
   const [profileContent, setProfileContent] = useState<
     ProfileContent | undefined
@@ -79,6 +79,7 @@ const MainPage = () => {
   // ✅ Fetch profile content only once
   useEffect(() => {
     fetchProfileContent();
+    getAI_Status();
   }, []);
 
   const fetchProfileContent = async () => {
@@ -98,6 +99,31 @@ const MainPage = () => {
     }
   };
 
+  const getAI_Status = async () => {
+
+    const apiUrl =
+      process.env.NEXT_PUBLIC_GET_API_STATUS ||
+      "http://localhost:8000/api/test/";
+    console.log("Checking AI status at:", apiUrl);
+
+    try {
+      const res = await fetch(apiUrl, {
+        method: "GET",
+      });
+      
+      if (!res.ok) throw new Error("Failed to get AI status");
+      const data = await res.json();
+      console.log("AI Status:", data);
+      if (data.status === true) {
+        setIsAI(true);
+      } else {
+        setIsAI(false);
+      }
+    } catch (error) {
+      console.error("Error getting AI status:", error);
+    }
+  };
+
   /*
 home
 experience
@@ -114,7 +140,7 @@ connect
           showNavbar ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <Navbar_Compo />
+        <Navbar_Compo isAI={isAI} />
       </nav>
 
       <div className="scroll-smooth">
@@ -127,7 +153,7 @@ connect
           {/* <h1 className="text-4xl font-bold"></h1> */}
           <AskAI />
         </section>
-        
+
         <section id="experience" className=" pt-10 scroll-mt-20">
           {/* <h1 className="text-4xl font-bold"> experience</h1> */}
 
