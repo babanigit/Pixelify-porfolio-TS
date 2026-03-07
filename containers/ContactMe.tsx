@@ -27,7 +27,7 @@ const ContactMe = () => {
       .then(
         (result: { text: any; }) => {
           alert("Email sent successfully!");
-          console.log(result.text);
+          // console.log(result.text);
           form.current?.reset();
         },
         (error: { text: any; }) => {

@@ -91,7 +91,7 @@ const MainPage = () => {
       );
       if (!res.ok) throw new Error("Failed to fetch profile content");
       const data = await res.json();
-      console.log("the data is:- ", data);
+      // console.log("the data is:- ", data);
       setProfileContent(data);
     } catch (error) {
       console.error("Error fetching profile content:", error);

@@ -36,12 +36,12 @@ export default function AskAI() {
 
     const data: IAiResponse = await res.json();
 
-    console.log("API response:", data);
+    // console.log("API response:", data);
     // setIsSuccess(data.success);
 
     setResponse({
       success: data.success,
-      message: data.message_ai_response,
+      message: data.message,
     });
 
     setLoading(false);
