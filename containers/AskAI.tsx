@@ -7,8 +7,11 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IAiResponse, IRequest, IResponse } from "@/models/ai";
 import Image from "next/image";
+interface NavbarProps {
+  isAI: boolean;
+}
 
-export default function AskAI() {
+export default function AskAI({ isAI }: NavbarProps) {
   const [input, setInput] = useState<string>("");
 
   const [response, setResponse] = useState<IResponse>({
@@ -54,7 +57,7 @@ export default function AskAI() {
   };
 
   return (
-    <main className="min-h-screen text-black bg-gray-100 p-3 sm:p-6">
+    <main className=" text-black bg-gray-100 p-3 sm:p-6">
       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow p-4 sm:p-6 space-y-4">
         <h1 className="text-xl sm:text-2xl font-bold flex gap-2 items-center">
           <span>Know About Aniket</span>
@@ -83,7 +86,7 @@ export default function AskAI() {
             </span>
             <button
               onClick={askAI}
-              disabled={loading || !input.trim()}
+              disabled={loading || !input.trim() || !isAI}
               className="w-full sm:w-auto bg-black text-white px-6 py-2.5 rounded hover:opacity-80 disabled:opacity-40 disabled:cursor-not-allowed text-sm sm:text-base font-medium transition-opacity"
             >
               {loading ? (
@@ -108,10 +111,20 @@ export default function AskAI() {
                       d="M4 12a8 8 0 018-8v8H4z"
                     />
                   </svg>
-                  Thinking...
+                  Processing...
                 </span>
-              ) : (
+              ) : isAI ? (
                 "Ask AI"
+              ) : (
+                <span className="flex items-center justify-center gap-2">
+                  Setting Server{" "}
+                  <Image
+                    src="/loading_gif.gif"
+                    alt="loading_gif"
+                    width={20}
+                    height={20}
+                  />
+                </span>
               )}
             </button>
           </div>

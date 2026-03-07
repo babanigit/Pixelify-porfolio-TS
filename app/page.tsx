@@ -6,48 +6,88 @@ import { ProfileContent } from "@/models/getProfile";
 
 import Navbar_Compo from "@/components/Navbar_Compo";
 import AskAI from "@/containers/AskAI";
+import Loading from "@/components/Loading";
 
 const Greeting = dynamic(() => import("@/containers/Greeting"), {
   ssr: false,
-  loading: () => <p>Loading...</p>,
+  loading: () => (
+    <p>
+      <Loading />
+    </p>
+  ),
 });
 
 // const AskAI = dynamic(() => import("@/containers/AskAI"), {
 //   ssr: false,
-//   loading: () => <p>Loading...</p>,
+//   loading: () => <p><Loading /></p>,
 // });
 
 const EduAndCerti = dynamic(
   () => import("@/containers/EducationAndCertificates"),
-  { ssr: false, loading: () => <p>Loading...</p> },
+  {
+    ssr: false,
+    loading: () => (
+      <p>
+        <Loading />
+      </p>
+    ),
+  },
 );
 const EducationIntro = dynamic(() => import("@/containers/EducationIntro"), {
   ssr: false,
-  loading: () => <p>Loading...</p>,
+  loading: () => (
+    <p>
+      <Loading />
+    </p>
+  ),
 });
 const ContactMe = dynamic(() => import("@/containers/ContactMe"), {
   ssr: false,
-  loading: () => <p>Loading...</p>,
+  loading: () => (
+    <p>
+      <Loading />
+    </p>
+  ),
 });
 const ProjectPage = dynamic(() => import("@/containers/ProjectPage"), {
   ssr: false,
-  loading: () => <p>Loading...</p>,
+  loading: () => (
+    <p>
+      <Loading />
+    </p>
+  ),
 });
 const Experience = dynamic(() => import("@/containers/Experience"), {
   ssr: false,
-  loading: () => <p>Loading...</p>,
+  loading: () => (
+    <p>
+      <Loading />
+    </p>
+  ),
 });
 const Skills = dynamic(() => import("@/containers/Skills"), {
   ssr: false,
-  loading: () => <p>Loading...</p>,
+  loading: () => (
+    <p>
+      <Loading />
+    </p>
+  ),
 });
 const ExperienceIntro = dynamic(() => import("@/containers/ExperienceIntro"), {
   ssr: false,
-  loading: () => <p>Loading...</p>,
+  loading: () => (
+    <p>
+      <Loading />
+    </p>
+  ),
 });
 const SkillsIntro = dynamic(() => import("@/containers/SkillsIntro"), {
   ssr: false,
-  loading: () => <p>Loading...</p>,
+  loading: () => (
+    <p>
+      <Loading />
+    </p>
+  ),
 });
 
 const MainPage = () => {
@@ -100,7 +140,6 @@ const MainPage = () => {
   };
 
   const getAI_Status = async () => {
-
     const apiUrl =
       process.env.NEXT_PUBLIC_GET_API_STATUS ||
       "http://localhost:8000/api/test/";
@@ -110,7 +149,7 @@ const MainPage = () => {
       const res = await fetch(apiUrl, {
         method: "GET",
       });
-      
+
       if (!res.ok) throw new Error("Failed to get AI status");
       const data = await res.json();
       console.log("AI Status:", data);
@@ -151,7 +190,7 @@ connect
 
         <section id="askai" className=" pt-10 scroll-mt-20">
           {/* <h1 className="text-4xl font-bold"></h1> */}
-          <AskAI />
+          <AskAI isAI={isAI} />
         </section>
 
         <section id="experience" className=" pt-10 scroll-mt-20">
