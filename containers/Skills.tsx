@@ -67,15 +67,15 @@ const Skills = () => {
 
               <div className="flex flex-wrap gap-2 sm:gap-3 justify-center md:justify-start">
                 {items
-                  .filter((item) => item.is_active === 1)
-                  .map((item) => (
-                    <button
-                      key={item.name}
-                      onClick={() => handleSkillClick(item.name)}
-                      className="bg-yellow-200/70 text-black px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium hover:bg-yellow-300 hover:scale-105 transition-all duration-200 active:scale-95"
-                    >
-                      {item.name}
-                    </button>
+                  .filter((item: SkillItem) => item.is_active === 1)
+                  .map((item: SkillItem) => (
+                  <button
+                    key={item.name}
+                    onClick={() => handleSkillClick(item.name)}
+                    className="bg-yellow-200/70 text-black px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium hover:bg-yellow-300 hover:scale-105 transition-all duration-200 active:scale-95"
+                  >
+                    {item.name}
+                  </button>
                   ))}
               </div>
             </div>
