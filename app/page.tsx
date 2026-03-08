@@ -134,7 +134,9 @@ const MainPage = () => {
           showNavbar ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <Navbar_Compo isAI={isAI} />
+        <Navbar_Compo 
+        // isAI={isAI}
+         />
       </nav>
 
       <div className="scroll-smooth">

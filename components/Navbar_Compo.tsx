@@ -14,11 +14,13 @@ const navs = [
   // { name: "portfolio", url: "/portfolio" },
 ];
 
-interface NavbarProps {
-  isAI: boolean;
-}
+// interface NavbarProps {
+//   isAI: boolean;
+// }
 
-const Navbar_Compo = ({ isAI }: NavbarProps) => {
+const Navbar_Compo = (
+  // { isAI }: NavbarProps
+) => {
   const [isOpen, setIsOpen] = useState(false);
   // console.log("isAI in Navbar_Compo:", isAI);
 
