@@ -11,7 +11,7 @@ const navs = [
   { name: "projects", url: "#projects" },
   { name: "connect", url: "#connect" },
   { name: "resume", url: "/resume" },
-  { name: "portfolio", url: "/portfolio" },
+  // { name: "portfolio", url: "/portfolio" },
 ];
 
 interface NavbarProps {
@@ -20,6 +20,7 @@ interface NavbarProps {
 
 const Navbar_Compo = ({ isAI }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  // console.log("isAI in Navbar_Compo:", isAI);
 
   return (
     <header className="bg-white shadow-md">
@@ -59,7 +60,7 @@ const Navbar_Compo = ({ isAI }: NavbarProps) => {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-6">
           <li className="flex gap-2 border-2 border-gray-300 rounded-md ">
-            {isAI ? (
+            {1 == 1 ? (
               <a
                 href="#askai"
                 className="hover:text-blue-600 hover:bg-blue-100 capitalize flex items-center gap-2 px-1.5"
@@ -102,36 +103,14 @@ const Navbar_Compo = ({ isAI }: NavbarProps) => {
       {/* Mobile Navigation */}
       {isOpen && (
         <ul className="md:hidden px-4 pb-4 space-y-2">
-          <li className="flex gap-2 border-2 border-gray-300 rounded-md ">
-            {isAI ? (
-              <a
-                href="#askai"
-                className="hover:text-blue-600 hover:bg-blue-100 capitalize flex items-center gap-2 px-1.5"
-              >
-                <span>Ask AI</span>
-
-                <Image
-                  src="/dancing_duck.gif"
-                  alt="AI thinking"
-                  width={20}
-                  height={20}
-                />
-              </a>
-            ) : (
-              <a
-                href="#askai"
-                className="capitalize disabled:opacity-50 pointer-events-none flex items-center gap-2 px-1.5"
-              >
-                <span>Ask AI</span>
-
-                <Image
-                  src="/loading_gif.gif"
-                  alt="AI thinking"
-                  width={20}
-                  height={20}
-                />
-              </a>
-            )}
+          <li>
+            <a
+              href="#askai"
+              className="block py-2 border-b border-gray-200 hover:text-blue-600 capitalize"
+              onClick={() => setIsOpen(false)}
+            >
+              Ask AI
+            </a>
           </li>
           {navs.map((data, index) => (
             <li key={index}>

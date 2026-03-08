@@ -6,88 +6,52 @@ import { ProfileContent } from "@/models/getProfile";
 
 import Navbar_Compo from "@/components/Navbar_Compo";
 import AskAI from "@/containers/AskAI";
-import Loading from "@/components/Loading";
+import Loading_Compo from "@/components/Loading_Compo";
 
 const Greeting = dynamic(() => import("@/containers/Greeting"), {
   ssr: false,
-  loading: () => (
-    <p>
-      <Loading />
-    </p>
-  ),
+  loading: () => <Loading_Compo />,
 });
 
 // const AskAI = dynamic(() => import("@/containers/AskAI"), {
 //   ssr: false,
-//   loading: () => <p><Loading /></p>,
+//   loading: () => <Loading_Compo />,
 // });
 
 const EduAndCerti = dynamic(
   () => import("@/containers/EducationAndCertificates"),
   {
     ssr: false,
-    loading: () => (
-      <p>
-        <Loading />
-      </p>
-    ),
+    loading: () => <Loading_Compo />,
   },
 );
 const EducationIntro = dynamic(() => import("@/containers/EducationIntro"), {
   ssr: false,
-  loading: () => (
-    <p>
-      <Loading />
-    </p>
-  ),
+  loading: () => <Loading_Compo />,
 });
 const ContactMe = dynamic(() => import("@/containers/ContactMe"), {
   ssr: false,
-  loading: () => (
-    <p>
-      <Loading />
-    </p>
-  ),
+  loading: () => <Loading_Compo />,
 });
 const ProjectPage = dynamic(() => import("@/containers/ProjectPage"), {
   ssr: false,
-  loading: () => (
-    <p>
-      <Loading />
-    </p>
-  ),
+  loading: () => <Loading_Compo />,
 });
 const Experience = dynamic(() => import("@/containers/Experience"), {
   ssr: false,
-  loading: () => (
-    <p>
-      <Loading />
-    </p>
-  ),
+  loading: () => <Loading_Compo />,
 });
 const Skills = dynamic(() => import("@/containers/Skills"), {
   ssr: false,
-  loading: () => (
-    <p>
-      <Loading />
-    </p>
-  ),
+  loading: () => <Loading_Compo />,
 });
 const ExperienceIntro = dynamic(() => import("@/containers/ExperienceIntro"), {
   ssr: false,
-  loading: () => (
-    <p>
-      <Loading />
-    </p>
-  ),
+  loading: () => <Loading_Compo />,
 });
 const SkillsIntro = dynamic(() => import("@/containers/SkillsIntro"), {
   ssr: false,
-  loading: () => (
-    <p>
-      <Loading />
-    </p>
-  ),
+  loading: () => <Loading_Compo />,
 });
 
 const MainPage = () => {
@@ -162,15 +126,6 @@ const MainPage = () => {
       console.error("Error getting AI status:", error);
     }
   };
-
-  /*
-home
-experience
-skills
-education
-projects
-connect
-*/
 
   return (
     <>

@@ -22,16 +22,16 @@ const Resume = () => {
 
             {/* Download Button */}
             <a
-                href="/resume.pdf"
+                href="/Aniket_Vilas_Panchal_Resume.pdf"
                 download
                 className="mb-4 px-6 py-2 bg-green-700/80 text-white rounded hover:bg-green-800 transition"
             >
                 Download Resume
             </a>
-
+        
             {/* Resume Viewer - Centered */}
             <iframe
-                src="/resume.pdf"
+                src="/Aniket_Vilas_Panchal_Resume.pdf"
                 className="w-full max-w-4xl h-[90vh] border rounded shadow-lg"
             ></iframe>
         </div>

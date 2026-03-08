@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Loading = () => {
+const Loading_Compo = () => {
   return (
     <div className="flex items-center justify-center">
       <h1 className="text-xl sm:text-2xl font-bold flex gap-2 items-center">
@@ -18,4 +18,4 @@ const Loading = () => {
   );
 };
 
-export default Loading;
+export default Loading_Compo;
