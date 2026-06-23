@@ -107,7 +107,6 @@ const MainPage = () => {
     const apiUrl =
       process.env.NEXT_PUBLIC_GET_API_STATUS ||
       "http://localhost:8000/api/test/";
-    console.log("Checking AI status at:", apiUrl);
 
     try {
       const res = await fetch(apiUrl, {
@@ -134,9 +133,9 @@ const MainPage = () => {
           showNavbar ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <Navbar_Compo 
+        <Navbar_Compo
         // isAI={isAI}
-         />
+        />
       </nav>
 
       <div className="scroll-smooth">

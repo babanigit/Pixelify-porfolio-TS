@@ -17,19 +17,27 @@ export default function AskAI({ isAI }: NavbarProps) {
   const [response, setResponse] = useState<IResponse>({
     success: false,
     message: "",
+    history: "",
   });
 
   const [loading, setLoading] = useState(false);
 
   const askAI = async () => {
     setLoading(true);
-    setResponse({ success: false, message: "" });
+    setResponse({
+      success: false,
+      message: "",
+      history: "",
+    });
 
     const BACKEND_API = process.env.NEXT_PUBLIC_BACKEND_API!;
 
     const request_body: IRequest = {
       input,
+      history: localStorage.getItem("history") || "[]",
     };
+
+    console.log("request body :- ", request_body);
 
     const res = await fetch(BACKEND_API, {
       method: "POST",
@@ -42,7 +50,10 @@ export default function AskAI({ isAI }: NavbarProps) {
     setResponse({
       success: data.success,
       message: data.message,
+      history: JSON.stringify(data.history),
     });
+
+    localStorage.setItem("history", JSON.stringify(data.history));
 
     setLoading(false);
     setInput("");

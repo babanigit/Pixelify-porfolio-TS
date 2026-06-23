@@ -19,7 +19,7 @@ const Greeting = () => {
         "https://gist.githubusercontent.com/babanigit/a0e0e15cc12c23c54b0f9227750f4b10/raw/getPersonal.json",
       );
       const jsonData = await res.json();
-      console.log("jsonData :-", jsonData);
+      // console.log("jsonData :-", jsonData);
       setPersonal(jsonData);
     } catch (error) {
       console.error("Error fetching greeting Personal:", error);
