@@ -34,7 +34,10 @@ export default function AskAI({ isAI }: NavbarProps) {
 
     const request_body: IRequest = {
       input,
-      history: localStorage.getItem("history") || "[]",
+      history:
+        (localStorage.getItem("history") == undefined
+          ? "[]"
+          : localStorage.getItem("history")) || "[]",
     };
 
     console.log("request body :- ", request_body);
@@ -50,11 +53,11 @@ export default function AskAI({ isAI }: NavbarProps) {
     setResponse({
       success: data.success,
       message: data.message,
-      history: JSON.stringify(data.history),
+      history: data.history,
     });
 
     if (data.history) {
-      localStorage.setItem("history", JSON.stringify(data.history));
+      localStorage.setItem("history", data.history);
     }
     setLoading(false);
     setInput("");
