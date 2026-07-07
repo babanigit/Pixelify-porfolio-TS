@@ -53,8 +53,9 @@ export default function AskAI({ isAI }: NavbarProps) {
       history: JSON.stringify(data.history),
     });
 
-    localStorage.setItem("history", JSON.stringify(data.history));
-
+    if (data.history) {
+      localStorage.setItem("history", JSON.stringify(data.history));
+    }
     setLoading(false);
     setInput("");
   };
